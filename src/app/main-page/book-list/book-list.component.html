@@ -1,0 +1,20 @@
+<div class="book-container">
+  <div class="item-book" *ngFor="let item of allBookFilter">
+    <div (click)="navigateToDetail(item.book_id)">
+      <nz-card nzHoverable nzSize="small" class="book-item-card" [nzCover]="coverTemplate">
+        <nz-card-meta [nzTitle]="item.name">
+          <ng-template #descriptionTemplate>
+            <div>
+              <nz-rate nzDisabled [ngModel]="item.rating" [nzAllowHalf]="true"></nz-rate>
+            </div>
+          </ng-template>
+        </nz-card-meta>
+        <ng-container *ngTemplateOutlet="descriptionTemplate"></ng-container>
+      </nz-card>
+      <ng-template class="book-item-image" #coverTemplate>
+        <img [alt]="item.name" [src]="item.cover" />
+      </ng-template>
+    </div>
+  </div>
+  <button (click)="onTest()">Click here</button>
+</div>

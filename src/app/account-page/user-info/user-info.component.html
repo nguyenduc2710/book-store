@@ -1,0 +1,42 @@
+<!-- <div class="user-info-container row d-flex align-items-center" *ngIf="currentUser$ | async as user"> -->
+<div class="user-info-container row d-flex ">
+  <div class="col-4 d-flex flex-column align-items-center justify-content-center bg-gradient p-0 full-height user-block_image" >
+    <div class="img-container">
+      <img class="img-fluid" [src]="currentUser.imagePath" />
+    </div>
+    <h4 class="user-short-des">
+      {{ currentUser.username }}
+    </h4>
+  </div>
+  <div class="col-8 user-block_info">
+    <ul nz-menu nzMode="horizontal" class="user-navigation">
+      <li nz-menu-item nzSelected>
+        <span class="item-icon" nz-icon nzType="contacts" nzTheme="outline"></span>
+        Account Information
+      </li>
+      <li nz-menu-item >
+        <span class="item-icon" nz-icon nzType="audit" nzTheme="outline"></span>
+        Receipt
+      </li>
+    </ul>
+
+    <div class="user_info">
+      <div class="info-item">
+        <span class="item-icon" nz-icon nzType="user" nzTheme="outline"></span>
+        Full Name:&nbsp;{{ currentUser.fullName }}
+      </div>
+      <div class="info-item">
+        <span class="item-icon" nz-icon [nzRotate]="115" nzType="phone" nzTheme="outline"></span>
+        Phone:&nbsp;{{ currentUser.phoneNumber }}
+      </div>
+      <div class="info-item">
+        <span class="item-icon" nz-icon nzType="home" nzTheme="outline"></span>
+        Address:&nbsp;{{ currentUser.address }}
+      </div>
+    </div>
+    <div class="user-receipt">
+
+    </div>
+    <button class="btn btn-outline-danger" routerLink="/book" (click)="onLogout()">Logout</button>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+.validate-account{
+  /* padding: 30px 50px; */
+  width: 60%;
+}
+
+.form-container{
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+input.ng-invalid.ng-touched,
+.ant-input-number.ng-touched.ng-dirty.ng-invalid{
+  border: 1px solid red;
+}

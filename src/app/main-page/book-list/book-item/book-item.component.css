@@ -1,0 +1,41 @@
+.book-item-container {
+  padding: 50px 80px;
+
+  .book-info {
+    padding: 0 20px;
+
+    .book-title_name {
+      font-size: 21px;
+      color: #575757;
+      font-weight: 700;
+    }
+
+    .book-title_author {
+      color: #326d7f;
+
+    }
+  }
+
+  .book-add-to-cart {
+    width: fit-content;
+
+    .book-operation {
+      display: flex;
+
+      .update-quantity {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .add-to-cart {
+      width: 100%;
+    }
+  }
+
+
+  .ant-input-number-handler-wrap {
+    visibility: hidden;
+  }
+}

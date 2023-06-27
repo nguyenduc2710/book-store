@@ -1,0 +1,17 @@
+.validate-account {
+  padding: 30px 50px;
+}
+.form-container{
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.tab-content{
+  width: 60%;
+}
+
+.nav-icon {
+  font-size: 35px;
+  color: rgba(0, 136, 204, 0.822);
+}
