@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
@@ -11,6 +11,13 @@ import { UserService } from 'src/app/services/user.service';
 export class RegisterAccountComponent implements OnInit {
   registerForm: FormGroup;
 
+  // checkRepeatPass = (group: FormGroup): { [key: string]: boolean } | null => {
+  //   let pass = group.get('password');
+  //   let confirmPass = group.get('repeatPassword');
+  //   if (pass === confirmPass) console.log("Trueeeeee");
+  //   return pass === confirmPass ? null : { notSame: true }
+  // }
+
   constructor(private userService: UserService,
     private router: Router) {
     this.registerForm = new FormGroup({});
@@ -20,7 +27,7 @@ export class RegisterAccountComponent implements OnInit {
     this.initForm();
   }
   onCreateAcc() {
-    if(this.registerForm.value['password'] === this.registerForm.value['repeatPassword']){
+    if (this.registerForm.value['password'] === this.registerForm.value['repeatPassword']) {
       this.userService.createUser(
         this.registerForm.value['username'],
         this.registerForm.value['password'],
@@ -31,7 +38,7 @@ export class RegisterAccountComponent implements OnInit {
         this.registerForm.value['phoneNumber'],
       )
       this.router.navigate(['/book']);
-    } else{
+    } else {
       alert('Create user failed, please try again.');
     }
   }

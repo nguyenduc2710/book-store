@@ -37,14 +37,16 @@ import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { NzImageModule } from 'ng-zorro-antd/image';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzBadgeModule } from 'ng-zorro-antd/badge';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+
 //FireBase
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { firebaseConfig } from './firebaseConfig';
-import { BookService } from './services/book.services';
 import { RegisterAccountComponent } from './account-page/register-account/register-account.component';
 import { LoginAccountComponent } from './account-page/login-account/login-account.component';
-import { UserService } from './services/user.service';
 import { UserInfoComponent } from './account-page/user-info/user-info.component';
 
 registerLocaleData(en);
@@ -89,10 +91,12 @@ registerLocaleData(en);
     NzImageModule,
     NzGridModule,
     NzDividerModule,
+    NzLayoutModule,
+    NzBadgeModule,
+    NzSelectModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },
-    BookService,
   ],
   exports: [ReactiveFormsModule],
   bootstrap: [AppComponent]

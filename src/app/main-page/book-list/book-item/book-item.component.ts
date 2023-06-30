@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
-import { Subscription, map } from 'rxjs';
+import { ActivatedRoute, Params } from '@angular/router';
 import { BookService } from 'src/app/services/book.services';
-import { TopBook } from 'src/app/model/books.model';
+import { Book } from 'src/app/model/books.model';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-book-item',
@@ -22,6 +22,7 @@ import { TopBook } from 'src/app/model/books.model';
         <p>
           By <span class="book-title_author">{{book.author}}</span>
         </p>
+        <div>Price: <span class="book-title-price">{{'$' + book.price}}</span></div>
       </div>
       <hr>
       <form class="book-add-to-cart">
@@ -30,11 +31,11 @@ import { TopBook } from 'src/app/model/books.model';
           <nz-input-number class="hide-arrows me-2" name="quantity" [(ngModel)]="bookQuantity" [nzMin]="1" [nzMax]="100" [nzStep]="1" ></nz-input-number>
           <button class="update-quantity" (click)="increaseQuantity()" nz-button nzType="primary" nzShape="circle"><span nz-icon nzType="plus" nzTheme="outline"></span></button>
         </div>
-        <button class="mt-2 add-to-cart" type="button" nz-button nzType="default">Add To Cart</button>
+        <button class="mt-2 add-to-cart" type="button" nz-button nzType="default" (click)="onAddItem()">Add To Cart</button>
       </form>
       <nz-divider nzText="Descriptions" nzOrientation="left"></nz-divider>
       <div class="book-description">
-        {{ book.descriptions | lineBreak }}
+        {{ book.descriptions }}
       </div>
     </div>
     <hr>
@@ -45,18 +46,19 @@ import { TopBook } from 'src/app/model/books.model';
 })
 export class BookItemComponent implements OnInit {
   bookQuantity: number = 1;
-  book: TopBook = {
+  book: Book = {
     book_id: 0,
     cover: '',
     name: '',
     rating: 0,
     descriptions: '',
     author: '',
+    price: 0
   };
   bookId?: number;
   constructor(private bookService: BookService,
-    private router: Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private cartService: CartService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((param: Params) => {
@@ -75,5 +77,10 @@ export class BookItemComponent implements OnInit {
     } else {
       this.bookQuantity -= 1;
     }
+  }
+
+  onAddItem(){
+    const book_id = this.book.book_id.toString();
+    this.cartService.onAddItem(book_id, this.bookQuantity)
   }
 }

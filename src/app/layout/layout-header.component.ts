@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from "@angular/core";
 import { UserService } from "../services/user.service";
 import { FilterDataService } from "../services/filter.services";
+import { CartService } from "../services/cart.service";
 
 @Component({
   selector: 'app-layout-header',
@@ -24,11 +25,13 @@ import { FilterDataService } from "../services/filter.services";
       <nz-page-header-extra>
         <ul nz-menu nzMode="horizontal" class="header-menu">
             <li nz-menu-item>
-              <a rel="noopener noreferrer">View Cart</a>
+              <nz-badge style="line-height: 1.6;" [nzCount]="bookCount">
+                <a style="text-decoration: none;" class="menu-nav-cart" routerLink="cart" rel="noopener noreferrer">View Cart</a>
+              </nz-badge>
             </li>
 
             <li *ngIf="isAuth == false" class="authenticate">
-              <a class="authen-account"  routerLink="login" rel="noopener noreferrer">Sign in</a>
+              <a class="authen-account" routerLink="login" rel="noopener noreferrer">Sign in</a>
               /
               <a class="authen-account" routerLink="register" rel="noopener noreferrer">Sign up</a>
             </li>
@@ -51,36 +54,52 @@ import { FilterDataService } from "../services/filter.services";
     '.authenticate a {color: black;}',
     '.authenticate a:hover {color: #1890ff;}',
     '.header-menu-child {display: flex; flex-direction: row}',
-    '.authen-account{ text-decoration: none }',
+    '.authen-account { text-decoration: none }',
+    '.menu-nav-cart { padding-right: 8px }',
   ],
 })
 
 export class LayoutHeader implements OnInit, OnDestroy {
 
-  @ViewChild("searchVal", {static: false}) searchVal!: ElementRef<HTMLInputElement>;
+  @ViewChild("searchVal", { static: false }) searchVal!: ElementRef<HTMLInputElement>;
   constructor(private userService: UserService,
-    private filterService: FilterDataService) { }
+    private filterService: FilterDataService,
+    private cartService: CartService) { }
   isAuth: boolean = false;
+  bookCount = 0;
   ngOnInit(): void {
     this.userService.isAuthenticated.subscribe((isAuthen: boolean) => {
       if (isAuthen) {
         this.isAuth = true;
-      } else{
+      } else {
         this.isAuth = false;
       }
     })
+    this.cartService.itemQuantity.subscribe((quantity: number) => {
+      this.bookCount = quantity;
+    })
   }
 
-  onChangeSearch(event: HTMLInputElement){
+  onChangeSearch(event: HTMLInputElement) {
     const str = event.value;
     this.filterService.searchOnChange(str);
   }
-  onClearSearch(){
+  onClearSearch() {
     this.searchVal.nativeElement.value = '';
     this.filterService.searchOnChange('');
   }
 
   ngOnDestroy(): void {
     this.userService.isAuthenticated.unsubscribe();
+  }
+  addCount(): void {
+    this.bookCount++;
+  }
+
+  minCount(): void {
+    this.bookCount--;
+    if (this.bookCount < 0) {
+      this.bookCount = 0;
+    }
   }
 }

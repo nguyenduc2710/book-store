@@ -14,6 +14,11 @@
       color: #326d7f;
 
     }
+    .book-title-price{
+      font-weight: 500;
+      font-size: 15px;
+      text-decoration: underline;
+    }
   }
 
   .book-add-to-cart {
@@ -39,3 +44,5 @@
     visibility: hidden;
   }
 }
+
+

@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BookService } from 'src/app/services/book.services';
-import { TopBook } from 'src/app/model/books.model';
+import { Book } from 'src/app/model/books.model';
 import { FilterDataService } from 'src/app/services/filter.services';
 import { distinctUntilChanged, distinctUntilKeyChanged } from 'rxjs';
 
@@ -12,8 +12,8 @@ import { distinctUntilChanged, distinctUntilKeyChanged } from 'rxjs';
 })
 export class BookListComponent implements OnInit {
   bookClicked = false;
-  allBookOriginnal: TopBook[] = [];
-  allBookFilter: TopBook[] = [];
+  allBookOriginnal: Book[] = [];
+  allBookFilter: Book[] = [];
   constructor(private bookService: BookService,
     private router: Router,
     private filterService: FilterDataService) {}
@@ -21,10 +21,8 @@ export class BookListComponent implements OnInit {
   ngOnInit(): void {
     this.allBookOriginnal = this.bookService.getAll();
     this.allBookFilter = this.allBookOriginnal;
-    console.log(this.allBookFilter);
 
     this.filterService.filterString.pipe(distinctUntilChanged()).subscribe((filterStr:string) =>{
-
       this.filterList(filterStr);
     })
   }

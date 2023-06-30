@@ -1,13 +1,39 @@
 import { Injectable } from "@angular/core";
-import { User } from "../model/user.model";
-import { BehaviorSubject, Subject } from "rxjs";
+import { UserModel } from "../model/user.model";
+import { User } from "../model/user.class";
+import { BehaviorSubject, map } from "rxjs";
+import { AngularFireDatabase, AngularFireList } from "@angular/fire/compat/database";
+import { getDatabase, ref, set } from "firebase/database"
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
   readonly isAuthenticated = new BehaviorSubject<boolean>(false);
   readonly currentUser = new BehaviorSubject<User | null>(null);
-
   readonly currentUser$ = this.currentUser.asObservable();
+  readonly dbUsers = '/users';
+  userRef: AngularFireList<UserModel>;
+  user: any[] = [];
+
+  constructor(private db: AngularFireDatabase) {
+    this.userRef = this.db.list(this.dbUsers)
+    this.userRef.snapshotChanges()
+      .pipe(
+        map(changes =>
+          changes.map(c => ({ id: c.key, value: c.payload.val() }))
+        )
+      ).subscribe(result => {
+        const format: any = {}
+        result.map(item => {
+          const key: any = item.id;
+          const value = item.value;
+          format[key] = value
+        });
+        this.user.push(format);
+      })
+  }
+  getUserAcc() {
+    return this.user;
+  }
 
   private userAccount: User[] = [
     new User(
@@ -53,18 +79,16 @@ export class UserService {
   ]
 
   authenUser(username: string, password: string) {
-
-    for (let index = 0; index < this.userAccount.length; index++) {
-      const user = this.userAccount[index];
-      if (user.username === username && user.password === password) {
+    let isValid = false
+    Object.values(this.user[0]).forEach((userInfo: any) => {
+      if (userInfo.username == username && userInfo.password == password) {
         this.isAuthenticated.next(true);
-        this.currentUser.next(this.getUserInfo(username));
-        console.log(this.getUserInfo(username));
-        return true;
+        this.currentUser.next(userInfo);
+        isValid = true;
       }
-    }
+    })
 
-    return false
+    return isValid;
   }
 
   getUserInfo(username: string) {
@@ -79,10 +103,47 @@ export class UserService {
     gender: string,
     age: number,
     phoneNumber: number) {
-    this.userAccount.push(new User(username, password, fullName, address, gender, age, phoneNumber, ''));
+    const db = getDatabase();
+    set(ref(db, 'users/' + 'u_' + Object.values(this.user[0]).length), {
+      username: username,
+      password: password,
+      fullName: fullName,
+      address: address,
+      gender: gender,
+      age: age,
+      phoneNumber: phoneNumber,
+    })
   }
 
   logout() {
     this.isAuthenticated.next(false);
   }
+
+  setData() {
+
+  }
 }
+
+
+
+
+
+
+
+
+
+//Authen local
+//  authenUser(username: string, password: string) {
+    // for (let index = 0; index < this.userAccount.length; index++) {
+    //   const user = this.userAccount[index];
+    //   if (user.username === username && user.password === password) {
+    //     this.isAuthenticated.next(true);
+    //     this.currentUser.next(this.getUserInfo(username));
+    //     console.log(this.getUserInfo(username));
+    //     return true;
+    //   }
+    // }
+    // return false
+    //
+    // this.userAccount.push(new User(username, password, fullName, address, gender, age, phoneNumber, ''));
+    //}
