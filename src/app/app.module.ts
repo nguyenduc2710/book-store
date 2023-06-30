@@ -40,6 +40,8 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzListModule } from 'ng-zorro-antd/list';
+import { NzCollapseModule } from 'ng-zorro-antd/collapse';
 
 //FireBase
 import { AngularFireModule } from '@angular/fire/compat';
@@ -74,6 +76,8 @@ registerLocaleData(en);
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
     NzButtonModule,
     NzSliderModule,
     NzCarouselModule,
@@ -81,8 +85,6 @@ registerLocaleData(en);
     NzMenuModule,
     NzInputModule,
     NzIconModule,
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule,
     NzRateModule,
     NzCardModule,
     NzDescriptionsModule,
@@ -94,6 +96,8 @@ registerLocaleData(en);
     NzLayoutModule,
     NzBadgeModule,
     NzSelectModule,
+    NzListModule,
+    NzCollapseModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },

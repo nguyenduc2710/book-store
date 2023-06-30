@@ -1,3 +1,65 @@
-<div class="product-item-container">
-
+<div class="product-item row">
+  <div class="item-left col-9">
+    <div class="item-image-block">
+      <img class="img-fluid item-image" src="https://m.media-amazon.com/images/I/41TrPxT4jJL.jpg" alt="The halo">
+    </div>
+    <div class="item-description">
+      <div class="description_title">
+        The Halo Effect
+      </div>
+      <div class="description_detail">
+        <nz-collapse nzGhost>
+          <nz-collapse-panel nzHeader="Details & Core" [nzActive]="false">
+            <p style="margin:0; color: rgba(0, 0, 0, 0.75);">
+              With two new chapters and a new preface, the award-winning book The Halo Effect continues to unmask
+              the
+              delusions found in the corporate world and provides a sharp understanding of what drives business
+              success
+              and failure. Too many of today's most prominent management gurus make steel-clad guarantees based on
+              claims
+              of irrefutable research, promising to reveal the secrets of why one company fails and another
+              succeeds,
+              and
+              how you can become the latter. Combining equal measures of solemn-faced hype and a wide range of
+              popular
+              business delusions, statistical and otherwise, these self-styled experts cloud our ability to think
+              critically about the nature of success. Central among these delusions is the Halo Effect—the tendency
+              to
+              focus on the high financial performance of a successful company and then spread its golden glow to all
+              its
+              attributes—clear strategy, strong values, brilliant leadership, and outstanding execution. But should
+              the
+              same company's sales head south, the very same attributes are universally derided—suddenly the
+              strategy
+              was
+              wrong, the culture was complacent, and the leader became arrogant. The Halo Effect not only identifies
+              these
+              delusions that keep us from understanding business performance, but also suggests a more accurate way
+              to
+              think about leading a company. This approach—focusing on strategic choice and execution, while
+              recognizing
+              the inherent riskiness of both—clarifies the priorities that managers face. Brilliant and
+              unconventional,
+              irreverent and witty, The Halo Effect is essential reading for anyone wanting to separate fact from
+              fiction
+              in the world of business.
+            </p>
+          </nz-collapse-panel>
+        </nz-collapse>
+      </div>
+    </div>
+  </div>
+  <div class="item-right col-3">
+    <div class="item-quantity">
+      <!-- <label>Quantity</label> -->
+      <nz-input-number [nzMin]="1" [nzMax]="100" [nzStep]="1"></nz-input-number>
+    </div>
+    <div class="item-total">
+      $231
+    </div>
+    <div class="item-action-remove">
+      <span style="font-size: 17px;" nz-icon nzType="delete" nzTheme="twotone" nzTwotoneColor="#EA7673"></span>
+    </div>
+  </div>
 </div>
+<hr class="divider">
