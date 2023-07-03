@@ -49,7 +49,7 @@ export class RegisterAccountComponent implements OnInit {
       'password': new FormControl('', Validators.required),
       'repeatPassword': new FormControl('', Validators.required),
       'fullName': new FormControl('', Validators.required),
-      'phoneNumber': new FormControl(0, Validators.required),
+      'phoneNumber': new FormControl(null ,[Validators.required, Validators.pattern('[0-9]{9}')]),
       'age': new FormControl(0, Validators.required),
       'gender': new FormControl('male', Validators.required),
       'address': new FormControl('', Validators.required),

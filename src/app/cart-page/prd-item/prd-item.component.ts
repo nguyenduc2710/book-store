@@ -7,6 +7,20 @@ import { Book } from 'src/app/model/books.model';
   styleUrls: ['./prd-item.component.css']
 })
 export class PrdItemComponent {
-  // @Input() bookItem: Book;
-  // @Input() quantity: number;
+  @Input() quantity: number;
+
+  @Input() bookItem: Book;
+  constructor() {
+    this.bookItem = {
+      book_id: 0,
+      cover: '',
+      name: '',
+      rating: 0,
+      descriptions: '',
+      author: '',
+      price: 0
+    };
+
+    this.quantity = 0;
+  }
 }

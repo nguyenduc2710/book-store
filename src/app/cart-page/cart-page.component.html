@@ -1,14 +1,18 @@
 <div class="cart-container">
   <div class="cart-header">
-    Review your bag (current ... product)
+    <div [ngSwitch]="totalBook">
+      <div [ngSwitch]="totalBook > 1">
+        <div *ngSwitchCase="true"> Review your bag (current {{ totalBook }} products)</div>
+      </div>
+      <div *ngSwitchCase="1"> Review your bag (current {{ totalBook }} products)</div>
+      <div *ngSwitchCase="0">You have not add any products!</div>
+    </div>
     <hr>
   </div>
   <div class="cart-body">
     <nz-list>
-        <app-prd-item
-        *ngFor="let item of bookList"
-
-        ></app-prd-item>
+      <app-prd-item *ngFor="let item of bookList" [bookItem]="item"
+        [quantity]="getQuantity(item.book_id.toString())"></app-prd-item>
     </nz-list>
   </div>
   <div class="cart-footer">

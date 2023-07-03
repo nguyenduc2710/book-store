@@ -10,11 +10,9 @@ import { UserInfoComponent } from './account-page/user-info/user-info.component'
 
 const routes: Routes = [
   { path: '', redirectTo: 'book', pathMatch: 'full' },
-  { path: 'cart', component: CartPageComponent },
-  {
-    path: 'book', component: BookListComponent,
-  },
+  { path: 'book', component: BookListComponent },
   { path: 'book/:id', component: BookItemComponent },
+  { path: 'cart', component: CartPageComponent },
   { path: 'register', component: RegisterAccountComponent },
   { path: 'login', component: LoginAccountComponent },
   { path: 'user', component: UserInfoComponent },

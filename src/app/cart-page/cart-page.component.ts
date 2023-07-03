@@ -8,7 +8,7 @@ import { Cart } from '../model/cart.model';
   templateUrl: './cart-page.component.html',
   styleUrls: ['./cart-page.component.css']
 })
-export class CartPageComponent implements OnInit, OnDestroy {
+export class CartPageComponent implements OnInit {
   totalBook: number = 0
   bookList: Book[] = [];
   shortList: Cart[] = [];
@@ -17,18 +17,28 @@ export class CartPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.bookList = this.cartService.onGetList();
+    this.shortList = this.cartService.onGetShortList();
     this.cartService.itemQuantity.subscribe(quanChange => {
       this.totalBook = quanChange;
-      this.bookList = this.cartService.onGetList();
-      this.shortList = this.cartService.onGetShortList();
+      // this.bookList = this.cartService.onGetList();
+      // this.shortList = this.cartService.onGetShortList();
     })
   }
 
-  getQuantity(book_id: string){
-
+  getQuantity(book_id: string): number {
+    let quantity = 0;
+    console.log(this.bookList);
+    for (let i = 0; i < this.shortList.length; i++) {
+      const id = this.shortList[i].book_id;
+      const quan = this.shortList[i].quantity;
+      if (id === book_id) {
+        quantity = quan;
+      }
+    }
+    return quantity;
   }
 
-  ngOnDestroy(): void {
-    this.cartService.itemQuantity.unsubscribe();
-  }
+  // ngOnDestroy(): void {
+  //   this.cartService.itemQuantity.unsubscribe();
+  // }
 }

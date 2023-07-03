@@ -6,5 +6,5 @@ export interface Book{
   descriptions: string,
   author: string,
   price: number
-
+  quantity?: number,
 }

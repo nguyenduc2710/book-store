@@ -28,4 +28,11 @@ export class CartService{
     }
     this.itemQuantity.next(this.itemQuantity.value + quantity);
   }
+
+  onGetList(){
+    return this.itemList;
+  }
+  onGetShortList(){
+    return this.list;
+  }
 }

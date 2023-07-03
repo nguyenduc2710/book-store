@@ -22,21 +22,23 @@
       <label>Full Name</label>
     </div>
 
+    <div class="mb-3">
+      <nz-radio-group name="gender" formControlName="gender">
+        <label nz-radio nzValue="male">Male</label>
+        <label nz-radio nzValue="female">Female</label>
+      </nz-radio-group>
+    </div>
+
     <div class="form-floating mb-3">
-      <input type="number" class="form-control" name="phoneNumber" formControlName="phoneNumber" placeholder="Phone Number">
+      <input type="number" class="form-control"
+            name="phoneNumber" formControlName="phoneNumber"
+            placeholder="Phone Number">
       <label>Phone Number</label>
     </div>
 
     <div class="form-floating mb-3">
       <input type="text" class="form-control" name="address" formControlName="address" placeholder="Address">
       <label>Address</label>
-    </div>
-
-    <div class="mb-3">
-      <nz-radio-group name="gender" formControlName="gender">
-        <label nz-radio nzValue="male">Male</label>
-        <label nz-radio nzValue="female">Female</label>
-      </nz-radio-group>
     </div>
 
     <div class="mb-3">
