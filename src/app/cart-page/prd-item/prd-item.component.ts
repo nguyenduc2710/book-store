@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Book } from 'src/app/model/books.model';
 
 @Component({
   selector: 'app-prd-item',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./prd-item.component.css']
 })
 export class PrdItemComponent {
-
+  // @Input() bookItem: Book;
+  // @Input() quantity: number;
 }

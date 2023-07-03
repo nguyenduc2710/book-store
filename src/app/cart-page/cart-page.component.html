@@ -5,7 +5,10 @@
   </div>
   <div class="cart-body">
     <nz-list>
-        <app-prd-item></app-prd-item>
+        <app-prd-item
+        *ngFor="let item of bookList"
+
+        ></app-prd-item>
     </nz-list>
   </div>
   <div class="cart-footer">
