@@ -42,6 +42,7 @@
     </div>
 
     <div class="mb-3">
+      <label class="arlert-msg" *ngIf="!registerForm.get('age')?.valid && registerForm.get('age')?.touched">Age is required!</label>
       <nz-input-number-group nzAddOnBefore="Age" style="width: 100%;">
         <nz-input-number name="age" formControlName="age" [nzMin]="1" [nzMax]="115" [nzStep]="1"></nz-input-number>
       </nz-input-number-group>

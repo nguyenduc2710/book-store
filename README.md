@@ -1,3 +1,7 @@
+# MESSAGE
+--- Practicing Angular Project
+-----Simple AngularTS web app selling books, using firebase, antd, bootstraps
+
 # NgBooksStore
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.

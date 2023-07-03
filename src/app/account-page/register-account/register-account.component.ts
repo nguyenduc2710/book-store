@@ -45,14 +45,14 @@ export class RegisterAccountComponent implements OnInit {
 
   private initForm() {
     this.registerForm = new FormGroup({
-      'username': new FormControl('', Validators.required),
-      'password': new FormControl('', Validators.required),
-      'repeatPassword': new FormControl('', Validators.required),
-      'fullName': new FormControl('', Validators.required),
+      'username': new FormControl(null, Validators.required),
+      'password': new FormControl(null, Validators.required),
+      'repeatPassword': new FormControl(null, Validators.required),
+      'fullName': new FormControl(null, Validators.required),
       'phoneNumber': new FormControl(null ,[Validators.required, Validators.pattern('[0-9]{9}')]),
-      'age': new FormControl(0, Validators.required),
+      'age': new FormControl(null, Validators.required),
       'gender': new FormControl('male', Validators.required),
-      'address': new FormControl('', Validators.required),
+      'address': new FormControl(null, Validators.required),
     })
   }
 

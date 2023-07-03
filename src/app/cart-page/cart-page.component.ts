@@ -27,7 +27,6 @@ export class CartPageComponent implements OnInit {
 
   getQuantity(book_id: string): number {
     let quantity = 0;
-    console.log(this.bookList);
     for (let i = 0; i < this.shortList.length; i++) {
       const id = this.shortList[i].book_id;
       const quan = this.shortList[i].quantity;
