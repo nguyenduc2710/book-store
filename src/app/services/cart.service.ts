@@ -44,13 +44,13 @@ export class CartService {
   }
 
   onUpdateQuantity(book_id: string, quantity: number){
-    console.log("Updating in cart service");
-    this.list.forEach(item => {
-      if(item.book_id === book_id){
-        this.itemQuantity$.next(this.itemQuantity$.value - item.quantity + quantity);
-        item.quantity = quantity;
+    for(let i = 0; i < this.list.length; i++){
+      const currentBook = this.list[i];
+      if(currentBook.book_id == book_id){
+        this.itemQuantity$.next(this.itemQuantity$.value - currentBook.quantity + quantity);
+        this.list[i].quantity = quantity;
       }
-    })
+    }
     this.calculatePrice();
   }
 

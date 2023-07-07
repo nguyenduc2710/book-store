@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { AfterContentChecked, AfterViewChecked, Component, Input } from '@angular/core';
 import { Book } from 'src/app/model/books.model';
 import { CartService } from 'src/app/services/cart.service';
 
@@ -25,14 +25,11 @@ export class PrdItemComponent {
     this.quantity = 0;
   }
 
-  onUpdateQuantity(event: HTMLInputElement){
-    // this.quantity = Number(event.value);
-
-    console.log("On the function update component");
-    this.cartService.onUpdateQuantity(this.bookItem.book_id, this.quantity);
+  onUpdateQuantity(quantity: number) {
+    this.cartService.onUpdateQuantity(this.bookItem.book_id, quantity);
   }
 
-  onDelete(){
+  onDelete() {
     console.log("Delete");
     this.cartService.onDeleteItem(this.bookItem.book_id);
   }
