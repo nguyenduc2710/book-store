@@ -28,6 +28,16 @@
       }
     }
 
+    .footer-checkout{
+      display: flex;
+      justify-content: flex-end;
+
+      .btn-checkout{
+        width: 100%;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+      }
+    }
   }
 
 

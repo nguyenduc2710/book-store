@@ -12,9 +12,12 @@ export class CartPageComponent implements OnInit, OnDestroy {
   totalBook: number = 0;
   bookList: Book[] = [];
   shortList: Cart[] = [];
-  totalPrice: number = 0;
-  totalPriceAfterVAT: number = 0;
-  readonly itemQuantity$ = this.cartService.itemQuantity;
+  totalPrice: number = 0
+  totalPriceAfterVAT: number = 0
+  readonly totalPrice$ = this.cartService.totalPrice$;
+  readonly totalPriceAfterVAT$ = this.cartService.totalPriceAfterVAT$;
+  readonly itemQuantity$ = this.cartService.itemQuantity$;
+  //Observable destroyed$ only be declared 1 time for each component, unsubcribed using next() & complete()
   readonly destroyed$ = new Subject<void>()
 
   constructor(private cartService: CartService) { }
@@ -22,14 +25,16 @@ export class CartPageComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.bookList = this.cartService.onGetList();
     this.shortList = this.cartService.onGetShortList();
-    this.itemQuantity$.pipe(takeUntil(this.destroyed$)).subscribe(quanChange => {
-      this.totalBook = quanChange;
-      // this.bookList = this.cartService.onGetList();
-      // this.shortList = this.cartService.onGetShortList();
-    })
-    if(this.shortList){
-      this.calculatePrice();
-    }
+
+    this.itemQuantity$
+      .pipe(takeUntil(this.destroyed$))
+      .subscribe(quanChange => this.totalBook = quanChange);
+    this.totalPrice$
+      .pipe(takeUntil(this.destroyed$))
+      .subscribe(totalPrice => this.totalPrice = totalPrice);
+    this.totalPriceAfterVAT$
+      .pipe(takeUntil(this.destroyed$))
+      .subscribe(totalPriceVAT => this.totalPriceAfterVAT = totalPriceVAT);
   }
 
   getQuantity(book_id: string): number {
@@ -42,16 +47,6 @@ export class CartPageComponent implements OnInit, OnDestroy {
       }
     }
     return quantity;
-  }
-
-  calculatePrice(){
-    this.shortList.forEach(item => {
-      const currentBook = this.bookList.find(book => book.book_id == item.book_id);
-      if(currentBook){
-        this.totalPrice += currentBook.price * item.quantity;
-      }
-    })
-    this.totalPriceAfterVAT = (this.totalPrice * 0.04) + this.totalPrice;
   }
 
   ngOnDestroy(): void {

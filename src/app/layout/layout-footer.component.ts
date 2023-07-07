@@ -5,7 +5,6 @@ import { Component, ContentChild, TemplateRef, ViewChild } from "@angular/core";
   template: `
     <footer class="footer">
       @ 2023 BOKET.COM
-      <div id="shadow">l,;l,</div>
     </footer>
   `,
   styles: ['.footer {width: 100%; text-align: center;}'],

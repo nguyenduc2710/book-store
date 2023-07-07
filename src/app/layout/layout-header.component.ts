@@ -77,7 +77,7 @@ export class LayoutHeader implements OnInit, OnDestroy {
         this.isAuth = false;
       }
     })
-    this.cartService.itemQuantity.subscribe((quantity: number) => {
+    this.cartService.itemQuantity$.subscribe((quantity: number) => {
       this.bookCount = quantity;
     })
   }

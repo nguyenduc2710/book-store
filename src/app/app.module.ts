@@ -42,6 +42,7 @@ import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzCollapseModule } from 'ng-zorro-antd/collapse';
+import { NzMessageModule } from 'ng-zorro-antd/message';
 
 //FireBase
 import { AngularFireModule } from '@angular/fire/compat';
@@ -99,7 +100,9 @@ registerLocaleData(en);
     NzBadgeModule,
     NzSelectModule,
     NzListModule,
-    NzCollapseModule
+    NzCollapseModule,
+    NzMessageModule,
+
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },

@@ -20,13 +20,13 @@
   </div>
   <div class="item-right col-3">
     <div class="item-quantity">
-      <nz-input-number [(ngModel)]="quantity" [nzMin]="1" [nzMax]="100" [nzStep]="1"></nz-input-number>
+      <nz-input-number (ngModelChange)="onUpdateQuantity($event)" [(ngModel)]="quantity" [nzMin]="1" [nzMax]="100" [nzStep]="1"></nz-input-number>
     </div>
     <div class="item-total">
       {{ bookItem.price * quantity | currency: 'USD'}}
     </div>
     <div class="item-action-remove">
-      <span style="font-size: 17px;" nz-icon nzType="delete" nzTheme="twotone" nzTwotoneColor="#EA7673"></span>
+      <span style="font-size: 17px; cursor: pointer;" (click)="onDelete()" nz-icon nzType="delete" nzTheme="twotone" nzTwotoneColor="#EA7673"></span>
     </div>
   </div>
 </div>
