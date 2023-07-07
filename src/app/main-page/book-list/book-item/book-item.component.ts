@@ -47,7 +47,7 @@ import { CartService } from 'src/app/services/cart.service';
 export class BookItemComponent implements OnInit {
   bookQuantity: number = 1;
   book: Book = {
-    book_id: 0,
+    book_id: '',
     cover: '',
     name: '',
     rating: 0,

@@ -15,12 +15,33 @@
         [quantity]="getQuantity(item.book_id.toString())"></app-prd-item>
     </nz-list>
   </div>
-  <div class="cart-footer">
-    <div class="footer-subtotal">
+  <ng-container *ngIf="totalBook > 0; then cartFooter"></ng-container>
 
+  <ng-template #cartFooter>
+    <div class="cart-footer">
+      <div class="footer-subtotal">
+        <div class="footer-item">
+          <div class="item_title">SUBTOTAL:</div>
+          <div>{{totalPrice | currency}}</div>
+        </div>
+        <div class="footer-item">
+          <div class="item_title">VAT:</div>
+          <div>4%</div>
+        </div>
+        <div class="footer-item">
+          <div class="item_title">SHIPPING:</div>
+          <div>FREE</div>
+        </div>
+        <hr>
+      </div>
+      <div class="footer-total">
+        <div class="total_title">
+          TOTAL:
+        </div>
+        <div class="total_price">
+          {{totalPriceAfterVAT | currency}}
+        </div>
+      </div>
     </div>
-    <div class="footer-total">
-
-    </div>
-  </div>
+  </ng-template>
 </div>

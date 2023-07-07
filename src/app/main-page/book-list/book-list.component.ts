@@ -16,13 +16,18 @@ export class BookListComponent implements OnInit {
   allBookFilter: Book[] = [];
   constructor(private bookService: BookService,
     private router: Router,
-    private filterService: FilterDataService) {}
+    private filterService: FilterDataService) { }
 
   ngOnInit(): void {
-    this.allBookOriginnal = this.bookService.getAll();
-    this.allBookFilter = this.allBookOriginnal;
+    // this.allBookOriginnal = this.bookService.getAll();
+    this.bookService.callApi();
+    this.bookService.book$.subscribe(book => {
+      this.allBookOriginnal = book;
+      this.allBookFilter = this.allBookOriginnal;
 
-    this.filterService.filterString.pipe(distinctUntilChanged()).subscribe((filterStr:string) =>{
+    })
+
+    this.filterService.filterString.pipe(distinctUntilChanged()).subscribe((filterStr: string) => {
       this.filterList(filterStr);
     })
   }
@@ -31,22 +36,21 @@ export class BookListComponent implements OnInit {
     this.bookClicked = !this.bookClicked;
   }
 
-  filterList(searchName: string){
-    if(!searchName)
-    {
+  filterList(searchName: string) {
+    if (!searchName) {
       this.allBookFilter = this.allBookOriginnal;
     }
-    else{
+    else {
       this.allBookFilter = this.allBookOriginnal.filter(x => x.name.toLowerCase().includes(searchName.toLowerCase()));
     }
   }
 
-  navigateToDetail(book_id: number){
+  navigateToDetail(book_id: string) {
     const index = this.allBookOriginnal.findIndex(x => x.book_id === book_id);
     this.router.navigate([`book/${index}`]);
   }
 
-  onTest(){
+  onTest() {
     this.bookService.onAddTest();
   }
 }

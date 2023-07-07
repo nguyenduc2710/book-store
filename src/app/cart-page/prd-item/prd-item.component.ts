@@ -12,7 +12,7 @@ export class PrdItemComponent {
   @Input() bookItem: Book;
   constructor() {
     this.bookItem = {
-      book_id: 0,
+      book_id: '',
       cover: '',
       name: '',
       rating: 0,

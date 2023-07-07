@@ -6,7 +6,8 @@ import { CartService } from "../services/cart.service";
 @Component({
   selector: 'app-layout-header',
   template: `
-    <nz-page-header nzTitle="BOKET" class="border-bt">
+    <nz-page-header class="border-bt">
+    <nz-page-header-title class="header-title" routerLink="/book">BOKET</nz-page-header-title>
       <nz-page-header-subtitle>
         <ul nz-menu nzMode="horizontal" class="header-menu">
             <li (click)="onClearSearch()" routerLink="book" nz-menu-item nzSelected>
@@ -56,6 +57,7 @@ import { CartService } from "../services/cart.service";
     '.header-menu-child {display: flex; flex-direction: row}',
     '.authen-account { text-decoration: none }',
     '.menu-nav-cart { padding-right: 8px }',
+    '.header-title { cursor: pointer }',
   ],
 })
 

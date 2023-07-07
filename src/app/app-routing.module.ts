@@ -7,6 +7,7 @@ import { LoginAccountComponent } from './account-page/login-account/login-accoun
 import { RegisterAccountComponent } from './account-page/register-account/register-account.component';
 import { UserInfoComponent } from './account-page/user-info/user-info.component';
 import { NotFoundComponent } from './not-found.component';
+import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'book', pathMatch: 'full' },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterAccountComponent },
   { path: 'login', component: LoginAccountComponent },
   { path: 'user', component: UserInfoComponent },
+  { path: 'checkout', component: CheckoutPageComponent},
 
   { path: '**', component: NotFoundComponent }
 ];
