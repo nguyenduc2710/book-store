@@ -20,12 +20,12 @@ export class LoginAccountComponent {
 
   onSubmit() {
     this.isValid = this.userService.authenUser(this.username, this.password);
-    this.router.navigate(['/book']);
     if (this.isValid) {
-      console.log("Login succeed");
+      this.userService.sendUserMessage("success", "Login succeed");
     } else {
-      console.log("Login failed");
+      this.userService.sendUserMessage("error", "Login failed");
     }
+    this.router.navigate(['/book']);
   }
   ontest() {
     Object.values(this.userAcc[0]).forEach((user: any) => {

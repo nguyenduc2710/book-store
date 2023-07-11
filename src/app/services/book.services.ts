@@ -2,6 +2,7 @@ import { Injectable, OnInit } from "@angular/core";
 import { Book } from "../model/books.model";
 import { AngularFireDatabase, AngularFireList } from "@angular/fire/compat/database";
 import { BehaviorSubject, Subject, map } from "rxjs";
+import { Message } from "../model/message.model";
 
 @Injectable({ providedIn: 'root' })
 export class BookService{
@@ -10,6 +11,7 @@ export class BookService{
   private books: any[] = [];
   bookRef: AngularFireList<Book>;
   book$ = new BehaviorSubject<Book[]>([]);
+  bookMessage$ = new BehaviorSubject<Message>({type: '', message: ''});
 
   constructor(private db: AngularFireDatabase) {
     this.bookRef = this.db.list(this.dbBookPath);
@@ -46,8 +48,8 @@ export class BookService{
     return this.books;
   }
 
-  getBook(index: number) {
-    return this.books[index];
+  sendBookMessage(type: string, info: string){
+    this.bookMessage$.next({type: type, message: info});
   }
 
   getBookById(book_id: string): Book {

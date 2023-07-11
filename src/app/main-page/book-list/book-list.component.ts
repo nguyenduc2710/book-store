@@ -46,8 +46,7 @@ export class BookListComponent implements OnInit {
   }
 
   navigateToDetail(book_id: string) {
-    const index = this.allBookOriginnal.findIndex(x => x.book_id === book_id);
-    this.router.navigate([`book/${index}`]);
+    this.router.navigate([`book/${book_id}`]);
   }
 
   onTest() {

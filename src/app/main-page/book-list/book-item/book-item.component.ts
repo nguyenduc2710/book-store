@@ -28,7 +28,7 @@ import { CartService } from 'src/app/services/cart.service';
       <form class="book-add-to-cart">
         <div class="book-operation">
           <button class="update-quantity me-2" (click)="decreaseQuantity()" nz-button nzType="primary"  nzShape="circle"><span nz-icon nzType="minus" nzTheme="outline"></span></button>
-          <nz-input-number class="hide-arrows me-2" name="quantity" [(ngModel)]="bookQuantity" [nzMin]="1" [nzMax]="100" [nzStep]="1" ></nz-input-number>
+          <nz-input-number class="hide-arrows me-2" name="quantity" [(ngModel)]="bookQuantity" [nzMin]="1" [nzMax]="1000" [nzStep]="1" ></nz-input-number>
           <button class="update-quantity" (click)="increaseQuantity()" nz-button nzType="primary" nzShape="circle"><span nz-icon nzType="plus" nzTheme="outline"></span></button>
         </div>
         <button class="mt-2 add-to-cart" type="button" nz-button nzType="default" (click)="onAddItem()">Add To Cart</button>
@@ -55,15 +55,15 @@ export class BookItemComponent implements OnInit {
     author: '',
     price: 0
   };
-  bookId?: number;
+  bookId: string = '';
   constructor(private bookService: BookService,
     private route: ActivatedRoute,
     private cartService: CartService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((param: Params) => {
-      this.bookId = +param['id'];
-      this.book = this.bookService.getBook(this.bookId);
+      this.bookId = param['id'];
+      this.book = this.bookService.getBookById(this.bookId);
     })
   }
 
@@ -81,6 +81,10 @@ export class BookItemComponent implements OnInit {
 
   onAddItem(){
     const book_id = this.book.book_id.toString();
-    this.cartService.onAddItem(book_id, this.bookQuantity)
+    if(this.book.quantity && this.bookQuantity > this.book.quantity){
+      this.bookService.sendBookMessage("warning", "Selected quantity exceeds available storage!");
+    } else{
+      this.cartService.onAddItem(book_id, this.bookQuantity);
+    }
   }
 }
