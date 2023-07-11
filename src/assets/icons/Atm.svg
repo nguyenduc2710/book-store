@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="24" viewBox="0 0 40 24">
+  <g id="ico_atm" transform="translate(-4053 -20577)">
+    <g id="Rectangle_610" data-name="Rectangle 610" transform="translate(4053 20577)" fill="#fff" stroke="#212121" stroke-width="1">
+      <rect width="40" height="24" rx="2" stroke="none"/>
+      <rect x="0.5" y="0.5" width="39" height="23" rx="1.5" fill="none"/>
+    </g>
+    <rect id="Rectangle_611" data-name="Rectangle 611" width="40" height="6" transform="translate(4053 20581)" fill="#212121"/>
+    <text id="ATM" transform="translate(4063 20596.674)" fill="#212121" font-size="9" font-family="OpenSans-ExtraBold, Open Sans" font-weight="800" letter-spacing="0.025em"><tspan x="0" y="0">ATM</tspan></text>
+  </g>
+</svg>

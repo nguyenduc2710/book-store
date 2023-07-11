@@ -52,6 +52,7 @@ import { RegisterAccountComponent } from './account-page/register-account/regist
 import { LoginAccountComponent } from './account-page/login-account/login-account.component';
 import { UserInfoComponent } from './account-page/user-info/user-info.component';
 import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
+import { ReviewItemComponent } from './checkout-page/review-item/review-item.component';
 
 registerLocaleData(en);
 
@@ -71,6 +72,7 @@ registerLocaleData(en);
     LineBreak,
     FilterBook,
     CheckoutPageComponent,
+    ReviewItemComponent,
   ],
   imports: [
     BrowserModule,

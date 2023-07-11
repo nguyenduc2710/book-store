@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-checkout-page',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./checkout-page.component.css']
 })
 export class CheckoutPageComponent {
+  checkoutForm = new FormGroup({});
 
 }

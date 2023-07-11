@@ -71,7 +71,7 @@ export class UserService {
   }
 
   sendUserMessage(type: string, info: string) {
-    this.userMessage$.next({type: type,message: info});
+    this.userMessage$.next({type: type, message: info});
   }
 
   logout() {

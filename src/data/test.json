@@ -170,7 +170,8 @@
       "imagePath": "https://drive.google.com/uc?id=1LEwECidNTZH0FRT_p9qEK9ALwpUAn4nP",
       "password": 1,
       "phoneNumber": "0902 ngày mai nói tiếp",
-      "username": "admin"
+      "username": "admin",
+      "email": "testtest@gmail.com"
     },
     "u_1": {
       "address": "123 đường 321",
@@ -180,7 +181,8 @@
       "imagePath": "",
       "password": 1,
       "phoneNumber": "09876543211",
-      "username": "user"
+      "username": "user",
+      "email": "testtest@gmail.com"
     },
     "u_2": {
       "address": "Earth",
@@ -190,7 +192,8 @@
       "imagePath": "https://drive.google.com/uc?id=1LEwECidNTZH0FRT_p9qEK9ALwpUAn4nP",
       "password": 1,
       "phoneNumber": "083629999",
-      "username": "nguyenduc"
+      "username": "nguyenduc",
+      "email": "testtest@gmail.com"
     },
     "u_3": {
       "address": "1233456",
@@ -200,7 +203,8 @@
       "imagePath": "",
       "password": 1,
       "phoneNumber": "01293845",
-      "username": "user03"
+      "username": "user03",
+      "email": "testtest@gmail.com"
     },
     "u_4": {
       "address": "12345678",
@@ -210,7 +214,8 @@
       "imagePath": "",
       "password": 1,
       "phoneNumber": "1234567890",
-      "username": "user4"
+      "username": "user4",
+      "email": "testtest@gmail.com"
     },
     "u_5": {
       "address": "123456",
@@ -220,7 +225,8 @@
       "imagePath": "",
       "password": 1,
       "phoneNumber": "123456789",
-      "username": "user5"
+      "username": "user5",
+      "email": "testtest@gmail.com"
     },
     "u_6": {
       "address": "1234567",
@@ -230,7 +236,8 @@
       "imagePath": "",
       "password": 1,
       "phoneNumber": "12345678",
-      "username": "user6"
+      "username": "user6",
+      "email": "testtest@gmail.com"
     },
     "u_7": {
       "address": "Random place in the world",
@@ -239,7 +246,8 @@
       "gender": "male",
       "password": "123",
       "phoneNumber": 987654321,
-      "username": "testUser"
+      "username": "testUser",
+      "email": "testtest@gmail.com"
     }
   }
 }

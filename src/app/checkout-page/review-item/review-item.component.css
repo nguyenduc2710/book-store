@@ -1,0 +1,8 @@
+.review-item-container {
+  display: flex;
+  justify-content: space-between;
+
+  .item-title {}
+
+  .item-prices {}
+}

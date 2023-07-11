@@ -1,0 +1,48 @@
+.checkout-container {
+  padding: 35px 50px;
+}
+
+.checkout-information {
+
+
+  .checkout-form {
+
+    .form_title {
+      font-size: 17px;
+      margin: 10px 0;
+    }
+
+    .form_title:last-child {
+      margin: 18px 0;
+    }
+
+    .checkout-label-number {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      background-color: grey;
+      text-align: center;
+      border-radius: 50%;
+      margin-right: 10px;
+      color: white;
+    }
+
+    .payments-icon {
+      margin: 0 8px;
+    }
+  }
+}
+
+.checkout-review {
+
+  .review-summary {
+    margin-top: 15px;
+
+    .review-total{
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}
