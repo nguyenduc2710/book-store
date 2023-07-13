@@ -7,15 +7,25 @@ export class User{
   public age: number;
   public phoneNumber: number;
   public imagePath: string | undefined;
+  public email: string;
 
-  constructor(username: string, password: string, fullName: string, address: string, gender: string, age: number, phoneNumber: number, imagePath: string){
-    this.username = username;
-    this.password = password;
-    this.fullName = fullName;
-    this.address = address;
-    this.gender = gender;
-    this.age = age;
-    this.phoneNumber = phoneNumber;
-    this.imagePath = imagePath;
+  constructor(username: string,
+    password: string,
+    fullName: string,
+    address: string,
+    gender: string,
+    age: number,
+    phoneNumber: number,
+    imagePath: string,
+    email: string){
+      this.username = username;
+      this.password = password;
+      this.fullName = fullName;
+      this.address = address;
+      this.gender = gender;
+      this.age = age;
+      this.phoneNumber = phoneNumber;
+      this.imagePath = imagePath;
+      this.email = email;
   }
 }

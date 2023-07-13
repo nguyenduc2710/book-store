@@ -7,5 +7,6 @@ export interface UserModel {
   age: number;
   phoneNumber: number;
   imagePath: string | undefined;
+  email: string;
 
 }

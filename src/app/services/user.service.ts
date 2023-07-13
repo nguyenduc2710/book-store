@@ -9,7 +9,17 @@ import { Message } from "../model/message.model";
 @Injectable({ providedIn: 'root' })
 export class UserService {
   readonly isAuthenticated = new BehaviorSubject<boolean>(false);
-  readonly currentUser = new BehaviorSubject<User | null>(null);
+  readonly currentUser = new BehaviorSubject<User>({
+    'username': '',
+    'password': '',
+    'fullName': '',
+    'gender': '',
+    'age': 0,
+    'phoneNumber': 0,
+    'address': '',
+    'imagePath': '',
+    'email': ''
+  });
   readonly currentUser$ = this.currentUser.asObservable();
   readonly userMessage$ = new BehaviorSubject<Message>({type: '', message: ''});
   readonly dbUsers = '/users';
@@ -37,6 +47,10 @@ export class UserService {
     return this.user;
   }
 
+  getCurrentUser(){
+    return this.currentUser.value;
+  }
+
   authenUser(username: string, password: string) {
     let isValid = false
     Object.values(this.user[0]).forEach((userInfo: any) => {
@@ -52,6 +66,7 @@ export class UserService {
 
   createUser(
     username: string,
+    email: string,
     password: string,
     fullName: string,
     address: string,
@@ -61,6 +76,7 @@ export class UserService {
     const db = getDatabase();
     set(ref(db, 'users/' + 'u_' + Object.values(this.user[0]).length), {
       username: username,
+      email: email,
       password: password,
       fullName: fullName,
       address: address,

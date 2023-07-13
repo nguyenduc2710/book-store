@@ -30,6 +30,7 @@ export class RegisterAccountComponent implements OnInit {
     if (this.registerForm.value['password'] === this.registerForm.value['repeatPassword']) {
       this.userService.createUser(
         this.registerForm.value['username'],
+        this.registerForm.value['email'],
         this.registerForm.value['password'],
         this.registerForm.value['fullName'],
         this.registerForm.value['address'],
@@ -53,6 +54,7 @@ export class RegisterAccountComponent implements OnInit {
       'age': new FormControl(null, Validators.required),
       'gender': new FormControl('male', Validators.required),
       'address': new FormControl(null, Validators.required),
+      'email': new FormControl(null, [Validators.required, Validators.email]),
     })
   }
 

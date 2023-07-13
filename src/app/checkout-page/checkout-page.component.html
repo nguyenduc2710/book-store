@@ -68,18 +68,36 @@
 
   <div class="checkout-review col-5">
     <div class="review-summary">
-      <nz-card style="width:100%;" nzTitle="Your Order">
-
-        <app-review-item></app-review-item>
-        <div class="review-subfee">
-
+      <div class="card mb-3">
+        <div class="card-header bg-transparent">Your Order</div>
+        <div class="card-body">
+          <div class="list-group-item" *ngFor="let item of summaryCart">
+            <app-review-item [bookItem]="item">
+            </app-review-item>
+          </div>
         </div>
-        <span class="dot-divider"></span>
-        <div class="review-total">
-          <div>Total: </div>
-          <div>200$</div>
+        <div class="card-footer bg-transparent">
+          <div class="footer_item">
+            <span>SUM</span>
+            <span>{{ totalBeforeVat$.value | currency }}</span>
+          </div>
+          <div class="footer_item">
+            <span>VAT</span>
+            <span>4%</span>
+          </div>
+          <div class="footer_item">
+            <span>SHIPPING</span>
+            <span>FREE</span>
+          </div>
         </div>
-      </nz-card>
+        <div class="card-footer bg-transparent">
+          <div class="footer_item">
+            <span>Total:</span>
+            <span>{{ totalAfterVat$.value | currency }}</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
 </div>

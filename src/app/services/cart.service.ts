@@ -9,6 +9,7 @@ export class CartService {
   readonly itemQuantity$ = new BehaviorSubject<number>(0);
   readonly totalPrice$ = new BehaviorSubject<number>(0);
   readonly totalPriceAfterVAT$ = new BehaviorSubject<number>(0);
+  readonly shortList$ = new BehaviorSubject<Cart[]>([]);
   itemList: Book[] = [];
   list: Cart[] = [];
 
@@ -28,6 +29,7 @@ export class CartService {
       this.itemList.push(bookDetail);
     }
     this.itemQuantity$.next(this.itemQuantity$.value + quantity);
+    this.shortList$.next(this.list);
     this.calculatePrice();
   }
 
@@ -38,20 +40,32 @@ export class CartService {
     if (index != -1 && indexList != -1) {
       this.itemList.splice(index, 1);
       this.list.splice(indexList, 1);
+
+      this.shortList$.next(this.list);
       this.itemQuantity$.next(this.itemQuantity$.value - currentQuantity);
       this.calculatePrice();
     }
   }
 
-  onUpdateQuantity(book_id: string, quantity: number){
-    for(let i = 0; i < this.list.length; i++){
+  onUpdateQuantity(book_id: string, quantity: number) {
+    for (let i = 0; i < this.list.length; i++) {
       const currentBook = this.list[i];
-      if(currentBook.book_id == book_id){
+      if (currentBook.book_id == book_id) {
         this.itemQuantity$.next(this.itemQuantity$.value - currentBook.quantity + quantity);
         this.list[i].quantity = quantity;
+        this.shortList$.next(this.list)
+        break;
       }
     }
     this.calculatePrice();
+  }
+
+  onGetList() {
+    return this.itemList;
+  }
+
+  onGetShortList() {
+    return this.list;
   }
 
   getQuantity(book_id: string) {
@@ -61,6 +75,23 @@ export class CartService {
         rs = item.quantity;
       }
     })
+    return rs;
+  }
+
+  getShortListProducts(): {bookName: string, totalPrice: string}[]{
+    let rs: {bookName: string, totalPrice: string}[] = [];
+    const books = this.itemList;
+    const shortList = this.list;
+
+    shortList.forEach(itemShort => {
+      const bookIndex = books.findIndex(item => item.book_id == itemShort.book_id);
+      if(bookIndex != -1){
+        const bookName = books[bookIndex].name;
+        const totalPrice = books[bookIndex].price * itemShort.quantity;
+        rs.push({bookName: bookName, totalPrice: totalPrice.toFixed(2).toString()})
+      }
+    })
+
     return rs;
   }
 
@@ -76,12 +107,4 @@ export class CartService {
     this.totalPriceAfterVAT$.next((this.totalPrice$.value * 0.04) + this.totalPrice$.value);
   }
 
-
-  onGetList() {
-    return this.itemList;
-  }
-
-  onGetShortList() {
-    return this.list;
-  }
 }

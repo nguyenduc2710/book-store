@@ -19,7 +19,36 @@ const routes: Routes = [
   { path: 'user', component: UserInfoComponent },
   { path: 'checkout', component: CheckoutPageComponent},
 
-  { path: '**', component: NotFoundComponent }
+  {
+    path: '**', component: NotFoundComponent
+  }
+  // { path: 'book', component: BookListComponent },
+  // {
+  //   path: 'book/:id',
+  //   loadComponent: () => import('./main-page/book-list/book-item/book-item.component').then(m => m.BookItemComponent)
+  // },
+  // {
+  //   path: 'cart',
+  //   loadComponent: () => import('./cart-page/cart-page.component').then(m => m.CartPageComponent)
+  // },
+  // {
+  //   path: 'register',
+  //   loadComponent: () => import('./account-page/register-account/register-account.component').then(m => m.RegisterAccountComponent)
+  // },
+  // {
+  //   path: 'login',
+  //   loadComponent: () => import('./account-page/login-account/login-account.component').then(m => m.LoginAccountComponent)
+  // },
+  // {
+  //   path: 'user',
+  //   loadComponent: () => import('./account-page/user-info/user-info.component').then(m => m.UserInfoComponent)
+  // },
+  // {
+  //   path: 'checkout',
+  //   loadComponent: () => import('./checkout-page/checkout-page.component').then(m => m.CheckoutPageComponent)
+  // },
+
+
 ];
 
 @NgModule({
