@@ -3,9 +3,6 @@ export interface Bill{
   product: Products[],
   email: string,
   phoneNumber: number,
-  district: string,
-  ward: string,
-  level: string,
   address: string,
   typePayment: string,
   totalBill: number

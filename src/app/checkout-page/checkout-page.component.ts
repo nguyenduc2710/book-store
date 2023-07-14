@@ -1,11 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../services/user.service';
 import { BookService } from '../services/book.services';
 import { UserModel } from '../model/user.model';
 import { Subject, takeUntil } from 'rxjs';
 import { CartService } from '../services/cart.service';
-import { Cart } from '../model/cart.model';
 
 @Component({
   selector: 'app-checkout-page',
@@ -13,7 +12,9 @@ import { Cart } from '../model/cart.model';
   styleUrls: ['./checkout-page.component.css']
 })
 export class CheckoutPageComponent implements OnInit, OnDestroy {
-  summaryCart: {bookName: string, totalPrice: string}[] = [];
+  @ViewChild('#cashMethod') cashMethod?: ElementRef;
+
+  summaryCart: {bookName: string, quantity: number, totalPrice: string}[] = [];
   summaryCart$ = this.cartService.shortList$;
   userInfo?: UserModel;
   totalBeforeVat$ = this.cartService.totalPrice$;
@@ -28,7 +29,9 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
 
   constructor(private userService: UserService,
     private bookService: BookService,
-    private cartService: CartService) { }
+    private cartService: CartService) {
+      // this.cashMethod.nativeElement.
+    }
 
   ngOnInit(): void {
     this.userInfo = this.userService.getCurrentUser();
@@ -43,7 +46,10 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
     this.summaryCart$.pipe(takeUntil(this.destroy$)).subscribe(product => {
       this.summaryCart = this.cartService.getShortListProducts()
     })
+  }
 
+  functionComingSoon(){
+    this.cartService.sendCartMessage('info', 'Feature coming soon, please use method payment by cash!')
   }
 
   ngOnDestroy(): void {

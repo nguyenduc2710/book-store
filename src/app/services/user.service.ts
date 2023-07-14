@@ -21,7 +21,7 @@ export class UserService {
     'email': ''
   });
   readonly currentUser$ = this.currentUser.asObservable();
-  readonly userMessage$ = new BehaviorSubject<Message>({type: '', message: ''});
+  readonly userMessage$ = new BehaviorSubject<Message>({type: '', info: ''});
   readonly dbUsers = '/users';
   userRef: AngularFireList<UserModel>;
   user: any[] = [];
@@ -87,7 +87,7 @@ export class UserService {
   }
 
   sendUserMessage(type: string, info: string) {
-    this.userMessage$.next({type: type, message: info});
+    this.userMessage$.next({type: type, info: info});
   }
 
   logout() {

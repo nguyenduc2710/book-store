@@ -3,6 +3,7 @@ import { BehaviorSubject } from "rxjs";
 import { Cart } from "../model/cart.model";
 import { Book } from "../model/books.model";
 import { BookService } from "./book.services";
+import { Message } from "../model/message.model";
 
 @Injectable({ providedIn: 'root' })
 export class CartService {
@@ -10,6 +11,7 @@ export class CartService {
   readonly totalPrice$ = new BehaviorSubject<number>(0);
   readonly totalPriceAfterVAT$ = new BehaviorSubject<number>(0);
   readonly shortList$ = new BehaviorSubject<Cart[]>([]);
+  readonly cartMessage$ = new BehaviorSubject<Message>({type: '', info: ''});
   itemList: Book[] = [];
   list: Cart[] = [];
 
@@ -31,6 +33,10 @@ export class CartService {
     this.itemQuantity$.next(this.itemQuantity$.value + quantity);
     this.shortList$.next(this.list);
     this.calculatePrice();
+  }
+
+  sendCartMessage(type: string, info: string){
+    this.cartMessage$.next({type: type, info: info});
   }
 
   onDeleteItem(book_id: string) {
@@ -78,8 +84,8 @@ export class CartService {
     return rs;
   }
 
-  getShortListProducts(): {bookName: string, totalPrice: string}[]{
-    let rs: {bookName: string, totalPrice: string}[] = [];
+  getShortListProducts(): {bookName: string, quantity: number, totalPrice: string}[]{
+    let rs: {bookName: string, quantity: number, totalPrice: string}[] = [];
     const books = this.itemList;
     const shortList = this.list;
 
@@ -88,7 +94,8 @@ export class CartService {
       if(bookIndex != -1){
         const bookName = books[bookIndex].name;
         const totalPrice = books[bookIndex].price * itemShort.quantity;
-        rs.push({bookName: bookName, totalPrice: totalPrice.toFixed(2).toString()})
+        const quantity = itemShort.quantity;
+        rs.push({bookName: bookName, quantity: quantity, totalPrice: totalPrice.toFixed(2).toString()})
       }
     })
 

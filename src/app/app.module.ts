@@ -1,21 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { registerLocaleData } from '@angular/common';
-import en from '@angular/common/locales/en';
+import { CommonModule, registerLocaleData } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-//Components
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { MainPageComponent } from './main-page/main-page.component';
-import { BookListComponent } from './main-page/book-list/book-list.component';
-import { BookItemComponent } from './main-page/book-list/book-item/book-item.component';
-import { CartPageComponent } from './cart-page/cart-page.component';
-import { PrdItemComponent } from './cart-page/prd-item/prd-item.component';
-import { LayoutFooter } from './layout/layout-footer.component';
-import { LayoutHeader } from './layout/layout-header.component';
-import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
+import en from '@angular/common/locales/en';
 
 //Pipe
 import { LineBreak } from './shared/line-break.pipe';
@@ -48,21 +37,32 @@ import { NzMessageModule } from 'ng-zorro-antd/message';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { firebaseConfig } from './firebaseConfig';
+
+//Components
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+// import { MainPageComponent } from './main-page/main-page.component';
+// import { BookListComponent } from './book-list/book-list.component';
+// import { BookItemComponent } from './book-list/book-item/book-item.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
+import { PrdItemComponent } from './cart-page/prd-item/prd-item.component';
+import { LayoutFooter } from './layout/layout-footer.component';
+import { LayoutHeader } from './layout/layout-header.component';
+import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
 import { RegisterAccountComponent } from './account-page/register-account/register-account.component';
 import { LoginAccountComponent } from './account-page/login-account/login-account.component';
 import { UserInfoComponent } from './account-page/user-info/user-info.component';
-import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
-import { ReviewItemComponent } from './checkout-page/review-item/review-item.component';
+import { CheckoutModule } from './checkout-page/checkout.module';
+import { BookModule } from './book-list/book.module';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent,
     CartPageComponent,
-    BookListComponent,
-    BookItemComponent,
+    // BookListComponent,
+    // BookItemComponent,
     PrdItemComponent,
     LayoutFooter,
     LayoutHeader,
@@ -71,8 +71,6 @@ registerLocaleData(en);
     UserInfoComponent,
     LineBreak,
     FilterBook,
-    CheckoutPageComponent,
-    ReviewItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -81,8 +79,11 @@ registerLocaleData(en);
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    CommonModule,
+    //firebase
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
+    //antd zorro
     NzButtonModule,
     NzSliderModule,
     NzCarouselModule,
@@ -104,6 +105,9 @@ registerLocaleData(en);
     NzListModule,
     NzCollapseModule,
     NzMessageModule,
+    //modules
+    CheckoutModule,
+    BookModule,
 
   ],
   providers: [

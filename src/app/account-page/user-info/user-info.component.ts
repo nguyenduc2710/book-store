@@ -1,4 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { Subscription } from 'rxjs';
 import { User } from 'src/app/model/user.class';
 import { UserService } from 'src/app/services/user.service';
@@ -24,7 +27,6 @@ export class UserInfoComponent implements OnInit, OnDestroy {
         this.currentUser = user;
       }
     })
-    // this.userService.isAuthenticated.subscribe(console.log)
   }
 
   onLogout(){

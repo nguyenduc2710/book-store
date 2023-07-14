@@ -1,6 +1,6 @@
 # MESSAGE
 --- Practicing Angular Project
------Simple AngularTS web app selling books, using firebase, antd, bootstraps
+-----Simple AngularTS web app selling books, using Firebase, Antd Zorro, Bootstraps 5
 
 # NgBooksStore
 

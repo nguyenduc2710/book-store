@@ -36,6 +36,11 @@
     .review-summary {
       margin-top: 15px;
 
+      .summary-header {
+        font-size: 16px;
+        font-weight: 500;
+      }
+
       .footer_item {
         display: flex;
         justify-content: space-between;

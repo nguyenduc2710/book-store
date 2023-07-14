@@ -11,7 +11,7 @@ export class BookService{
   private books: any[] = [];
   bookRef: AngularFireList<Book>;
   book$ = new BehaviorSubject<Book[]>([]);
-  bookMessage$ = new BehaviorSubject<Message>({type: '', message: ''});
+  bookMessage$ = new BehaviorSubject<Message>({type: '', info: ''});
 
   constructor(private db: AngularFireDatabase) {
     this.bookRef = this.db.list(this.dbBookPath);
@@ -49,7 +49,7 @@ export class BookService{
   }
 
   sendBookMessage(type: string, info: string){
-    this.bookMessage$.next({type: type, message: info});
+    this.bookMessage$.next({type: type, info: info});
   }
 
   getBookById(book_id: string): Book {

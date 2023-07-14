@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -8,6 +11,7 @@ import { UserService } from 'src/app/services/user.service';
   templateUrl: './register-account.component.html',
   styleUrls: ['./register-account.component.css']
 })
+
 export class RegisterAccountComponent implements OnInit {
   registerForm: FormGroup;
 
