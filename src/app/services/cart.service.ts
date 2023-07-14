@@ -84,8 +84,8 @@ export class CartService {
     return rs;
   }
 
-  getShortListProducts(): {bookName: string, quantity: number, totalPrice: string}[]{
-    let rs: {bookName: string, quantity: number, totalPrice: string}[] = [];
+  getShortListProducts(): {book_id: string, bookName: string, quantity: number, totalPrice: number}[]{
+    let rs: {book_id: string, bookName: string, quantity: number, totalPrice: number}[] = [];
     const books = this.itemList;
     const shortList = this.list;
 
@@ -95,11 +95,16 @@ export class CartService {
         const bookName = books[bookIndex].name;
         const totalPrice = books[bookIndex].price * itemShort.quantity;
         const quantity = itemShort.quantity;
-        rs.push({bookName: bookName, quantity: quantity, totalPrice: totalPrice.toFixed(2).toString()})
+
+        rs.push({book_id: itemShort.book_id, bookName: bookName, quantity: quantity, totalPrice: totalPrice})
       }
     })
 
     return rs;
+  }
+
+  onCheckout(){
+
   }
 
   calculatePrice() {

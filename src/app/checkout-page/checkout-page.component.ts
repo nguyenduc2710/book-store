@@ -5,6 +5,7 @@ import { BookService } from '../services/book.services';
 import { UserModel } from '../model/user.model';
 import { Subject, takeUntil } from 'rxjs';
 import { CartService } from '../services/cart.service';
+import { BillService } from '../services/bills.service';
 
 @Component({
   selector: 'app-checkout-page',
@@ -14,7 +15,7 @@ import { CartService } from '../services/cart.service';
 export class CheckoutPageComponent implements OnInit, OnDestroy {
   @ViewChild('#cashMethod') cashMethod?: ElementRef;
 
-  summaryCart: {bookName: string, quantity: number, totalPrice: string}[] = [];
+  summaryCart: { book_id: string, bookName: string, quantity: number, totalPrice: number }[] = [];
   summaryCart$ = this.cartService.shortList$;
   userInfo?: UserModel;
   totalBeforeVat$ = this.cartService.totalPrice$;
@@ -28,10 +29,10 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
   });
 
   constructor(private userService: UserService,
-    private bookService: BookService,
-    private cartService: CartService) {
-      // this.cashMethod.nativeElement.
-    }
+    private cartService: CartService,
+    private billService: BillService) {
+    // this.cashMethod.nativeElement.
+  }
 
   ngOnInit(): void {
     this.userInfo = this.userService.getCurrentUser();
@@ -44,12 +45,28 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
       })
     }
     this.summaryCart$.pipe(takeUntil(this.destroy$)).subscribe(product => {
-      this.summaryCart = this.cartService.getShortListProducts()
+      this.summaryCart = this.cartService.getShortListProducts();
     })
   }
 
-  functionComingSoon(){
-    this.cartService.sendCartMessage('info', 'Feature coming soon, please use method payment by cash!')
+  functionComingSoon() {
+    this.cartService.sendCartMessage('info', 'Feature coming soon, please use method payment by cash!');
+  }
+
+  onTest() {
+    const checkoutForm = this.checkoutForm.value;
+    const username = this.userService.currentUser.value;
+    const products = this.cartService.getShortListProducts();
+    const totalBill = this.cartService.totalPriceAfterVAT$.value;
+    this.billService.onCheckout(
+      username.username,
+      checkoutForm.email,
+      checkoutForm.fullName,
+      checkoutForm.phoneNumber,
+      checkoutForm.address,
+      products,
+      totalBill,
+    )
   }
 
   ngOnDestroy(): void {

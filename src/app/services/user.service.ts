@@ -8,18 +8,19 @@ import { Message } from "../model/message.model";
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
-  readonly isAuthenticated = new BehaviorSubject<boolean>(false);
-  readonly currentUser = new BehaviorSubject<User>({
+  nullUser = {
     'username': '',
     'password': '',
     'fullName': '',
     'gender': '',
     'age': 0,
-    'phoneNumber': 0,
+    'phoneNumber': '',
     'address': '',
     'imagePath': '',
     'email': ''
-  });
+  }
+  readonly isAuthenticated = new BehaviorSubject<boolean>(false);
+  readonly currentUser = new BehaviorSubject<User>(this.nullUser);
   readonly currentUser$ = this.currentUser.asObservable();
   readonly userMessage$ = new BehaviorSubject<Message>({type: '', info: ''});
   readonly dbUsers = '/users';
@@ -92,6 +93,7 @@ export class UserService {
 
   logout() {
     this.isAuthenticated.next(false);
+    this.currentUser.next(this.nullUser);
   }
 
   setData() {

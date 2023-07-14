@@ -1,19 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BookService } from 'src/app/services/book.services';
 import { Book } from 'src/app/model/books.model';
 import { FilterDataService } from 'src/app/services/filter.services';
-import { distinctUntilChanged } from 'rxjs';
+import { Subject, distinctUntilChanged, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.css'],
 })
-export class BookListComponent implements OnInit {
+export class BookListComponent implements OnInit, OnDestroy {
   bookClicked = false;
   allBookOriginnal: Book[] = [];
   allBookFilter: Book[] = [];
+  readonly destroyed$ = new Subject<void>();
+
   constructor(private bookService: BookService,
     private router: Router,
     private filterService: FilterDataService) { }
@@ -24,10 +26,9 @@ export class BookListComponent implements OnInit {
     this.bookService.book$.subscribe(book => {
       this.allBookOriginnal = book;
       this.allBookFilter = this.allBookOriginnal;
-
     })
 
-    this.filterService.filterString.pipe(distinctUntilChanged()).subscribe((filterStr: string) => {
+    this.filterService.filterString.pipe(distinctUntilChanged(), takeUntil(this.destroyed$)).subscribe((filterStr: string) => {
       this.filterList(filterStr);
     })
   }
@@ -50,6 +51,11 @@ export class BookListComponent implements OnInit {
   }
 
   onTest() {
-    this.bookService.onAddTest();
+    this.bookService.getIdByValue('57693427');
+  }
+
+  ngOnDestroy(): void {
+    this.destroyed$.next();
+    this.destroyed$.complete();
   }
 }

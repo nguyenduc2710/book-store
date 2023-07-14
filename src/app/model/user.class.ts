@@ -5,7 +5,7 @@ export class User{
   public address: string;
   public gender: string;
   public age: number;
-  public phoneNumber: number;
+  public phoneNumber: string;
   public imagePath: string | undefined;
   public email: string;
 
@@ -15,7 +15,7 @@ export class User{
     address: string,
     gender: string,
     age: number,
-    phoneNumber: number,
+    phoneNumber: string,
     imagePath: string,
     email: string){
       this.username = username;

@@ -1,11 +1,13 @@
 export interface Bill{
+  username?: string,
   fullName: string,
-  product: Products[],
   email: string,
-  phoneNumber: number,
+  phoneNumber: string,
   address: string,
   typePayment: string,
-  totalBill: number
+  product: Products[],
+  totalBill: number,
+  dateBuy: string;
 }
 
 export interface Products{

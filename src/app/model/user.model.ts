@@ -5,7 +5,7 @@ export interface UserModel {
   address: string;
   gender: string;
   age: number;
-  phoneNumber: number;
+  phoneNumber: string;
   imagePath: string | undefined;
   email: string;
 
