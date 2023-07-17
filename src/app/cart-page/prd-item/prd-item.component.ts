@@ -19,7 +19,8 @@ export class PrdItemComponent {
       rating: 0,
       descriptions: '',
       author: '',
-      price: 0
+      price: 0,
+      quantity: 0
     };
 
     this.quantity = 0;

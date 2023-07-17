@@ -8,7 +8,7 @@ import { Cart } from 'src/app/model/cart.model';
   styleUrls: ['./review-item.component.css']
 })
 export class ReviewItemComponent implements OnInit {
-  @Input() bookItem!: {bookName: string, totalPrice: number};
+  @Input() bookItem!: { book_id: string, bookName: string, quantity: number, totalPrice: number };
 
   ngOnInit(): void {
     // console.log(this.bookItem);

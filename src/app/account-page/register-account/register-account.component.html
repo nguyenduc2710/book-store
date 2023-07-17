@@ -34,7 +34,7 @@
       </nz-radio-group>
     </div>
 
-    <div class="arlert-msg" *ngIf="!registerForm.get('phoneNumber')?.valid && registerForm.get('phoneNumber')?.touched">Phone number must have 10 digits!</div>
+    <div class="alert-msg" *ngIf="!registerForm.get('phoneNumber')?.valid && registerForm.get('phoneNumber')?.touched">Phone number must have 10 digits!</div>
     <div class="form-floating mb-3">
       <input type="number" class="form-control"
             name="phoneNumber" formControlName="phoneNumber"
@@ -48,7 +48,7 @@
     </div>
 
     <div class="mb-3">
-      <label class="arlert-msg" *ngIf="!registerForm.get('age')?.valid && registerForm.get('age')?.touched">Age is required!</label>
+      <label class="alert-msg" *ngIf="!registerForm.get('age')?.valid && registerForm.get('age')?.touched">Age is required!</label>
       <nz-input-number-group nzAddOnBefore="Age" style="width: 100%;">
         <nz-input-number name="age" formControlName="age" [nzMin]="1" [nzMax]="115" [nzStep]="1"></nz-input-number>
       </nz-input-number-group>

@@ -18,11 +18,12 @@ import { CartService } from 'src/app/services/cart.service';
     </div>
     <div class="book-info" nz-col [nzSpan]="16">
       <div class="book-title">
-        <div class="book-title_name">{{book.name}}</div>
+        <div class="book-title_name">{{ book.name }}</div>
         <p>
-          By <span class="book-title_author">{{book.author}}</span>
+          By <span class="book-title_author">{{ book.author }}</span>
         </p>
-        <div>Price: <span class="book-title-price">{{'$' + book.price}}</span></div>
+        <div>Price: <span class="book-title-price">{{ '$' + book.price }}</span></div>
+        <div>Store: {{ book.quantity }}</div>
       </div>
       <hr>
       <form class="book-add-to-cart">
@@ -53,7 +54,8 @@ export class BookItemComponent implements OnInit {
     rating: 0,
     descriptions: '',
     author: '',
-    price: 0
+    price: 0,
+    quantity: 0,
   };
   bookId: string = '';
   constructor(private bookService: BookService,

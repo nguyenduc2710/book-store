@@ -11,7 +11,7 @@ export class CartService {
   readonly totalPrice$ = new BehaviorSubject<number>(0);
   readonly totalPriceAfterVAT$ = new BehaviorSubject<number>(0);
   readonly shortList$ = new BehaviorSubject<Cart[]>([]);
-  readonly cartMessage$ = new BehaviorSubject<Message>({type: '', info: ''});
+  readonly cartMessage$ = new BehaviorSubject<Message>({ type: '', info: '' });
   itemList: Book[] = [];
   list: Cart[] = [];
 
@@ -35,8 +35,8 @@ export class CartService {
     this.calculatePrice();
   }
 
-  sendCartMessage(type: string, info: string){
-    this.cartMessage$.next({type: type, info: info});
+  sendCartMessage(type: string, info: string) {
+    this.cartMessage$.next({ type: type, info: info });
   }
 
   onDeleteItem(book_id: string) {
@@ -84,26 +84,26 @@ export class CartService {
     return rs;
   }
 
-  getShortListProducts(): {book_id: string, bookName: string, quantity: number, totalPrice: number}[]{
-    let rs: {book_id: string, bookName: string, quantity: number, totalPrice: number}[] = [];
+  getShortListProducts(): { book_id: string, bookName: string, quantity: number, totalPrice: number }[] {
+    let rs: { book_id: string, bookName: string, quantity: number, totalPrice: number }[] = [];
     const books = this.itemList;
     const shortList = this.list;
 
     shortList.forEach(itemShort => {
       const bookIndex = books.findIndex(item => item.book_id == itemShort.book_id);
-      if(bookIndex != -1){
+      if (bookIndex != -1) {
         const bookName = books[bookIndex].name;
         const totalPrice = books[bookIndex].price * itemShort.quantity;
         const quantity = itemShort.quantity;
 
-        rs.push({book_id: itemShort.book_id, bookName: bookName, quantity: quantity, totalPrice: totalPrice})
+        rs.push({ book_id: itemShort.book_id, bookName: bookName, quantity: quantity, totalPrice: totalPrice })
       }
     })
 
     return rs;
   }
 
-  onCheckout(){
+  onCheckout() {
 
   }
 
@@ -117,6 +117,15 @@ export class CartService {
     })
     this.totalPrice$.next(totalPrice);
     this.totalPriceAfterVAT$.next((this.totalPrice$.value * 0.04) + this.totalPrice$.value);
+  }
+
+  clearAll() {
+    this.itemQuantity$.next(0)
+    this.totalPrice$.next(0)
+    this.totalPriceAfterVAT$.next(0)
+    this.shortList$.next([])
+    this.itemList = [];
+    this.list = [];
   }
 
 }

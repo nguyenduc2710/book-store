@@ -1,4 +1,4 @@
-<div class="checkout-container row">
+<div class="checkout-container row" *ngIf="!purchased; else checkoutSuccess">
   <h2>Purchase Order</h2>
   <hr>
   <div class="checkout-information col-7">
@@ -9,11 +9,11 @@
         <label>Full Name</label>
       </div>
 
+      <div class="alert-msg"
+        *ngIf="!checkoutForm.get('phoneNumber')?.valid && checkoutForm.get('phoneNumber')?.touched">
+        Phone number must have 10 digits!
+      </div>
       <div class="form-floating mb-3">
-        <label class="arlert-msg"
-          *ngIf="!checkoutForm.get('phoneNumber')?.valid && checkoutForm.get('phoneNumber')?.touched">
-          Phone number must have 10 digits!
-        </label>
         <input type="number" class="form-control" name="phoneNumber" formControlName="phoneNumber"
           placeholder="Phone Number">
         <label>Phone Number</label>
@@ -38,7 +38,8 @@
         </label>
       </div>
       <div class="form-check mb-2">
-        <input (change)="functionComingSoon()" class="form-check-input" type="radio" name="paymentMethod" value="zalopay">
+        <input (change)="functionComingSoon()" class="form-check-input" type="radio" name="paymentMethod"
+          value="zalopay">
         <label class="form-check-label">
           <img class="payments-icon" src="../../assets/icons/zalopay.svg">
           ZaloPay
@@ -59,7 +60,8 @@
         </label>
       </div>
 
-      <button (click)="onTest()" [disabled]="!checkoutForm.valid" style="width: 100%;" class="btn btn-primary btn-block mb-3">
+      <button (click)="onPurchase()" [disabled]="!checkoutForm.valid" style="width: 100%;"
+        class="btn btn-primary btn-block mb-3">
         <span nz-icon nzType="shopping-cart" nzTheme="outline"></span>
         Purchase
       </button>
@@ -100,3 +102,18 @@
     </div>
   </div>
 </div>
+
+<ng-template #checkoutSuccess>
+  <div class="checkout-successful">
+    <nz-result nzStatus="success" nzTitle="Successfully Purchased!">
+      <div class="d-flex align-items-center justify-content-center" nz-result-subtitle>
+        Order number: {{ billId }}. Thank you for choosing us!
+        <span nz-icon nzType="heart" style="color: red;"
+          nzTheme="fill"></span>
+      </div>
+      <div nz-result-extra>
+        <button nz-button nzType="primary" routerLink="/">Back Home</button>
+      </div>
+    </nz-result>
+  </div>
+</ng-template>

@@ -1,4 +1,14 @@
 <p class="review-item-container">
   <span class="item-title">{{ bookItem.bookName}}</span>
-  <span class="item-prices">{{ bookItem.totalPrice }}</span>
+  <span class="item-info">
+    <span>
+      <nz-badge
+      nzStandalone
+      [nzCount]="bookItem.quantity"
+      [nzStyle]="{ backgroundColor: '#fff', color: '#999', boxShadow: '0 0 0 1px #d9d9d9 inset' }"></nz-badge>
+    </span>
+    <span>
+      {{ bookItem.totalPrice }}
+    </span>
+  </span>
 </p>

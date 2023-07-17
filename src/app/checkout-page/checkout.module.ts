@@ -1,19 +1,28 @@
-import { NgModule, Pipe } from "@angular/core";
+import { NgModule } from "@angular/core";
 import { CheckoutPageComponent } from "./checkout-page.component";
 import { ReviewItemComponent } from "./review-item/review-item.component";
 import { ReactiveFormsModule } from "@angular/forms";
-import { NzPipesModule } from "ng-zorro-antd/pipes";
 import { CommonModule } from "@angular/common";
-import { NzCardModule } from "ng-zorro-antd/card";
 import { RouterModule, Routes } from "@angular/router";
+import { NzCardModule } from "ng-zorro-antd/card";
+import { NzPipesModule } from "ng-zorro-antd/pipes";
+import { NzBadgeModule } from 'ng-zorro-antd/badge';
+import { NzResultModule } from 'ng-zorro-antd/result';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 const ngModules = [
   ReactiveFormsModule,
-  NzPipesModule,
   CommonModule,
+
 ]
 const antdZorro = [
-  NzCardModule
+  NzCardModule,
+  NzBadgeModule,
+  NzResultModule,
+  NzPipesModule,
+  NzButtonModule,
+  NzIconModule,
 ];
 const router: Routes = [
   { path: '', component: CheckoutPageComponent },

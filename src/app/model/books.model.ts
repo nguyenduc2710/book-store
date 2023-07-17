@@ -6,5 +6,10 @@ export interface Book{
   descriptions: string,
   author: string,
   price: number
-  quantity?: number,
+  quantity: number,
+}
+
+export interface BookStore{
+  id: string,
+  value: Book[]
 }

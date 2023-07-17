@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../services/user.service';
 import { BookService } from '../services/book.services';
 import { UserModel } from '../model/user.model';
-import { Subject, takeUntil } from 'rxjs';
+import { Subject, take, takeUntil } from 'rxjs';
 import { CartService } from '../services/cart.service';
 import { BillService } from '../services/bills.service';
 
@@ -20,6 +20,7 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
   userInfo?: UserModel;
   totalBeforeVat$ = this.cartService.totalPrice$;
   totalAfterVat$ = this.cartService.totalPriceAfterVAT$;
+  billId$ = this.billService.billId$;
   destroy$ = new Subject<void>();
   checkoutForm: FormGroup = new FormGroup({
     'fullName': new FormControl('', Validators.required),
@@ -27,12 +28,15 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
     'email': new FormControl('', Validators.required),
     'address': new FormControl('', Validators.required),
   });
+  purchased: boolean;
+  billId: string = '';
 
   constructor(private userService: UserService,
     private cartService: CartService,
-    private billService: BillService) {
-    // this.cashMethod.nativeElement.
-  }
+    private billService: BillService,
+    private bookService: BookService) {
+      this.purchased = false;
+    }
 
   ngOnInit(): void {
     this.userInfo = this.userService.getCurrentUser();
@@ -47,17 +51,19 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
     this.summaryCart$.pipe(takeUntil(this.destroy$)).subscribe(product => {
       this.summaryCart = this.cartService.getShortListProducts();
     })
+    this.billId$.pipe(takeUntil(this.destroy$)).subscribe(change => this.billId = change);
   }
 
   functionComingSoon() {
     this.cartService.sendCartMessage('info', 'Feature coming soon, please use method payment by cash!');
   }
 
-  onTest() {
+  onPurchase() {
     const checkoutForm = this.checkoutForm.value;
     const username = this.userService.currentUser.value;
     const products = this.cartService.getShortListProducts();
     const totalBill = this.cartService.totalPriceAfterVAT$.value;
+    const shortList = this.cartService.shortList$.value;
     this.billService.onCheckout(
       username.username,
       checkoutForm.email,
@@ -67,9 +73,13 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
       products,
       totalBill,
     )
+    this.bookService.updateBookQuantity(shortList);
+    this.cartService.clearAll()
+    this.purchased = true;
   }
 
   ngOnDestroy(): void {
+    this.billService.onClearBill();
     this.destroy$.next();
     this.destroy$.complete();
   }

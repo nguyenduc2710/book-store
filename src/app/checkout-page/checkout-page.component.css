@@ -5,6 +5,10 @@
 
     .checkout-form {
 
+      .alert-msg {
+        color: #A00000;
+      }
+
       .form_title {
         font-size: 17px;
         margin: 10px 0;
@@ -49,4 +53,6 @@
       }
     }
   }
+
+
 }

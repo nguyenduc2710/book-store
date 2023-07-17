@@ -1,11 +1,12 @@
 import { Injectable } from "@angular/core";
 import { Bill, Products } from "../model/bill.model";
-import { BehaviorSubject } from "rxjs";
+import { BehaviorSubject, Subject } from "rxjs";
 import { getDatabase, ref, set } from "firebase/database";
 import * as moment from "moment";
 
 @Injectable({ providedIn: 'root' })
 export class BillService {
+  readonly billId$ = new BehaviorSubject<string>('');
   bills$ = new BehaviorSubject<Bill[]>([]);
   bills: Bill[] = [];
 
@@ -36,9 +37,16 @@ export class BillService {
       dateBuy: currentDate,
     };
     const db = getDatabase();
+    this.billId$.next(this.getRandomNumber());
     if (db) {
-      set(ref(db, 'bills/' + this.getRandomNumber()), rs)
+      set(ref(db, 'bills/' + this.billId$.value), rs)
     }
+  }
+
+  onClearBill() {
+    this.billId$.next('');
+    this.bills$.next([])
+    this.bills = [];
   }
 
   getRandomNumber() {

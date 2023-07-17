@@ -51,7 +51,8 @@ export class BookListComponent implements OnInit, OnDestroy {
   }
 
   onTest() {
-    this.bookService.getIdByValue('57693427');
+    // const test = [{book_id: '47894246', quantity: 3}, {book_id: '58283080', quantity: 1}]
+    // this.bookService.updateBookQuantity(test);
   }
 
   ngOnDestroy(): void {
