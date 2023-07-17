@@ -1,5 +1,6 @@
 .body-container{
   min-height: 85vh;
+  position: relative;
 }
 
 .validate-account{

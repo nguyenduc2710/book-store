@@ -1,5 +1,5 @@
 <app-layout-header></app-layout-header>
-<div class="body-container">
-  <router-outlet></router-outlet>
+<div class="body-container" [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
 </div>
 <app-layout-footer></app-layout-footer>

@@ -80,6 +80,7 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     CommonModule,
+    BrowserAnimationsModule,
     //firebase
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,

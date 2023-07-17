@@ -11,9 +11,11 @@ import { NzInputNumberModule } from "ng-zorro-antd/input-number";
 import { NzImageModule } from "ng-zorro-antd/image";
 import { NzButtonModule } from "ng-zorro-antd/button";
 import { NzIconModule } from "ng-zorro-antd/icon";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 const modules = [
   BrowserModule,
+  BrowserAnimationsModule,
   FormsModule,
 ]
 

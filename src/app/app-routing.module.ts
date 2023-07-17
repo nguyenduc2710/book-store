@@ -10,12 +10,12 @@ import { NotFoundComponent } from './not-found.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'book', pathMatch: 'full' },
-  { path: 'book', component: BookListComponent },
-  { path: 'book/:id', component: BookItemComponent },
-  { path: 'cart', component: CartPageComponent },
-  { path: 'register', component: RegisterAccountComponent },
-  { path: 'login', component: LoginAccountComponent },
-  { path: 'user', component: UserInfoComponent },
+  { path: 'book', component: BookListComponent , data: { animation: BookListComponent } },
+  { path: 'book/:id', component: BookItemComponent , data: { animation: BookItemComponent } },
+  { path: 'cart', component: CartPageComponent , data: { animation: CartPageComponent  } },
+  { path: 'register', component: RegisterAccountComponent , data: { animation: RegisterAccountComponent  } },
+  { path: 'login', component: LoginAccountComponent , data: { animation: LoginAccountComponent  } },
+  { path: 'user', component: UserInfoComponent , data: { animation: UserInfoComponent  } },
 
   {
     path: 'checkout',
@@ -24,28 +24,6 @@ const routes: Routes = [
   {
     path: '**', component: NotFoundComponent
   },
-  // {
-  //   path: 'cart',
-  //   loadComponent: () => import('./cart-page/cart-page.component').then(m => m.CartPageComponent)
-  // },
-  // {
-  //   path: 'register',
-  //   loadComponent: () => import('./account-page/register-account/register-account.component').then(m => m.RegisterAccountComponent)
-  // },
-  // {
-  //   path: 'login',
-  //   loadComponent: () => import('./account-page/login-account/login-account.component').then(m => m.LoginAccountComponent)
-  // },
-  // {
-  //   path: 'user',
-  //   loadComponent: () => import('./account-page/user-info/user-info.component').then(m => m.UserInfoComponent)
-  // },
-  // {
-  //   path: 'checkout',
-  //   loadComponent: () => import('./checkout-page/checkout-page.component').then(m => m.CheckoutPageComponent)
-  // },
-
-
 ];
 
 @NgModule({

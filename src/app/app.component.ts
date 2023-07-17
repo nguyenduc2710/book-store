@@ -2,14 +2,19 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { BookService } from './services/book.services';
 import { UserService } from './services/user.service';
-import { Subject, take, takeUntil } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 import { Message } from './model/message.model';
 import { CartService } from './services/cart.service';
+import { RouterOutlet } from '@angular/router';
+import { fade } from './route-animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations: [
+    fade,
+  ]
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = 'ng-books-store';
@@ -33,6 +38,10 @@ export class AppComponent implements OnInit, OnDestroy {
     this.cart$.pipe(takeUntil(this.destroyed$)).subscribe(message => {
       this.renderMessage(message);
     })
+  }
+
+  prepareRoute(outlet: RouterOutlet){
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
 
   renderMessage(message: Message){
