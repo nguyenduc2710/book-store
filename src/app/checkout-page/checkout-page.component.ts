@@ -41,7 +41,7 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.userInfo = this.userService.getCurrentUser();
     if (this.userInfo.fullName && this.userInfo.phoneNumber && this.userInfo.address) {
-      this.checkoutForm = new FormGroup({
+      this.checkoutForm.patchValue({
         'fullName': new FormControl(this.userInfo.fullName, Validators.required),
         'phoneNumber': new FormControl(this.userInfo.phoneNumber, [Validators.required, Validators.minLength(9)]),
         'email': new FormControl(this.userInfo.email, Validators.required),
