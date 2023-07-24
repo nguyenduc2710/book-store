@@ -10,3 +10,7 @@ export interface UserModel {
   email: string;
 
 }
+
+export interface OriginUsers{
+  id: string
+}

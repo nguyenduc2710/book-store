@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import en from '@angular/common/locales/en';
-
+import { StoreModule } from '@ngrx/store';
 //Pipe
 import { LineBreak } from './shared/line-break.pipe';
 import { FilterBook } from './shared/filter-book.pipe';
@@ -54,6 +54,7 @@ import { LoginAccountComponent } from './account-page/login-account/login-accoun
 import { UserInfoComponent } from './account-page/user-info/user-info.component';
 import { CheckoutModule } from './checkout-page/checkout.module';
 import { BookModule } from './book-list/book.module';
+import { AccountReducer } from './store/account/account.reducer';
 
 registerLocaleData(en);
 
@@ -109,7 +110,6 @@ registerLocaleData(en);
     //modules
     CheckoutModule,
     BookModule,
-
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },

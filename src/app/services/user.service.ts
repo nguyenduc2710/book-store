@@ -1,10 +1,13 @@
 import { Injectable } from "@angular/core";
 import { UserModel } from "../model/user.model";
 import { User } from "../model/user.class";
-import { BehaviorSubject, map } from "rxjs";
+import { BehaviorSubject, Observable, map, of } from "rxjs";
 import { AngularFireDatabase, AngularFireList } from "@angular/fire/compat/database";
 import { getDatabase, ref, set } from "firebase/database"
 import { Message } from "../model/message.model";
+import { catchError, tap } from "rxjs/operators";
+import { HttpClient } from "@angular/common/http";
+import { AccountStore } from "../store/login/auth.store";
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
@@ -22,13 +25,15 @@ export class UserService {
   readonly isAuthenticated = new BehaviorSubject<boolean>(false);
   readonly currentUser = new BehaviorSubject<User>(this.nullUser);
   readonly currentUser$ = this.currentUser.asObservable();
-  readonly userMessage$ = new BehaviorSubject<Message>({type: '', info: ''});
+  readonly userMessage$ = new BehaviorSubject<Message>({ type: '', info: '' });
   readonly dbUsers = '/users';
   userRef: AngularFireList<UserModel>;
-  user: any[] = [];
+  user: User[] = [];
+  readonly firebaseUrl = "https://angular-udemy-d70fb-default-rtdb.asia-southeast1.firebasedatabase.app"
 
-  constructor(private db: AngularFireDatabase) {
-    this.userRef = this.db.list(this.dbUsers)
+  constructor(private db: AngularFireDatabase,
+    private http: HttpClient) {
+    this.userRef = this.db.list(this.dbUsers);
     this.userRef.snapshotChanges()
       .pipe(
         map(changes =>
@@ -48,8 +53,24 @@ export class UserService {
     return this.user;
   }
 
-  getCurrentUser(){
+  getCurrentUser() {
     return this.currentUser.value;
+  }
+
+  httpUser(): Observable<any>{
+    return this.http.get(this.firebaseUrl + '/users.json');
+  }
+
+  authUser(username: string, password: string){
+    const user = new BehaviorSubject<User>(this.nullUser);
+    Object.values(this.user[0]).forEach((userInfo: any) => {
+      if (userInfo.username == username && userInfo.password == password) {
+        this.isAuthenticated.next(true);
+        this.currentUser.next(userInfo);
+        user.next(userInfo);
+      }
+    })
+    return user;
   }
 
   authenUser(username: string, password: string) {
@@ -73,7 +94,8 @@ export class UserService {
     address: string,
     gender: string,
     age: number,
-    phoneNumber: number) {
+    phoneNumber: number
+  ) {
     const db = getDatabase();
     set(ref(db, 'users/' + 'u_' + Object.values(this.user[0]).length), {
       username: username,
@@ -88,7 +110,7 @@ export class UserService {
   }
 
   sendUserMessage(type: string, info: string) {
-    this.userMessage$.next({type: type, info: info});
+    this.userMessage$.next({ type: type, info: info });
   }
 
   logout() {
