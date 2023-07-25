@@ -50,11 +50,6 @@ export class BookListComponent implements OnInit, OnDestroy {
     this.router.navigate([`book/${book_id}`]);
   }
 
-  onTest() {
-    // const test = [{book_id: '47894246', quantity: 3}, {book_id: '58283080', quantity: 1}]
-    // this.bookService.updateBookQuantity(test);
-  }
-
   ngOnDestroy(): void {
     this.destroyed$.next();
     this.destroyed$.complete();

@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterViewChecked, Component, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Book } from 'src/app/model/books.model';
 import { CartService } from 'src/app/services/cart.service';
 

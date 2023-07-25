@@ -2,6 +2,7 @@ import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from "@angular/co
 import { UserService } from "../services/user.service";
 import { FilterDataService } from "../services/filter.services";
 import { CartService } from "../services/cart.service";
+import { BookService } from "../services/book.services";
 
 @Component({
   selector: 'app-layout-header',
@@ -16,7 +17,7 @@ import { CartService } from "../services/cart.service";
             </li>
 
             <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
-              <input #searchVal (keyup)="onChangeSearch(searchVal)" type="text" nz-input placeholder="input search text" />
+              <input #searchVal id="search-box" (keyup)="onChangeSearch(searchVal)" type="text" nz-input placeholder="Input search text" />
             </nz-input-group>
             <ng-template #suffixIconButton>
               <button (click)="onChangeSearch(searchVal)" nz-button nzType="primary" nzSearch><span nz-icon nzType="search"></span></button>
@@ -66,7 +67,9 @@ export class LayoutHeader implements OnInit, OnDestroy {
   @ViewChild("searchVal", { static: false }) searchVal!: ElementRef<HTMLInputElement>;
   constructor(private userService: UserService,
     private filterService: FilterDataService,
-    private cartService: CartService) { }
+    private cartService: CartService,
+    private bookService: BookService) { }
+
   isAuth: boolean = false;
   bookCount = 0;
   ngOnInit(): void {
@@ -86,6 +89,7 @@ export class LayoutHeader implements OnInit, OnDestroy {
     const str = event.value;
     this.filterService.searchOnChange(str);
   }
+
   onClearSearch() {
     this.searchVal.nativeElement.value = '';
     this.filterService.searchOnChange('');

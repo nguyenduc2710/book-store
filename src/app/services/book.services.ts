@@ -36,17 +36,6 @@ export class BookService {
         });
         this.book$.next(this.books);
         this.originStore$.next(origin)
-        // const format = result.map(item => {
-        //   const key: any = item.id;
-        //   const val = item.value;
-        //   return { [key]: val }
-        // });
-        // this.books = [];
-        // format.map((item) => {
-        //   //Moi id khac nhau va khong tuan tu, nen khong push theo index cua ham map
-        //   // this.books.push(item[Object.keys(item)]);
-        // });
-        // this.book$.next(this.books);
       })
   }
 

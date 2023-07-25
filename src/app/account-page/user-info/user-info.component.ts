@@ -1,10 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { NzIconModule } from 'ng-zorro-antd/icon';
-import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { Subscription } from 'rxjs';
 import { User } from 'src/app/model/user.class';
 import { UserService } from 'src/app/services/user.service';
+import { AccountStore } from 'src/app/store/login/auth.store';
 
 @Component({
   selector: 'app-user-info',
@@ -13,12 +11,12 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class UserInfoComponent implements OnInit, OnDestroy {
   currentUser!: User;
-
+  currentUserSubcription: Subscription | undefined;
+  vm$ = this.store.vm$;
   readonly currentUser$ = this.userService.currentUser$;
 
-  currentUserSubcription: Subscription | undefined;
-
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,
+    private store: AccountStore) { }
 
   ngOnInit(): void {
     console.log('init user info', this.userService.currentUser)
@@ -30,7 +28,8 @@ export class UserInfoComponent implements OnInit, OnDestroy {
   }
 
   onLogout(){
-    this.userService.logout();
+    this.store.logoutUser();
+    // this.userService.logout();
   }
 
   ngOnDestroy(): void {

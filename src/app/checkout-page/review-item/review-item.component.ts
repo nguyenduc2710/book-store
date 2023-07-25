@@ -1,6 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Book } from 'src/app/model/books.model';
-import { Cart } from 'src/app/model/cart.model';
 
 @Component({
   selector: 'app-review-item',

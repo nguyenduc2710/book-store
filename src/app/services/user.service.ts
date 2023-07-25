@@ -5,9 +5,7 @@ import { BehaviorSubject, Observable, map, of } from "rxjs";
 import { AngularFireDatabase, AngularFireList } from "@angular/fire/compat/database";
 import { getDatabase, ref, set } from "firebase/database"
 import { Message } from "../model/message.model";
-import { catchError, tap } from "rxjs/operators";
 import { HttpClient } from "@angular/common/http";
-import { AccountStore } from "../store/login/auth.store";
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
@@ -57,7 +55,7 @@ export class UserService {
     return this.currentUser.value;
   }
 
-  httpUser(): Observable<any>{
+  getAllUsers(): Observable<any>{
     return this.http.get(this.firebaseUrl + '/users.json');
   }
 
@@ -70,20 +68,19 @@ export class UserService {
         user.next(userInfo);
       }
     })
-    return user;
+    return of(user);
   }
 
-  authenUser(username: string, password: string) {
-    let isValid = false
+  authenUser(username: string, password: string){
+    const user = new BehaviorSubject<User>(this.nullUser);
     Object.values(this.user[0]).forEach((userInfo: any) => {
       if (userInfo.username == username && userInfo.password == password) {
         this.isAuthenticated.next(true);
         this.currentUser.next(userInfo);
-        isValid = true;
+        user.next(userInfo);
       }
     })
-
-    return isValid;
+    return user;
   }
 
   createUser(
