@@ -42,10 +42,10 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
     this.userInfo = this.userService.getCurrentUser();
     if (this.userInfo.fullName && this.userInfo.phoneNumber && this.userInfo.address) {
       this.checkoutForm.patchValue({
-        'fullName': new FormControl(this.userInfo.fullName, Validators.required),
-        'phoneNumber': new FormControl(this.userInfo.phoneNumber, [Validators.required, Validators.minLength(9)]),
-        'email': new FormControl(this.userInfo.email, Validators.required),
-        'address': new FormControl(this.userInfo.address, Validators.required),
+        'fullName': this.userInfo.fullName,
+        'phoneNumber': this.userInfo.phoneNumber,
+        'email': this.userInfo.email,
+        'address': this.userInfo.address,
       })
     }
     this.summaryCart$.pipe(takeUntil(this.destroy$)).subscribe(product => {
