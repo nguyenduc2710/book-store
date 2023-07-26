@@ -69,7 +69,6 @@ export class BookItemComponent implements OnInit {
       this.bookId = param['id'];
       this.book = this.bookService.getBookById(this.bookId);
     })
-    this.store.getBooks();
   }
 
   increaseQuantity() {

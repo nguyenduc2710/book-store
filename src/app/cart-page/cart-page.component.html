@@ -1,18 +1,18 @@
-<div class="cart-container">
+<div class="cart-container" *ngIf="vm$ | async as vm">
   <div class="cart-header">
-    <div [ngSwitch]="totalBook">
-      <div [ngSwitch]="totalBook > 1">
-        <div *ngSwitchCase="true"> Review your bag (current {{ totalBook }} products)</div>
+    <div [ngSwitch]="vm.numbersOfItem">
+      <div [ngSwitch]="vm.numbersOfItem > 1">
+        <div *ngSwitchCase="true"> Review your bag (current {{ vm.numbersOfItem }} products)</div>
       </div>
-      <div *ngSwitchCase="1"> Review your bag (current {{ totalBook }} products)</div>
+      <div *ngSwitchCase="1"> Review your bag (current {{vm.numbersOfItem}} product)</div>
       <div *ngSwitchCase="0">You haven't added any products!</div>
     </div>
     <hr>
   </div>
   <div class="cart-body">
     <nz-list>
-      <app-prd-item *ngFor="let item of bookList" [bookItem]="item"
-        [quantity]="getQuantity(item.book_id.toString())"></app-prd-item>
+      <app-prd-item *ngFor="let item of vm.cartItems" [bookItem]="item.item"
+        [quantity]="item.numbersOfItem"></app-prd-item>
     </nz-list>
   </div>
   <ng-container *ngIf="totalBook > 0; then cartFooter"></ng-container>
@@ -22,7 +22,7 @@
       <div class="footer-subtotal">
         <div class="footer-item">
           <div class="item_title">SUBTOTAL:</div>
-          <div>{{totalPrice | currency}}</div>
+          <div>{{vm.totalPrice | currency}}</div>
         </div>
         <div class="footer-item">
           <div class="item_title">VAT:</div>
@@ -39,14 +39,14 @@
           TOTAL:
         </div>
         <div class="total_price">
-          {{totalPriceAfterVAT | currency}}
+          {{vm.totalPrice + (vm.totalPrice * 0.04) | currency}}
         </div>
       </div>
       <div class="footer-checkout">
         <button routerLink="/checkout" class="btn btn-outline-success btn-checkout">
           Checkout
         </button>
-        <button (click)="test()">test</button>
+        <!-- <button (click)="test()">test</button> -->
       </div>
     </div>
   </ng-template>

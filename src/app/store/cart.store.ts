@@ -27,6 +27,7 @@ const initCart: CartState = {
 export class CartStore extends ComponentStore<CartState> {
   constructor(private bookService: BookService) {
     super(initCart);
+    this.getBooks();
   };
 
   //SELECTORS
