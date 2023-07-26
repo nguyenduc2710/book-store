@@ -3,6 +3,7 @@ import { CartService } from '../services/cart.service';
 import { Book } from '../model/books.model';
 import { Cart } from '../model/cart.model';
 import { Subject, takeUntil } from 'rxjs';
+import { CartStore } from '../store/cart.store';
 @Component({
   selector: 'app-cart-page',
   templateUrl: './cart-page.component.html',
@@ -17,10 +18,15 @@ export class CartPageComponent implements OnInit, OnDestroy {
   readonly totalPrice$ = this.cartService.totalPrice$;
   readonly totalPriceAfterVAT$ = this.cartService.totalPriceAfterVAT$;
   readonly itemQuantity$ = this.cartService.itemQuantity$;
+  readonly bookStorage$ = this.store.bookStorage$;
+  readonly vm$ = this.store.vm$
+  showVmData: any
+  showBookStorage: any
   //Observable destroyed$ only be declared 1 time for each component, unsubcribed using next() & complete()
   readonly destroyed$ = new Subject<void>()
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService,
+    private store: CartStore) { }
 
   ngOnInit(): void {
     this.bookList = this.cartService.onGetList();
@@ -35,6 +41,12 @@ export class CartPageComponent implements OnInit, OnDestroy {
     this.totalPriceAfterVAT$
       .pipe(takeUntil(this.destroyed$))
       .subscribe(totalPriceVAT => this.totalPriceAfterVAT = totalPriceVAT);
+    this.vm$
+    .pipe(takeUntil(this.destroyed$))
+    .subscribe(data => this.showVmData = data);
+    this.bookStorage$
+    .pipe(takeUntil(this.destroyed$))
+    .subscribe(data => this.showBookStorage = data);
   }
 
   getQuantity(book_id: string): number {
@@ -48,7 +60,10 @@ export class CartPageComponent implements OnInit, OnDestroy {
     }
     return quantity;
   }
-
+  test(){
+    console.log(this.showVmData);
+    console.log(this.showBookStorage);
+  }
   ngOnDestroy(): void {
     this.destroyed$.next();
     this.destroyed$.complete();

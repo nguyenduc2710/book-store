@@ -1,21 +1,25 @@
 import { Injectable } from "@angular/core";
-import { Book } from "../model/books.model";
+import { HttpClient } from "@angular/common/http";
+import { BehaviorSubject, Observable, map } from "rxjs";
 import { AngularFireDatabase, AngularFireList } from "@angular/fire/compat/database";
-import { BehaviorSubject, map } from "rxjs";
-import { Message } from "../model/message.model";
 import { getDatabase, ref, update } from "firebase/database";
+import { Book } from "../model/books.model";
+import { Message } from "../model/message.model";
+
 
 @Injectable({ providedIn: 'root' })
 export class BookService {
-  // onChangeBook = new Subject<Book>();
   private dbBookPath = '/books';
   private books: any[] = [];
   bookRef: AngularFireList<Book>;
   originStore$ = new BehaviorSubject<any[]>([]);
   book$ = new BehaviorSubject<Book[]>([]);
   bookMessage$ = new BehaviorSubject<Message>({ type: '', info: '' });
+  readonly firebaseUrl = "https://angular-udemy-d70fb-default-rtdb.asia-southeast1.firebasedatabase.app"
 
-  constructor(private db: AngularFireDatabase) {
+
+  constructor(private db: AngularFireDatabase,
+    private http: HttpClient) {
     this.bookRef = this.db.list(this.dbBookPath);
   }
 
@@ -43,8 +47,8 @@ export class BookService {
     return this.books;
   }
 
-  sendBookMessage(type: string, info: string) {
-    this.bookMessage$.next({ type: type, info: info });
+  getAllBooks(): Observable<any>{
+    return this.http.get(this.firebaseUrl + '/books.json');
   }
 
   getBookById(book_id: string): Book {
@@ -96,6 +100,11 @@ export class BookService {
     update(ref(db), updatedList)
   }
 
+  sendBookMessage(type: string, info: string) {
+    this.bookMessage$.next({ type: type, info: info });
+  }
+
+}
 
   //Update one item at a time called
   // updateBookQuantity(book_id: string, quantity: number) {
@@ -123,6 +132,3 @@ export class BookService {
   //       }
   //     })
   // }
-
-}
-

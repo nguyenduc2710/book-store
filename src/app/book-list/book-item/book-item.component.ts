@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { BookService } from 'src/app/services/book.services';
 import { Book } from 'src/app/model/books.model';
 import { CartService } from 'src/app/services/cart.service';
+import { CartStore } from 'src/app/store/cart.store';
 
 @Component({
   selector: 'app-book-item',
@@ -60,13 +61,15 @@ export class BookItemComponent implements OnInit {
   bookId: string = '';
   constructor(private bookService: BookService,
     private route: ActivatedRoute,
-    private cartService: CartService) { }
+    private cartService: CartService,
+    private store: CartStore) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((param: Params) => {
       this.bookId = param['id'];
       this.book = this.bookService.getBookById(this.bookId);
     })
+    this.store.getBooks();
   }
 
   increaseQuantity() {
@@ -81,11 +84,13 @@ export class BookItemComponent implements OnInit {
     }
   }
 
-  onAddItem(){
+  onAddItem() {
     const book_id = this.book.book_id.toString();
-    if(this.book.quantity && this.bookQuantity > this.book.quantity){
+    const itemId = Math.trunc((Math.random() * 1000000)).toString();
+    this.store.addItem({ id: itemId, numbersOfItem: this.bookQuantity, item: this.book })
+    if (this.book.quantity && this.bookQuantity > this.book.quantity) {
       this.bookService.sendBookMessage("warning", "Selected quantity exceeds available storage!");
-    } else{
+    } else {
       this.cartService.onAddItem(book_id, this.bookQuantity);
     }
   }

@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { ComponentStore, tapResponse } from "@ngrx/component-store";
-import { Observable, switchMap, concatMap, of } from "rxjs";
+import { Observable, switchMap } from "rxjs";
 import { delay, tap } from 'rxjs/operators'
 import { User } from "src/app/model/user.class";
 import { UserService } from "src/app/services/user.service";

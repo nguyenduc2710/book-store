@@ -1796,6 +1796,13 @@
   dependencies:
     tslib "^2.0.0"
 
+"@ngrx/store-devtools@^16.1.0":
+  version "16.1.0"
+  resolved "https://registry.npmjs.org/@ngrx/store-devtools/-/store-devtools-16.1.0.tgz"
+  integrity sha512-7MKvmdRhAoIClOX9KkIeeQxe6c/uUqe1UcjFTABsquioSac4r/TxfUkmelSjtlQLBXiUAKTc9icqhZzfyMI0gw==
+  dependencies:
+    tslib "^2.0.0"
+
 "@ngrx/store@^16.1.0", "@ngrx/store@16.1.0":
   version "16.1.0"
   resolved "https://registry.npmjs.org/@ngrx/store/-/store-16.1.0.tgz"

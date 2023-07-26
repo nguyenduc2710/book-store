@@ -55,6 +55,7 @@ import { UserInfoComponent } from './account-page/user-info/user-info.component'
 import { CheckoutModule } from './checkout-page/checkout.module';
 import { BookModule } from './book-list/book.module';
 import { AccountReducer } from './store/account/account.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 registerLocaleData(en);
 
@@ -62,8 +63,6 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     CartPageComponent,
-    // BookListComponent,
-    // BookItemComponent,
     PrdItemComponent,
     LayoutFooter,
     LayoutHeader,
@@ -110,6 +109,13 @@ registerLocaleData(en);
     //modules
     CheckoutModule,
     BookModule,
+
+    //store
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Retains last 25 states
+      logOnly: false, // Restrict extension to log-only mode
+      autoPause: true, // Pauses recording actions and state changes when the extension window is not open
+    }),
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },

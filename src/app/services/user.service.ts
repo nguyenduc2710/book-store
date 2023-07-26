@@ -1,11 +1,11 @@
 import { Injectable } from "@angular/core";
-import { UserModel } from "../model/user.model";
-import { User } from "../model/user.class";
+import { HttpClient } from "@angular/common/http";
 import { BehaviorSubject, Observable, map, of } from "rxjs";
 import { AngularFireDatabase, AngularFireList } from "@angular/fire/compat/database";
 import { getDatabase, ref, set } from "firebase/database"
 import { Message } from "../model/message.model";
-import { HttpClient } from "@angular/common/http";
+import { UserModel } from "../model/user.model";
+import { User } from "../model/user.class";
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
