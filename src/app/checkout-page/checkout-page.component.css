@@ -54,5 +54,7 @@
     }
   }
 
-
+}
+input.ng-invalid.ng-touched{
+  border: 1px solid rgb(190, 0, 0);
 }

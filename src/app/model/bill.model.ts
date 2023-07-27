@@ -15,3 +15,8 @@ export interface Products{
   quantity: number,
   total: number
 }
+
+export interface OriginBill{
+  billId: string,
+  bill: Bill
+}

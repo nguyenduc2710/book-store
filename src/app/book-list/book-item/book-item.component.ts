@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { BookService } from 'src/app/services/book.services';
 import { Book } from 'src/app/model/books.model';
+import { Subject } from 'rxjs'
 import { CartService } from 'src/app/services/cart.service';
 import { CartStore } from 'src/app/store/cart.store';
 
@@ -46,7 +47,7 @@ import { CartStore } from 'src/app/store/cart.store';
   `,
   styleUrls: ['./book-item.component.css'],
 })
-export class BookItemComponent implements OnInit {
+export class BookItemComponent implements OnInit, OnDestroy {
   bookQuantity: number = 1;
   book: Book = {
     book_id: '',
@@ -59,6 +60,9 @@ export class BookItemComponent implements OnInit {
     quantity: 0,
   };
   bookId: string = '';
+  itemListSelected$ = this.store.cartItems$
+  readonly destroy$ = new Subject<void>();
+
   constructor(private bookService: BookService,
     private route: ActivatedRoute,
     private cartService: CartService,
@@ -84,13 +88,21 @@ export class BookItemComponent implements OnInit {
   }
 
   onAddItem() {
-    const book_id = this.book.book_id.toString();
-    const itemId = Math.trunc((Math.random() * 1000000)).toString();
-    this.store.addItem({ id: itemId, numbersOfItem: this.bookQuantity, item: this.book })
+    //Still having bug constant adding product to cart
+    const currentItem = this.itemListSelected$.forEach(item => {return item})
     if (this.book.quantity && this.bookQuantity > this.book.quantity) {
       this.bookService.sendBookMessage("warning", "Selected quantity exceeds available storage!");
-    } else {
+    }
+    else {
+      const book_id = this.book.book_id.toString();
+      const itemId = Math.trunc((Math.random() * 1000000)).toString();
+      this.store.addItem({ id: itemId, numbersOfItem: this.bookQuantity, item: this.book });
       this.cartService.onAddItem(book_id, this.bookQuantity);
     }
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

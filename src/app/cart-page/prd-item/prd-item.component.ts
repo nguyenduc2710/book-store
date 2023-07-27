@@ -10,8 +10,8 @@ import { CartStore } from 'src/app/store/cart.store';
 })
 export class PrdItemComponent {
   @Input() quantity: number;
-
   @Input() bookItem: Book;
+
   constructor(private cartService: CartService,
     private store: CartStore) {
     this.bookItem = {
@@ -29,9 +29,10 @@ export class PrdItemComponent {
   }
 
   onUpdateQuantity(quantity: number) {
-    this.store.updateQuantity({ book: this.bookItem, quantity: quantity })
+    this.store.updateQuantity({ book: this.bookItem, quantity: quantity });
     this.cartService.onUpdateQuantity(this.bookItem.book_id, quantity);
   }
+
 
   onDelete() {
     this.store.removeItem(this.bookItem);

@@ -6,6 +6,7 @@ import { UserModel } from '../model/user.model';
 import { Subject, takeUntil } from 'rxjs';
 import { CartService } from '../services/cart.service';
 import { BillService } from '../services/bills.service';
+import { CartStore } from '../store/cart.store';
 
 @Component({
   selector: 'app-checkout-page',
@@ -30,13 +31,15 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
   });
   purchased: boolean;
   billId: string = '';
+  isLoading = false;
 
   constructor(private userService: UserService,
     private cartService: CartService,
     private billService: BillService,
-    private bookService: BookService) {
-      this.purchased = false;
-    }
+    private bookService: BookService,
+    private cartStore: CartStore) {
+    this.purchased = false;
+  }
 
   ngOnInit(): void {
     this.userInfo = this.userService.getCurrentUser();
@@ -59,23 +62,28 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
   }
 
   onPurchase() {
-    const checkoutForm = this.checkoutForm.value;
-    const username = this.userService.currentUser.value;
-    const products = this.cartService.getShortListProducts();
-    const totalBill = this.cartService.totalPriceAfterVAT$.value;
-    const shortList = this.cartService.shortList$.value;
-    this.billService.onCheckout(
-      username.username,
-      checkoutForm.email,
-      checkoutForm.fullName,
-      checkoutForm.phoneNumber,
-      checkoutForm.address,
-      products,
-      totalBill,
-    )
-    this.bookService.updateBookQuantity(shortList);
-    this.cartService.clearAll()
-    this.purchased = true;
+    this.isLoading = true;
+    setTimeout(() => {
+      const checkoutForm = this.checkoutForm.value;
+      const username = this.userService.currentUser.value;
+      const products = this.cartService.getShortListProducts();
+      const totalBill = this.cartService.totalPriceAfterVAT$.value;
+      const shortList = this.cartService.shortList$.value;
+      this.billService.onCheckout(
+        username.username,
+        checkoutForm.email,
+        checkoutForm.fullName,
+        checkoutForm.phoneNumber,
+        checkoutForm.address,
+        products,
+        totalBill,
+      )
+      this.bookService.updateBookQuantity(shortList);
+      this.cartService.clearAll();
+      this.cartStore.resetState();
+      this.purchased = true;
+      this.isLoading = false;
+    }, 1200)
   }
 
   ngOnDestroy(): void {

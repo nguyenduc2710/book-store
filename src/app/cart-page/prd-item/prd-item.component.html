@@ -20,7 +20,7 @@
   </div>
   <div class="item-right col-3">
     <div class="item-quantity">
-      <nz-input-number (ngModelChange)="onUpdateQuantity($event)" [(ngModel)]="quantity" [nzMin]="1" [nzMax]="100" [nzStep]="1"></nz-input-number>
+      <nz-input-number (ngModelChange)="onUpdateQuantity($event)" [(ngModel)]="quantity" [nzMin]="1" [nzMax]="200" [nzStep]="1"></nz-input-number>
     </div>
     <div class="item-total">
       {{ bookItem.price * quantity | currency: 'USD'}}

@@ -1,14 +1,18 @@
 import { Injectable } from "@angular/core";
 import { Bill, Products } from "../model/bill.model";
-import { BehaviorSubject, Subject } from "rxjs";
+import { BehaviorSubject, Observable, Subject } from "rxjs";
 import { getDatabase, ref, set } from "firebase/database";
 import * as moment from "moment";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({ providedIn: 'root' })
 export class BillService {
   readonly billId$ = new BehaviorSubject<string>('');
-  bills$ = new BehaviorSubject<Bill[]>([]);
+  readonly bills$ = new BehaviorSubject<Bill[]>([]);
   bills: Bill[] = [];
+  readonly firebaseUrl = "https://angular-udemy-d70fb-default-rtdb.asia-southeast1.firebasedatabase.app"
+
+  constructor(private http: HttpClient) { }
 
   onCheckout(
     username: string | undefined,
@@ -45,7 +49,8 @@ export class BillService {
 
   onClearBill() {
     this.billId$.next('');
-    this.bills$.next([])
+    this.bills$.next([]);
+    this.bills$.complete();
     this.bills = [];
   }
 
@@ -54,6 +59,8 @@ export class BillService {
     return result.toString();
   }
 
-
+  getBills(): Observable<any> {
+    return this.http.get(this.firebaseUrl + '/bills.json');
+  }
 
 }

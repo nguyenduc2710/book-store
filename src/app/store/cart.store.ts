@@ -48,6 +48,10 @@ export class CartStore extends ComponentStore<CartState> {
     })
   );
 
+  resetState(){
+    this.setState(initCart);
+  }
+
   //UPDATERSs
   readonly addBooks = this.updater((state: CartState, books: Book[]) => (
     {

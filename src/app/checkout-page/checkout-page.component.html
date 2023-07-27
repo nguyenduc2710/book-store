@@ -2,7 +2,7 @@
   <h2>Purchase Order</h2>
   <hr>
   <div class="checkout-information col-7">
-    <form [formGroup]="checkoutForm" class="checkout-form">
+    <form [formGroup]="checkoutForm" class="checkout-form" (ngSubmit)="onPurchase()">
       <h5 class="form_title"><span class="checkout-label-number">1</span>PERSONAL INFORMATION</h5>
       <div class="form-floating mb-3">
         <input type="text" class="form-control" name="fullName" formControlName="fullName" placeholder="Full Name">
@@ -59,12 +59,13 @@
           Visa/Master/JCB
         </label>
       </div>
-
-      <button (click)="onPurchase()" [disabled]="!checkoutForm.valid" style="width: 100%;"
-        class="btn btn-primary btn-block mb-3">
-        <span nz-icon nzType="shopping-cart" nzTheme="outline"></span>
-        Purchase
-      </button>
+      <nz-spin [nzSpinning]="isLoading">
+        <button type="submit" [disabled]="!checkoutForm.valid" style="width: 100%;"
+          class="btn btn-primary btn-block mb-3">
+          <span nz-icon nzType="shopping-cart" nzTheme="outline"></span>
+          Purchase
+        </button>
+      </nz-spin>
     </form>
   </div>
 

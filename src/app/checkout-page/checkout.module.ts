@@ -10,6 +10,7 @@ import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzResultModule } from 'ng-zorro-antd/result';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzSpinModule } from 'ng-zorro-antd/spin';
 
 const ngModules = [
   ReactiveFormsModule,
@@ -23,6 +24,7 @@ const antdZorro = [
   NzPipesModule,
   NzButtonModule,
   NzIconModule,
+  NzSpinModule,
 ];
 const router: Routes = [
   { path: '', component: CheckoutPageComponent },

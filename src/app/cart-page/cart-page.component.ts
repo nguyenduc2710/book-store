@@ -4,6 +4,7 @@ import { Book } from '../model/books.model';
 import { Cart } from '../model/cart.model';
 import { Subject, takeUntil } from 'rxjs';
 import { CartStore } from '../store/cart.store';
+import { BillStore } from '../store/bill.store';
 @Component({
   selector: 'app-cart-page',
   templateUrl: './cart-page.component.html',
@@ -25,7 +26,8 @@ export class CartPageComponent implements OnInit, OnDestroy {
   readonly destroyed$ = new Subject<void>();
 
   constructor(private cartService: CartService,
-    private store: CartStore) { }
+    private store: CartStore,
+    private billStore: BillStore) { }
 
   ngOnInit(): void {
     this.bookList = this.cartService.onGetList();
@@ -52,6 +54,9 @@ export class CartPageComponent implements OnInit, OnDestroy {
       }
     }
     return quantity;
+  }
+  test(){
+    this.billStore.getBills();
   }
 
   ngOnDestroy(): void {
