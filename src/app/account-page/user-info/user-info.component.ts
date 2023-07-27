@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { User } from 'src/app/model/user.class';
 import { UserService } from 'src/app/services/user.service';
+import { BillStore } from 'src/app/store/bill.store';
 import { AccountStore } from 'src/app/store/login/auth.store';
 
 @Component({
@@ -12,14 +13,15 @@ import { AccountStore } from 'src/app/store/login/auth.store';
 export class UserInfoComponent implements OnInit, OnDestroy {
   currentUser!: User;
   currentUserSubcription: Subscription | undefined;
-  vm$ = this.store.vm$;
+  accountVm$ = this.accountStore.vm$;
+  billsVm$ = this.billStore.vm$;
   readonly currentUser$ = this.userService.currentUser$;
 
   constructor(private userService: UserService,
-    private store: AccountStore) { }
+    private accountStore: AccountStore,
+    private billStore: BillStore) { }
 
   ngOnInit(): void {
-    console.log('init user info', this.userService.currentUser)
     this.currentUserSubcription = this.userService.currentUser.subscribe((user) => {
       if (user) {
         this.currentUser = user;
@@ -28,8 +30,8 @@ export class UserInfoComponent implements OnInit, OnDestroy {
   }
 
   onLogout(){
-    this.store.logoutUser();
-    // this.userService.logout();
+    this.accountStore.logoutUser();
+    this.userService.logout();
   }
 
   ngOnDestroy(): void {

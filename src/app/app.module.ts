@@ -5,7 +5,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import en from '@angular/common/locales/en';
-import { StoreModule } from '@ngrx/store';
 //Pipe
 import { LineBreak } from './shared/line-break.pipe';
 import { FilterBook } from './shared/filter-book.pipe';
@@ -41,9 +40,6 @@ import { firebaseConfig } from './firebaseConfig';
 //Components
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { MainPageComponent } from './main-page/main-page.component';
-// import { BookListComponent } from './book-list/book-list.component';
-// import { BookItemComponent } from './book-list/book-item/book-item.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { PrdItemComponent } from './cart-page/prd-item/prd-item.component';
 import { LayoutFooter } from './layout/layout-footer.component';
@@ -54,8 +50,7 @@ import { LoginAccountComponent } from './account-page/login-account/login-accoun
 import { UserInfoComponent } from './account-page/user-info/user-info.component';
 import { CheckoutModule } from './checkout-page/checkout.module';
 import { BookModule } from './book-list/book.module';
-import { AccountReducer } from './store/account/account.reducer';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { UserReceiptComponent } from './account-page/user-info/user-receipt/user-receipt.component';
 
 registerLocaleData(en);
 
@@ -71,6 +66,7 @@ registerLocaleData(en);
     UserInfoComponent,
     LineBreak,
     FilterBook,
+    UserReceiptComponent,
   ],
   imports: [
     BrowserModule,
@@ -110,12 +106,6 @@ registerLocaleData(en);
     CheckoutModule,
     BookModule,
 
-    //store
-    StoreDevtoolsModule.instrument({
-      maxAge: 25, // Retains last 25 states
-      logOnly: false, // Restrict extension to log-only mode
-      autoPause: true, // Pauses recording actions and state changes when the extension window is not open
-    }),
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },

@@ -10,6 +10,7 @@ import { switchMap } from "rxjs";
 
 export interface BillState {
   bills: OriginBill[];
+  userBills: OriginBill[];
   users: UserModel[];
   books: Book[];
   selectedBillId: string | null;
@@ -17,6 +18,7 @@ export interface BillState {
 
 const initState = {
   bills: [],
+  userBills: [],
   users: [],
   books: [],
   selectedBillId: null,
@@ -30,12 +32,14 @@ export class BillStore extends ComponentStore<BillState>{
     private billService: BillService
   ) {
     super(initState);
+    this.getBills();
     this.getBooks();
     this.getUsers();
   }
 
   //SELECTORS
   readonly bills$ = this.select((state) => state.bills);
+  readonly userBills$ = this.select((state) => state.userBills);
   readonly users$ = this.select((state) => state.users);
   readonly books$ = this.select((state) => state.books);
   readonly selectedBillId$ = this.select((state) => state.selectedBillId);
@@ -43,11 +47,13 @@ export class BillStore extends ComponentStore<BillState>{
   //ViewModel
   readonly vm$ = this.select(
     this.bills$,
+    this.userBills$,
     this.users$,
     this.books$,
     this.selectedBillId$,
-    (bills, users, books, selectedBillId) => ({
+    (bills, userBills, users, books, selectedBillId) => ({
       bills,
+      userBills,
       users,
       books,
       selectedBillId
@@ -70,10 +76,18 @@ export class BillStore extends ComponentStore<BillState>{
   readonly addBills = this.updater((state: BillState, bills: OriginBill[]) => (
     {
       ...state,
-      bills: bills
+      bills: [...bills]
     }
   ));
 
+  readonly getBillsByUsername = this.updater((state: BillState, username: string) => {
+    const userBills = state.bills.filter(bill => bill.bill.username === username);
+    console.log("Get bills by username function ", userBills);
+    return {
+      ...state,
+      userBills: userBills
+    }
+  });
 
 
   //EFFECTS
@@ -89,6 +103,7 @@ export class BillStore extends ComponentStore<BillState>{
       )
     )
   ));
+
   readonly getUsers = this.effect(param$ => param$.pipe(
     switchMap(() =>
       this.userService.getAllUsers().pipe(
@@ -101,6 +116,7 @@ export class BillStore extends ComponentStore<BillState>{
       )
     )
   ));
+
   readonly getBills = this.effect(param$ => param$.pipe(
     switchMap(() =>
       this.billService.getBills().pipe(
@@ -108,7 +124,7 @@ export class BillStore extends ComponentStore<BillState>{
           (bills: any[]) => {
             const formatedBill: OriginBill[] = [];
             for (const [key, value] of Object.entries(bills)) {
-              formatedBill.push({billId: key, bill: value});
+              formatedBill.push({ billId: key, bill: value });
             }
             console.log("Formated Bill", formatedBill);
             this.addBills(formatedBill);

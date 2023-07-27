@@ -56,7 +56,8 @@ export class CartPageComponent implements OnInit, OnDestroy {
     return quantity;
   }
   test(){
-    this.billStore.getBills();
+    // this.billStore.getBills();
+    this.billStore.getBillsByUsername('admin');
   }
 
   ngOnDestroy(): void {
