@@ -14,8 +14,8 @@ export class CartPageComponent implements OnInit, OnDestroy {
   totalBook: number = 0;
   bookList: Book[] = [];
   shortList: Cart[] = [];
-  totalPrice: number = 0
-  totalPriceAfterVAT: number = 0
+  totalPrice: number = 0;
+  totalPriceAfterVAT: number = 0;
   readonly totalPrice$ = this.cartService.totalPrice$;
   readonly totalPriceAfterVAT$ = this.cartService.totalPriceAfterVAT$;
   readonly itemQuantity$ = this.cartService.itemQuantity$;
@@ -42,7 +42,7 @@ export class CartPageComponent implements OnInit, OnDestroy {
     this.totalPriceAfterVAT$
       .pipe(takeUntil(this.destroyed$))
       .subscribe(totalPriceVAT => this.totalPriceAfterVAT = totalPriceVAT);
-  }
+  };
 
   getQuantity(book_id: string): number {
     let quantity = 0;
@@ -54,7 +54,7 @@ export class CartPageComponent implements OnInit, OnDestroy {
       }
     }
     return quantity;
-  }
+  };
   test(){
     // this.billStore.getBills();
     this.billStore.getBillsByUsername('admin');
@@ -63,6 +63,6 @@ export class CartPageComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.destroyed$.next();
     this.destroyed$.complete();
-  }
+  };
 }
 

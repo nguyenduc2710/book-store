@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { OriginBill } from 'src/app/model/bill.model';
 
 @Component({
   selector: 'app-user-receipt',
@@ -6,8 +7,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./user-receipt.component.css']
 })
 export class UserReceiptComponent {
-  //image, book name, quantity, total, date, billId, status
-  //BillsStore: billId, status
-  // @Input() receipt
+  //products, total, date, billId, status
+  //BillsStore: billId, status, date, products[]
+  @Input() receipt!: OriginBill;
+
 
 }

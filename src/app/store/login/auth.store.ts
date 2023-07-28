@@ -55,6 +55,10 @@ export class AccountStore extends ComponentStore<AccountState> {
     })
   )
 
+  getCurrentUser(){
+    return this.currentuser$
+  }
+
   readonly addUsers = this.updater<User[]>((state, users) => (
     {
       ...state,
@@ -67,7 +71,7 @@ export class AccountStore extends ComponentStore<AccountState> {
   readonly updateCurrentUser = this.updater((state: AccountState, currentUser: User): AccountState => (
     {
       ...state,
-      currentUser,
+      currentUser: currentUser,
       isAuth: true
     }
   ))
@@ -101,7 +105,7 @@ export class AccountStore extends ComponentStore<AccountState> {
         tapResponse(
           (user) => {
             if (user.value.username.length > 0) {
-              this.updateCurrentUser(user);
+              this.updateCurrentUser(user.value);
               this.userService.sendUserMessage("success", "Login succeed");
               this.router.navigate(['/book']);
             } else {
@@ -119,7 +123,7 @@ export class AccountStore extends ComponentStore<AccountState> {
       this.userService.logout();
       this.updateAuthLogout();
     })
-  ))
+  ));
 
 }
 

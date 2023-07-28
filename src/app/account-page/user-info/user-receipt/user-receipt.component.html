@@ -1,43 +1,37 @@
-<nz-collapse [nzExpandIconPosition]="'right'">
-  <nz-collapse-panel
-  *ngFor="let panel of [0]"
-  [nzHeader]="'#1234522 | 27/10/2002'"
-  [nzExtra]="extraTpl">
-    <div *ngFor="let item of [0,1,2,3]" class="row" style="margin:0; margin-bottom: 10px;">
+<nz-collapse [nzExpandIconPosition]="'right'" class="user-receipt-container">
+  <nz-collapse-panel [nzHeader]="header" [nzExtra]="extraTpl">
+    <div *ngFor="let product of receipt.bill?.product" class="row item-receipt">
       <div class="col-3">
-        <img
-        nz-image
-        width="57px"
-        height="57px"
-        nzSrc="https://drive.google.com/uc?id=1LEwECidNTZH0FRT_p9qEK9ALwpUAn4nP"
-        alt="Imageeee"
-        />
+        <img nz-image width="57px"
+          [nzSrc]="product.prdDetail.cover" alt="Imageeee" />
       </div>
 
       <div class="col-4 d-flex flex-column">
-        <div>Book name #1</div>
+        <div>{{ product.prdDetail.name }}</div>
         <div>| Review</div>
       </div>
       <div class="col-1">
-        <div>2</div>
+        <div>{{ product.quantity }}</div>
       </div>
       <div class="col-2">
-        <div>20$</div>
+        <div>{{product.prdDetail.price | currency}}</div>
       </div>
       <div class="col-2">
-        <div>40$</div>
+        <div>{{ product.prdDetail.price * product.quantity | currency }}</div>
       </div>
     </div>
-    <div class="d-flex justify-content-between" style="padding: 0 30px;">
+    <div class="d-flex justify-content-between" style="padding: 0 15px; font-size: 16px; font-weight: 500;">
       <span>Total: </span>
-      <span>100$</span>
+      <span>{{ receipt.bill.totalBill | currency }}</span>
     </div>
   </nz-collapse-panel>
 </nz-collapse>
 
+<ng-template #header>
+  <div>#{{ receipt.billId }} | {{ receipt.bill.dateBuy | date: 'MM/dd/yyyy' }}</div>
+</ng-template>
 
 <ng-template #extraTpl>
-  <!-- You can use stopPropagation if you don't want the panel to toggle -->
   <span>Confirmed</span>
 </ng-template>
 

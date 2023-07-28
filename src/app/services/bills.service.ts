@@ -4,6 +4,7 @@ import { BehaviorSubject, Observable, Subject } from "rxjs";
 import { getDatabase, ref, set } from "firebase/database";
 import * as moment from "moment";
 import { HttpClient } from "@angular/common/http";
+import { BookService } from "./book.services";
 
 @Injectable({ providedIn: 'root' })
 export class BillService {
@@ -12,7 +13,8 @@ export class BillService {
   bills: Bill[] = [];
   readonly firebaseUrl = "https://angular-udemy-d70fb-default-rtdb.asia-southeast1.firebasedatabase.app"
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+    private bookService: BookService) { }
 
   onCheckout(
     username: string | undefined,
@@ -25,7 +27,12 @@ export class BillService {
   ) {
     const productList: Products[] = products.map(
       item => {
-        return { productId: item.book_id, quantity: item.quantity, total: item.totalPrice }
+        return {
+          productId: item.book_id,
+          quantity: item.quantity,
+          total: item.totalPrice,
+          prdDetail: this.bookService.getBookById(item.book_id)
+        }
       }
     )
     const currentDate = moment().format('YYYY-MM-DD HH:mm:ss');

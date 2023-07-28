@@ -33,16 +33,13 @@
         <span class="item-icon" nz-icon nzType="home" nzTheme="outline"></span>
         Address:&nbsp;{{ accVm.currentUser?.address }}
       </div>
-      <button class="btn btn-outline-danger" routerLink="/book" (click)="onLogout()">Logout</button>
     </div> -->
     <div *ngIf="billsVm$ | async as billsVm" class="user-receipt">
       <app-user-receipt
       *ngFor="let bill of billsVm.userBills"
-
-      ></app-user-receipt>
-      <app-user-receipt
-
+      [receipt]="bill"
       ></app-user-receipt>
     </div>
+    <button class="btn btn-outline-danger" routerLink="/book" (click)="onLogout()">Logout</button>
   </div>
 </div>

@@ -36,20 +36,20 @@ export class BookService {
         this.books = [];
         const origin = result.map(item => {
           this.books.push(item.value);
-          return item
+          return item;
         });
         this.book$.next(this.books);
-        this.originStore$.next(origin)
+        this.originStore$.next(origin);
       })
-  }
+  };
 
   getAll() {
     return this.books;
-  }
+  };
 
   getAllBooks(): Observable<any>{
     return this.http.get(this.firebaseUrl + '/books.json');
-  }
+  };
 
   getBookById(book_id: string): Book {
     let rs: Book = {
@@ -68,7 +68,7 @@ export class BookService {
       }
     })
     return rs;
-  }
+  };
 
   getBookIndex(book_id: string) {
     let rs: string = '';
@@ -80,7 +80,7 @@ export class BookService {
       }
     })
     return rs.toString();
-  }
+  };
 
   updateBookQuantity(shortList: { book_id: string, quantity: number }[]) {
     const updatedList: any = {};
@@ -97,12 +97,12 @@ export class BookService {
     })
 
     const db = getDatabase();
-    update(ref(db), updatedList)
-  }
+    update(ref(db), updatedList);
+  };
 
   sendBookMessage(type: string, info: string) {
     this.bookMessage$.next({ type: type, info: info });
-  }
+  };
 
 }
 

@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 import { User } from 'src/app/model/user.class';
 import { UserService } from 'src/app/services/user.service';
 import { BillStore } from 'src/app/store/bill.store';
@@ -11,30 +11,34 @@ import { AccountStore } from 'src/app/store/login/auth.store';
   styleUrls: ['./user-info.component.css']
 })
 export class UserInfoComponent implements OnInit, OnDestroy {
-  currentUser!: User;
-  currentUserSubcription: Subscription | undefined;
-  accountVm$ = this.accountStore.vm$;
-  billsVm$ = this.billStore.vm$;
+  currentUser?: User;
+  readonly accountVm$ = this.accountStore.vm$;
+  readonly billsVm$ = this.billStore.vm$;
   readonly currentUser$ = this.userService.currentUser$;
+  readonly destroy$ = new Subject<void>;
 
   constructor(private userService: UserService,
     private accountStore: AccountStore,
-    private billStore: BillStore) { }
+    private billStore: BillStore) {
+      this.billStore.getBills();
+  }
 
   ngOnInit(): void {
-    this.currentUserSubcription = this.userService.currentUser.subscribe((user) => {
-      if (user) {
-        this.currentUser = user;
+    this.accountVm$.pipe(takeUntil(this.destroy$)).subscribe(data => {
+      this.currentUser = data.currentUser;
+      if (this.currentUser) {
+        this.billStore.getBillsByUsername(this.currentUser.username);
       }
     })
   }
 
-  onLogout(){
+  onLogout() {
     this.accountStore.logoutUser();
     this.userService.logout();
   }
 
   ngOnDestroy(): void {
-    this.currentUserSubcription?.unsubscribe();
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

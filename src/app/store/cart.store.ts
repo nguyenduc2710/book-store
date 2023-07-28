@@ -131,7 +131,7 @@ export class CartStore extends ComponentStore<CartState> {
         )
       )
     )
-  ))
+  ));
 
 
 }

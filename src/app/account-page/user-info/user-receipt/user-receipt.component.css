@@ -1,0 +1,9 @@
+.user-receipt-container {
+
+  .item-receipt {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}

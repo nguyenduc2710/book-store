@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
+import { BillStore } from 'src/app/store/bill.store';
 import { AccountStore } from 'src/app/store/login/auth.store';
 
 @Component({
@@ -12,13 +13,14 @@ export class LoginAccountComponent implements OnInit {
   password: string = '';
   userAcc: any[] = [];
   isValid = false;
+  users$ = this.store.user$;
 
   constructor(private userService: UserService,
-    private store: AccountStore) {
+    private store: AccountStore,
+    private billStore: BillStore) {
     this.userAcc = this.userService.getUserAcc();
   }
 
-  users$ = this.store.user$;
   ngOnInit(): void {
     this.store.getUsers();
   }

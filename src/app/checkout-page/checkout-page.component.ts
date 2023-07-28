@@ -69,6 +69,7 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
       const products = this.cartService.getShortListProducts();
       const totalBill = this.cartService.totalPriceAfterVAT$.value;
       const shortList = this.cartService.shortList$.value;
+
       this.billService.onCheckout(
         username.username,
         checkoutForm.email,
@@ -77,7 +78,7 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
         checkoutForm.address,
         products,
         totalBill,
-      )
+      );
       this.bookService.updateBookQuantity(shortList);
       this.cartService.clearAll();
       this.cartStore.resetState();
