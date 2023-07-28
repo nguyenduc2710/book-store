@@ -81,10 +81,7 @@ export class BillStore extends ComponentStore<BillState>{
   ));
 
   readonly getBillsByUsername = this.updater((state: BillState, username: string) => {
-    // this.getBills();
     const userBills = state.bills.filter(bill => bill.bill.username === username);
-    console.log("s: ", userBills, username, state.bills);
-
     return {
       ...state,
       userBills: userBills

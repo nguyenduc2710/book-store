@@ -16,6 +16,7 @@ export class UserInfoComponent implements OnInit, OnDestroy {
   readonly billsVm$ = this.billStore.vm$;
   readonly currentUser$ = this.userService.currentUser$;
   readonly destroy$ = new Subject<void>;
+  viewReceipt = false;
 
   constructor(private userService: UserService,
     private accountStore: AccountStore,
@@ -30,6 +31,10 @@ export class UserInfoComponent implements OnInit, OnDestroy {
         this.billStore.getBillsByUsername(this.currentUser.username);
       }
     })
+  }
+
+  onViewReceipt(){
+    this.viewReceipt = !this.viewReceipt;
   }
 
   onLogout() {
