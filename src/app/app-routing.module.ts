@@ -9,6 +9,7 @@ import { UserInfoComponent } from './account-page/user-info/user-info.component'
 import { NotFoundComponent } from './not-found.component';
 import { AdminPageComponent } from './admin/admin-page/admin-page.component';
 
+//Nên chia thành 2 view, user(book, cart, checkout) và admin
 const routes: Routes = [
   { path: '', redirectTo: 'book', pathMatch: 'full' },
   { path: 'book', component: BookListComponent, data: { animation: BookListComponent } },

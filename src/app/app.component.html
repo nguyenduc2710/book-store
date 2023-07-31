@@ -1,5 +1,12 @@
-<app-layout-header></app-layout-header>
-<div class="body-container" [@routeAnimations]="prepareRoute(outlet)">
-  <router-outlet #outlet="outlet"></router-outlet>
+<div class="app-container">
+  <div *ngIf="!getStatus()">
+    <app-layout-header></app-layout-header>
+  </div>
+
+  <div class="body-container" [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
+  <div *ngIf="!getStatus()">
+    <app-layout-footer></app-layout-footer>
+  </div>
 </div>
-<app-layout-footer></app-layout-footer>

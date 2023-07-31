@@ -32,6 +32,10 @@
       .payments-icon {
         margin: 0 8px;
       }
+
+      .feature-unsupported{
+        opacity: 0.7;
+      }
     }
   }
 

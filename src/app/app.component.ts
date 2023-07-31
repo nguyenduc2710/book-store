@@ -5,7 +5,7 @@ import { UserService } from './services/user.service';
 import { Subject, Subscription, takeUntil } from 'rxjs';
 import { Message } from './model/message.model';
 import { CartService } from './services/cart.service';
-import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { fade } from './route-animations';
 
 @Component({
@@ -18,14 +18,23 @@ import { fade } from './route-animations';
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = 'ng-books-store';
-  // routerSubcription$: Subscription;
+  routerSubcription$: Subscription;
+  private isAdmin = false;
 
   constructor(private message: NzMessageService,
     private bookService: BookService,
     private userService: UserService,
     private cartService: CartService,
     private routes: Router) {
-      // this.routerSubcription$ = this.routes.events.
+    this.routerSubcription$ = this.routes.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        if(event.url.toString().split('/')[1] === 'admin'){
+          this.isAdmin = true;
+        } else{
+          this.isAdmin = false;
+        }
+      }
+    })
   }
   // private validUser = false;
   private user$ = this.userService.userMessage$;
@@ -69,8 +78,12 @@ export class AppComponent implements OnInit, OnDestroy {
     }
   }
 
+  getStatus():boolean{
+    return this.isAdmin;
+  }
+
   ngOnDestroy(): void {
-    // this.routerSubcription$.unsubscribe();
+    this.routerSubcription$.unsubscribe();
     this.destroyed$.next();
     this.destroyed$.complete();
   }

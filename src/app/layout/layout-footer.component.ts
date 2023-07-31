@@ -7,10 +7,12 @@ import { Component, ContentChild, TemplateRef, ViewChild } from "@angular/core";
       @ 2023 BOKET.COM
     </footer>
   `,
-  styles: ['.footer {width: 100%; text-align: center;}'],
+  styles: [
+    '.footer {position: absolute; bottom: 0; width: 100%; text-align: center;}'
+  ],
 })
 
-export class LayoutFooter{
+export class LayoutFooter {
   @ViewChild(TemplateRef, { static: true }) panelBody: TemplateRef<unknown> | undefined;
 
 

@@ -1,42 +1,64 @@
-<nz-layout>
-  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-    <div class="logo">BOKET BookStore</div>
-    <ul nz-menu nzTheme="dark" nzMode="inline">
-      <li nz-submenu nzTitle="User" nzIcon="user">
-        <ul>
-          <li nz-menu-item>Tom</li>
-          <li nz-menu-item>Bill</li>
-          <li nz-menu-item>Alex</li>
-        </ul>
-      </li>
-      <li nz-submenu nzTitle="Team" nzIcon="team">
-        <ul>
-          <li nz-menu-item>Team 1</li>
-          <li nz-menu-item>Team 2</li>
-        </ul>
-      </li>
-      <li nz-menu-item>
-        <span nz-icon nzType="file"></span>
-        <span>File</span>
-      </li>
-    </ul>
-  </nz-sider>
   <nz-layout>
-    <nz-header>
-      <span
-        class="trigger"
-        nz-icon
-        [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-        (click)="isCollapsed = !isCollapsed"
-      ></span>
-    </nz-header>
-    <nz-content>
-      <nz-breadcrumb>
-        <nz-breadcrumb-item>User</nz-breadcrumb-item>
-        <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
-      </nz-breadcrumb>
-      <div class="inner-content">Bill is a cat.</div>
-    </nz-content>
-    <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+      <a routerLink="/book" class="logo" *ngIf="!isCollapsed; else shortTitle">BOKET BookStore</a>
+      <ng-template #shortTitle>
+        <a routerLink="/book" class="logo">
+          BOKET
+        </a>
+      </ng-template>
+      <ul nz-menu nzTheme="dark" nzMode="inline">
+        <li nz-menu-item>
+          <span nz-icon nzType="line-chart"></span>
+          <span>Dashboard</span>
+        </li>
+        <li nz-submenu nzTitle="Management" nzOpen nzIcon="edit">
+          <ul>
+            <li nz-menu-item>
+              <span nz-icon nzType="team"></span>
+              <span>Customers</span>
+            </li>
+
+            <li nz-menu-item>
+              <span nz-icon nzType="tags"></span>
+              <span>Products</span>
+            </li>
+
+            <li nz-menu-item>
+              <span nz-icon nzType="shopping-cart"></span>
+              <span>Orders</span>
+            </li>
+          </ul>
+        </li>
+
+        <li nz-submenu nzTitle="Page" nzOpen nzIcon="info-circle">
+          <ul>
+            <li nz-menu-item>
+              <span nz-icon nzType="calendar"></span>
+              <span>Tasks</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nz-sider>
+
+    <nz-layout>
+      <nz-header>
+        <div class="admin-header">
+          <span class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+            (click)="isCollapsed = !isCollapsed"></span>
+          <div class="header-setting">
+            <span class="home-icon" nz-icon nzType="home" nzTheme="outline"></span>
+            <nz-avatar nzIcon="user"></nz-avatar>
+          </div>
+        </div>
+      </nz-header>
+      <nz-content>
+        <nz-breadcrumb>
+          <nz-breadcrumb-item>User</nz-breadcrumb-item>
+          <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
+        </nz-breadcrumb>
+        <div class="inner-content">Bill is a cat.</div>
+      </nz-content>
+      <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
+    </nz-layout>
   </nz-layout>
-</nz-layout>
