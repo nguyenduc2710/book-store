@@ -31,6 +31,7 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzCollapseModule } from 'ng-zorro-antd/collapse';
 import { NzMessageModule } from 'ng-zorro-antd/message';
+import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
 
 //FireBase
 import { AngularFireModule } from '@angular/fire/compat';
@@ -44,13 +45,15 @@ import { CartPageComponent } from './cart-page/cart-page.component';
 import { PrdItemComponent } from './cart-page/prd-item/prd-item.component';
 import { LayoutFooter } from './layout/layout-footer.component';
 import { LayoutHeader } from './layout/layout-header.component';
-import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
 import { RegisterAccountComponent } from './account-page/register-account/register-account.component';
 import { LoginAccountComponent } from './account-page/login-account/login-account.component';
 import { UserInfoComponent } from './account-page/user-info/user-info.component';
+import { UserReceiptComponent } from './account-page/user-info/user-receipt/user-receipt.component';
+
+//Modules
 import { CheckoutModule } from './checkout-page/checkout.module';
 import { BookModule } from './book-list/book.module';
-import { UserReceiptComponent } from './account-page/user-info/user-receipt/user-receipt.component';
+import { AdminModule } from './admin/admin.module';
 
 registerLocaleData(en);
 
@@ -105,6 +108,7 @@ registerLocaleData(en);
     //modules
     CheckoutModule,
     BookModule,
+    AdminModule,
 
   ],
   providers: [

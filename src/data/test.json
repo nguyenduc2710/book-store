@@ -1,5 +1,398 @@
 {
   "bills": {
+    "99415": {
+      "address": "server",
+      "dateBuy": "2023-07-28 10:24:05",
+      "email": "testtest@gmail.com",
+      "fullName": "admin siu cap vjppro",
+      "phoneNumber": "0902222222",
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Robert T Kiyosaki",
+            "book_id": 57007401,
+            "cover": "https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UF1000,1000_QL80_.jpg",
+            "descriptions": "April 2017 marks 20 years since Robert Kiyosaki's Rich Dad Poor Dad first made waves in the Personal Finance arena. It has since become the #1 Personal Finance book of all time... translated into dozens of languages and sold around the world. Rich Dad Poor Dad is Robert's story of growing up with two dads -- his real father and the father of his best friend, his rich dad -- and the ways in which both men shaped his thoughts about money and investing. The book explodes the myth that you need to earn a high income to be rich and explains the difference between working for money and having your money work for you. 20 Years... 20/20 Hindsight In the 20th Anniversary Edition of this classic, Robert offers an update on what we've seen over the past 20 years related to money, investing, and the global economy. Sidebars throughout the book will take readers 'fast forward' -- from 1997 to today -- as Robert assesses how the principles taught by his rich dad have stood the test of time. In many ways, the messages of Rich Dad Poor Dad, messages that were criticized and challenged two decades ago, are more meaningful, relevant and important today than they were 20 years ago. As always, readers can expect that Robert will be candid, insightful... and continue to rock more than a few boats in his retrospective. Will there be a few surprises? Count on it.",
+            "name": "Rich Dad Poor Dad",
+            "price": 5.95,
+            "quantity": 95,
+            "rating": 4.6
+          },
+          "productId": "57007401",
+          "quantity": 1,
+          "total": 5.95
+        },
+        {
+          "prdDetail": {
+            "author": "Dolly Parton, James Patterson",
+            "book_id": 58505877,
+            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1628699768i/58505877.jpg",
+            "descriptions": "From America's most beloved superstar and its greatest storyteller — a thriller about a young singer-songwriter on the rise and on the run, and determined to do whatever it takes to survive. Every song tells a story. She's a star on the rise, singing about the hard life behind her. She's also on the run. Find a future, lose a past. Nashville is where she's come to claim her destiny. It's also where the darkness she's fled might find her. And destroy her. Run, Rose, Run is a novel glittering with danger and desire — a story that only America's #1 beloved entertainer and its #1 bestselling author could have created.",
+            "name": "Run, Rose, Run",
+            "price": 14.95,
+            "quantity": 100,
+            "rating": 3.84
+          },
+          "productId": "58505877",
+          "quantity": 1,
+          "total": 14.95
+        }
+      ],
+      "totalBill": 21.735999999999997,
+      "typePayment": "cash",
+      "username": "admin"
+    },
+    "635878": {
+      "address": "123 đường 321",
+      "dateBuy": "2023-07-28 10:26:01",
+      "email": "testtest@gmail.com",
+      "fullName": "Nguyễn Văn User",
+      "phoneNumber": "09876543211",
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Robert T Kiyosaki",
+            "book_id": 57007401,
+            "cover": "https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UF1000,1000_QL80_.jpg",
+            "descriptions": "April 2017 marks 20 years since Robert Kiyosaki's Rich Dad Poor Dad first made waves in the Personal Finance arena. It has since become the #1 Personal Finance book of all time... translated into dozens of languages and sold around the world. Rich Dad Poor Dad is Robert's story of growing up with two dads -- his real father and the father of his best friend, his rich dad -- and the ways in which both men shaped his thoughts about money and investing. The book explodes the myth that you need to earn a high income to be rich and explains the difference between working for money and having your money work for you. 20 Years... 20/20 Hindsight In the 20th Anniversary Edition of this classic, Robert offers an update on what we've seen over the past 20 years related to money, investing, and the global economy. Sidebars throughout the book will take readers 'fast forward' -- from 1997 to today -- as Robert assesses how the principles taught by his rich dad have stood the test of time. In many ways, the messages of Rich Dad Poor Dad, messages that were criticized and challenged two decades ago, are more meaningful, relevant and important today than they were 20 years ago. As always, readers can expect that Robert will be candid, insightful... and continue to rock more than a few boats in his retrospective. Will there be a few surprises? Count on it.",
+            "name": "Rich Dad Poor Dad",
+            "price": 5.95,
+            "quantity": 94,
+            "rating": 4.6
+          },
+          "productId": "57007401",
+          "quantity": 1,
+          "total": 5.95
+        },
+        {
+          "prdDetail": {
+            "author": "Lorrie Moore",
+            "book_id": 58283080,
+            "cover": "https://m.media-amazon.com/images/I/71U-MX-cYJL._AC_UF1000,1000_QL80_.jpg",
+            "descriptions": "Lorrie Moore's first novel since A Gate at the Stairs — a daring, meditative exploration of love and death, passion and grief, and what it means to be haunted by the past, both by history and the human heart. From ''one of the most acute and lasting writers of her generation'' (Caryn James; The New York Times) — a ghost story set in the nineteenth and twenty-first centuries, an elegiac consideration of grief, devotion (filial and romantic), and the vanishing and persistence of all things — seen and unseen. A teacher visiting his dying brother in the Bronx. A mysterious journal from the nineteenth century stolen from a boarding house. A therapy clown and an assassin, both presumed dead, but perhaps not dead at all… With her distinctive, irresistible wordplay and singular wry humor and wisdom, Lorrie Moore has given us a magic box of longing and surprise as she writes about love and rebirth and the pull towards life. Bold, meditative, theatrical, this new novel is an inventive, poetic portrait of lovers and siblings as it questions the stories we have been told which may or may not be true. I Am Homeless If This Is Not My Home takes us through a trap door, into a windswept, imagined journey to the tragic-comic landscape that is, unmistakably, the world of Lorrie Moore.",
+            "name": "I Am Homeless If This Is Not My Home",
+            "price": 27,
+            "quantity": 97,
+            "rating": 4
+          },
+          "productId": "58283080",
+          "quantity": 1,
+          "total": 27
+        }
+      ],
+      "totalBill": 34.268,
+      "typePayment": "cash",
+      "username": "user"
+    },
+    "694577": {
+      "address": "123 đường 321",
+      "dateBuy": "2023-07-28 10:27:09",
+      "email": "staff@gmail.com",
+      "fullName": "Đức",
+      "phoneNumber": 1234567890,
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Barbara Kingsolver",
+            "book_id": 58536005,
+            "cover": "https://m.media-amazon.com/images/I/918DFDx5ZRL._AC_UF1000,1000_QL80_.jpg",
+            "descriptions": "'Kingsolver is a writer who can help us understand and navigate the chaos of these times.' — Minneapolis Star Tribune. From the New York Times bestselling author of Unsheltered and Flight Behavior, a brilliant novel which enthralls, compels, and captures the heart as it evokes a young hero's unforgettable journey to maturity. 'Anyone will tell you the born of this world are marked from the get-out, win or lose.' Demon Copperhead is set in the mountains of southern Appalachia. It's the story of a boy born to a teenaged single mother in a single-wide trailer, with no assets beyond his dead father's good looks and copper-colored hair, a caustic wit, and a fierce talent for survival. In a plot that never pauses for breath, relayed in his own unsparing voice, he braves the modern perils of foster care, child labor, derelict schools, athletic success, addiction, disastrous loves, and crushing losses. Through all of it, he reckons with his own invisibility in a popular culture where even the superheroes have abandoned rural people in favor of cities. Many generations ago, Charles Dickens wrote David Copperfield from his experience as a survivor of institutional poverty and its damages to children in his society. Those problems have yet to be solved in ours. Dickens is not a prerequisite for readers of this novel, but he provided its inspiration. In transposing a Victorian epic novel to the contemporary American South, Barbara Kingsolver enlists Dickens' anger and compassion, and above all, his faith in the transformative powers of a good story. Demon Copperhead speaks for a new generation of lost boys, and all those born into beautiful, cursed places they can't imagine leaving behind.",
+            "name": "Demon Copperhead",
+            "price": 32.5,
+            "quantity": 99,
+            "rating": 3.9
+          },
+          "productId": "58536005",
+          "quantity": 2,
+          "total": 65
+        },
+        {
+          "prdDetail": {
+            "author": "Kate Quinn",
+            "book_id": 58490567,
+            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1641777418i/58490567.jpg",
+            "descriptions": "The New York Times bestselling author of The Rose Code returns with an unforgettable World War II tale of a quiet bookworm who becomes history's deadliest female sniper. Based on a true story. In 1937 in the snowbound city of Kiev (now known as Kyiv), wry and bookish history student Mila Pavlichenko organizes her life around her library job and her young son--but Hitler's invasion of Ukraine and Russia sends her on a different path. Given a rifle and sent to join the fight, Mila must forge herself from studious girl to deadly sniper--a lethal hunter of Nazis known as Lady Death. When news of her three hundredth kill makes her a national heroine, Mila finds herself torn from the bloody battlefields of the eastern front and sent to America on a goodwill tour. Still reeling from war wounds and devastated by loss, Mila finds herself isolated and lonely in the glittering world of Washington, DC--until an unexpected friendship with First Lady Eleanor Roosevelt and an even more unexpected connection with a silent fellow sniper offer the possibility of happiness. But when an old enemy from Mila's past joins forces with a deadly new foe lurking in the shadows, Lady Death finds herself battling her own demons and enemy bullets in the deadliest duel of her life. Based on a true story, The Diamond Eye is a haunting novel of heroism born of desperation, of a mother who became a soldier, of a woman who found her place in the world and changed the course of history forever.",
+            "name": "The Diamond Eye",
+            "price": 19.95,
+            "quantity": 99,
+            "rating": 4.29
+          },
+          "productId": "58490567",
+          "quantity": 1,
+          "total": 19.95
+        },
+        {
+          "prdDetail": {
+            "author": "Simone St James",
+            "book_id": 58371432,
+            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1624553583i/58371432.jpg",
+            "descriptions": "A true crime blogger gets more than she bargained for while interviewing the woman acquitted of two cold case slayings in this chilling new novel from the New York Times bestselling author of The Sun Down Motel. In 1977, Claire Lake, Oregon, was shaken by the Lady Killer Murders: Two men, seemingly randomly, were murdered with the same gun, with strange notes left behind. Beth Greer was the perfect suspect--a rich, eccentric twenty-three-year-old woman, seen fleeing one of the crimes. But she was acquitted, and she retreated to the isolation of her mansion. Oregon, 2017. Shea Collins is a receptionist, but by night, she runs a true crime website, the Book of Cold Cases--a passion fueled by the attempted abduction she escaped as a child. When she meets Beth by chance, Shea asks her for an interview. To Shea's surprise, Beth says yes. They meet regularly at Beth's mansion, though Shea is never comfortable there. Items move when she's not looking, and she could swear she's seen a girl outside the window. The allure of learning the truth about the case from the smart, charming Beth is too much to resist, but even as they grow closer, Shea senses something isn't right. Is she making friends with a manipulative murderer, or are there other dangers lurking in the darkness of the Greer house?",
+            "name": "The Book of Cold Cases",
+            "price": 17,
+            "quantity": 99,
+            "rating": 3.8
+          },
+          "productId": "58371432",
+          "quantity": 1,
+          "total": 17
+        }
+      ],
+      "totalBill": 106.028,
+      "typePayment": "cash",
+      "username": "nguyenduc2710"
+    },
+    "887298": {
+      "address": "123 đường 321",
+      "dateBuy": "2023-07-28 10:26:34",
+      "email": "testtest@gmail.com",
+      "fullName": "Nguyễn Văn User",
+      "phoneNumber": "09876543211",
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Dolly Parton, James Patterson",
+            "book_id": 58505877,
+            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1628699768i/58505877.jpg",
+            "descriptions": "From America's most beloved superstar and its greatest storyteller — a thriller about a young singer-songwriter on the rise and on the run, and determined to do whatever it takes to survive. Every song tells a story. She's a star on the rise, singing about the hard life behind her. She's also on the run. Find a future, lose a past. Nashville is where she's come to claim her destiny. It's also where the darkness she's fled might find her. And destroy her. Run, Rose, Run is a novel glittering with danger and desire — a story that only America's #1 beloved entertainer and its #1 bestselling author could have created.",
+            "name": "Run, Rose, Run",
+            "price": 14.95,
+            "quantity": 99,
+            "rating": 3.84
+          },
+          "productId": "58505877",
+          "quantity": 1,
+          "total": 14.95
+        }
+      ],
+      "totalBill": 15.548,
+      "typePayment": "cash",
+      "username": "user"
+    },
+    "1410495": {
+      "address": "123 đường 321",
+      "dateBuy": "2023-07-28 10:35:33",
+      "email": "staff@gmail.com",
+      "fullName": "Đức",
+      "phoneNumber": 1234567890,
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Lorrie Moore",
+            "book_id": 58283080,
+            "cover": "https://m.media-amazon.com/images/I/71U-MX-cYJL._AC_UF1000,1000_QL80_.jpg",
+            "descriptions": "Lorrie Moore's first novel since A Gate at the Stairs — a daring, meditative exploration of love and death, passion and grief, and what it means to be haunted by the past, both by history and the human heart. From ''one of the most acute and lasting writers of her generation'' (Caryn James; The New York Times) — a ghost story set in the nineteenth and twenty-first centuries, an elegiac consideration of grief, devotion (filial and romantic), and the vanishing and persistence of all things — seen and unseen. A teacher visiting his dying brother in the Bronx. A mysterious journal from the nineteenth century stolen from a boarding house. A therapy clown and an assassin, both presumed dead, but perhaps not dead at all… With her distinctive, irresistible wordplay and singular wry humor and wisdom, Lorrie Moore has given us a magic box of longing and surprise as she writes about love and rebirth and the pull towards life. Bold, meditative, theatrical, this new novel is an inventive, poetic portrait of lovers and siblings as it questions the stories we have been told which may or may not be true. I Am Homeless If This Is Not My Home takes us through a trap door, into a windswept, imagined journey to the tragic-comic landscape that is, unmistakably, the world of Lorrie Moore.",
+            "name": "I Am Homeless If This Is Not My Home",
+            "price": 27,
+            "quantity": 96,
+            "rating": 4
+          },
+          "productId": "58283080",
+          "quantity": 1,
+          "total": 27
+        },
+        {
+          "prdDetail": {
+            "author": "Sabaa Tahir",
+            "book_id": 57899793,
+            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629908086i/57899793.jpg",
+            "descriptions": "From #1 New York Times bestselling author Sabaa Tahir comes a brilliant, unforgettable, and heart-wrenching contemporary YA novel about family and forgiveness, love and loss, in a sweeping story that crosses generations and continents. Lahore, Pakistan. Then. Misbah is a dreamer and storyteller, newly married to Toufiq in an arranged match. After their young life is shaken by tragedy, they come to the United States and open the Clouds' Rest Inn Motel, hoping for a new start. Juniper, California. Now. Salahudin and Noor are more than best friends; they are family. Growing up as outcasts in the small desert town of Juniper, California, they understand each other the way no one else does. Until The Fight, which destroys their bond with the swift fury of a star exploding. Now, Sal scrambles to run the family motel as his mother Misbah's health fails and his grieving father loses himself to alcoholism. Noor, meanwhile, walks a harrowing tightrope: working at her wrathful uncle's liquor store while hiding the fact that she's applying to college so she can escape him — and Juniper — forever. When Sal's attempts to save the motel spiral out of control, he and Noor must ask themselves what friendship is worth — and what it takes to defeat the monsters in their pasts and the ones in their midst. From one of today's most cherished and bestselling young adult authors comes a breathtaking novel of young love, old regrets, and forgiveness — one that's both tragic and poignant in its tender ferocity.",
+            "name": "All My Rage",
+            "price": 9.98,
+            "quantity": 99,
+            "rating": 4.54
+          },
+          "productId": "57899793",
+          "quantity": 1,
+          "total": 9.98
+        }
+      ],
+      "totalBill": 38.4592,
+      "typePayment": "cash",
+      "username": "nguyenduc2710"
+    },
+    "2738771": {
+      "address": "123 đường 321",
+      "dateBuy": "2023-07-28 10:26:22",
+      "email": "testtest@gmail.com",
+      "fullName": "Nguyễn Văn User",
+      "phoneNumber": "09876543211",
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Kate Quinn",
+            "book_id": 58490567,
+            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1641777418i/58490567.jpg",
+            "descriptions": "The New York Times bestselling author of The Rose Code returns with an unforgettable World War II tale of a quiet bookworm who becomes history's deadliest female sniper. Based on a true story. In 1937 in the snowbound city of Kiev (now known as Kyiv), wry and bookish history student Mila Pavlichenko organizes her life around her library job and her young son--but Hitler's invasion of Ukraine and Russia sends her on a different path. Given a rifle and sent to join the fight, Mila must forge herself from studious girl to deadly sniper--a lethal hunter of Nazis known as Lady Death. When news of her three hundredth kill makes her a national heroine, Mila finds herself torn from the bloody battlefields of the eastern front and sent to America on a goodwill tour. Still reeling from war wounds and devastated by loss, Mila finds herself isolated and lonely in the glittering world of Washington, DC--until an unexpected friendship with First Lady Eleanor Roosevelt and an even more unexpected connection with a silent fellow sniper offer the possibility of happiness. But when an old enemy from Mila's past joins forces with a deadly new foe lurking in the shadows, Lady Death finds herself battling her own demons and enemy bullets in the deadliest duel of her life. Based on a true story, The Diamond Eye is a haunting novel of heroism born of desperation, of a mother who became a soldier, of a woman who found her place in the world and changed the course of history forever.",
+            "name": "The Diamond Eye",
+            "price": 19.95,
+            "quantity": 100,
+            "rating": 4.29
+          },
+          "productId": "58490567",
+          "quantity": 1,
+          "total": 19.95
+        },
+        {
+          "prdDetail": {
+            "author": "Simone St James",
+            "book_id": 58371432,
+            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1624553583i/58371432.jpg",
+            "descriptions": "A true crime blogger gets more than she bargained for while interviewing the woman acquitted of two cold case slayings in this chilling new novel from the New York Times bestselling author of The Sun Down Motel. In 1977, Claire Lake, Oregon, was shaken by the Lady Killer Murders: Two men, seemingly randomly, were murdered with the same gun, with strange notes left behind. Beth Greer was the perfect suspect--a rich, eccentric twenty-three-year-old woman, seen fleeing one of the crimes. But she was acquitted, and she retreated to the isolation of her mansion. Oregon, 2017. Shea Collins is a receptionist, but by night, she runs a true crime website, the Book of Cold Cases--a passion fueled by the attempted abduction she escaped as a child. When she meets Beth by chance, Shea asks her for an interview. To Shea's surprise, Beth says yes. They meet regularly at Beth's mansion, though Shea is never comfortable there. Items move when she's not looking, and she could swear she's seen a girl outside the window. The allure of learning the truth about the case from the smart, charming Beth is too much to resist, but even as they grow closer, Shea senses something isn't right. Is she making friends with a manipulative murderer, or are there other dangers lurking in the darkness of the Greer house?",
+            "name": "The Book of Cold Cases",
+            "price": 17,
+            "quantity": 100,
+            "rating": 3.8
+          },
+          "productId": "58371432",
+          "quantity": 1,
+          "total": 17
+        }
+      ],
+      "totalBill": 38.428000000000004,
+      "typePayment": "cash",
+      "username": "user"
+    },
+    "3121874": {
+      "address": "server",
+      "dateBuy": "2023-07-28 10:24:55",
+      "email": "testtest@gmail.com",
+      "fullName": "admin siu cap vjppro",
+      "phoneNumber": "0902222222",
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Lorrie Moore",
+            "book_id": 58283080,
+            "cover": "https://m.media-amazon.com/images/I/71U-MX-cYJL._AC_UF1000,1000_QL80_.jpg",
+            "descriptions": "Lorrie Moore's first novel since A Gate at the Stairs — a daring, meditative exploration of love and death, passion and grief, and what it means to be haunted by the past, both by history and the human heart. From ''one of the most acute and lasting writers of her generation'' (Caryn James; The New York Times) — a ghost story set in the nineteenth and twenty-first centuries, an elegiac consideration of grief, devotion (filial and romantic), and the vanishing and persistence of all things — seen and unseen. A teacher visiting his dying brother in the Bronx. A mysterious journal from the nineteenth century stolen from a boarding house. A therapy clown and an assassin, both presumed dead, but perhaps not dead at all… With her distinctive, irresistible wordplay and singular wry humor and wisdom, Lorrie Moore has given us a magic box of longing and surprise as she writes about love and rebirth and the pull towards life. Bold, meditative, theatrical, this new novel is an inventive, poetic portrait of lovers and siblings as it questions the stories we have been told which may or may not be true. I Am Homeless If This Is Not My Home takes us through a trap door, into a windswept, imagined journey to the tragic-comic landscape that is, unmistakably, the world of Lorrie Moore.",
+            "name": "I Am Homeless If This Is Not My Home",
+            "price": 27,
+            "quantity": 98,
+            "rating": 4
+          },
+          "productId": "58283080",
+          "quantity": 1,
+          "total": 27
+        },
+        {
+          "prdDetail": {
+            "author": "Barbara Kingsolver",
+            "book_id": 58536005,
+            "cover": "https://m.media-amazon.com/images/I/918DFDx5ZRL._AC_UF1000,1000_QL80_.jpg",
+            "descriptions": "'Kingsolver is a writer who can help us understand and navigate the chaos of these times.' — Minneapolis Star Tribune. From the New York Times bestselling author of Unsheltered and Flight Behavior, a brilliant novel which enthralls, compels, and captures the heart as it evokes a young hero's unforgettable journey to maturity. 'Anyone will tell you the born of this world are marked from the get-out, win or lose.' Demon Copperhead is set in the mountains of southern Appalachia. It's the story of a boy born to a teenaged single mother in a single-wide trailer, with no assets beyond his dead father's good looks and copper-colored hair, a caustic wit, and a fierce talent for survival. In a plot that never pauses for breath, relayed in his own unsparing voice, he braves the modern perils of foster care, child labor, derelict schools, athletic success, addiction, disastrous loves, and crushing losses. Through all of it, he reckons with his own invisibility in a popular culture where even the superheroes have abandoned rural people in favor of cities. Many generations ago, Charles Dickens wrote David Copperfield from his experience as a survivor of institutional poverty and its damages to children in his society. Those problems have yet to be solved in ours. Dickens is not a prerequisite for readers of this novel, but he provided its inspiration. In transposing a Victorian epic novel to the contemporary American South, Barbara Kingsolver enlists Dickens' anger and compassion, and above all, his faith in the transformative powers of a good story. Demon Copperhead speaks for a new generation of lost boys, and all those born into beautiful, cursed places they can't imagine leaving behind.",
+            "name": "Demon Copperhead",
+            "price": 32.5,
+            "quantity": 100,
+            "rating": 3.9
+          },
+          "productId": "58536005",
+          "quantity": 1,
+          "total": 32.5
+        },
+        {
+          "prdDetail": {
+            "author": "Brianna Wiest",
+            "book_id": 60306208,
+            "cover": "https://images-eu.ssl-images-amazon.com/images/I/81OvOzDu3fL._AC_UL600_SR600,600_.jpg",
+            "descriptions": "This is the year you change your life. If you're in a pivot period — if you're still bridging the space between where you are and where you want to be — remember that the person you're becoming is already within you. The journey is convincing your mind to act consistently on what your heart already knows it wants to do. The Pivot Year is a book of 365 daily meditations on finding the courage to become who you've always wanted to be, from the internationally bestselling author of 101 Essays That Will Change The Way You Think, The Mountain Is You, and more.",
+            "name": "The Pivot Year",
+            "price": 17.99,
+            "quantity": 97,
+            "rating": 4.2
+          },
+          "productId": "60306208",
+          "quantity": 1,
+          "total": 17.99
+        },
+        {
+          "prdDetail": {
+            "author": "Sabaa Tahir",
+            "book_id": 57899793,
+            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629908086i/57899793.jpg",
+            "descriptions": "From #1 New York Times bestselling author Sabaa Tahir comes a brilliant, unforgettable, and heart-wrenching contemporary YA novel about family and forgiveness, love and loss, in a sweeping story that crosses generations and continents. Lahore, Pakistan. Then. Misbah is a dreamer and storyteller, newly married to Toufiq in an arranged match. After their young life is shaken by tragedy, they come to the United States and open the Clouds' Rest Inn Motel, hoping for a new start. Juniper, California. Now. Salahudin and Noor are more than best friends; they are family. Growing up as outcasts in the small desert town of Juniper, California, they understand each other the way no one else does. Until The Fight, which destroys their bond with the swift fury of a star exploding. Now, Sal scrambles to run the family motel as his mother Misbah's health fails and his grieving father loses himself to alcoholism. Noor, meanwhile, walks a harrowing tightrope: working at her wrathful uncle's liquor store while hiding the fact that she's applying to college so she can escape him — and Juniper — forever. When Sal's attempts to save the motel spiral out of control, he and Noor must ask themselves what friendship is worth — and what it takes to defeat the monsters in their pasts and the ones in their midst. From one of today's most cherished and bestselling young adult authors comes a breathtaking novel of young love, old regrets, and forgiveness — one that's both tragic and poignant in its tender ferocity.",
+            "name": "All My Rage",
+            "price": 9.98,
+            "quantity": 100,
+            "rating": 4.54
+          },
+          "productId": "57899793",
+          "quantity": 1,
+          "total": 9.98
+        },
+        {
+          "prdDetail": {
+            "author": "Greer Hendricks",
+            "book_id": 57693416,
+            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1633973719i/57693416.jpg",
+            "descriptions": "The Golden Couple is the next electrifying novel from Greer Hendricks and Sarah Pekkanen, the #1 New York Times bestselling author duo behind The Wife Between Us. Propulsive and thrilling....A page-turner that will keep you guessing until the very end.--Taylor Jenkins Reid, author of Malibu Rising Wealthy Washington suburbanites Marissa and Matthew Bishop seem to have it all--until Marissa is unfaithful. Beneath their veneer of perfection is a relationship riven by work and a lack of intimacy. She wants to repair things for the sake of their eight-year-old son and because she loves her husband. Enter Avery Chambers. Avery is a therapist who lost her professional license. Still, it doesn't stop her from counseling those in crisis, though they have to adhere to her unorthodox methods. And the Bishops are desperate. When they glide through Avery's door and Marissa reveals her infidelity, all three are set on a collision course. Because the biggest secrets in the room are still hidden, and it's no longer simply a marriage that's in danger.",
+            "name": "The Golden Couple",
+            "price": 17.99,
+            "quantity": 97,
+            "rating": 4
+          },
+          "productId": "57693416",
+          "quantity": 1,
+          "total": 17.99
+        }
+      ],
+      "totalBill": 109.6784,
+      "typePayment": "cash",
+      "username": "admin"
+    },
+    "3170042": {
+      "address": "123 đường 321",
+      "dateBuy": "2023-07-28 10:35:10",
+      "email": "staff@gmail.com",
+      "fullName": "Đức",
+      "phoneNumber": 1234567890,
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Brianna Wiest",
+            "book_id": 60306208,
+            "cover": "https://images-eu.ssl-images-amazon.com/images/I/81OvOzDu3fL._AC_UL600_SR600,600_.jpg",
+            "descriptions": "This is the year you change your life. If you're in a pivot period — if you're still bridging the space between where you are and where you want to be — remember that the person you're becoming is already within you. The journey is convincing your mind to act consistently on what your heart already knows it wants to do. The Pivot Year is a book of 365 daily meditations on finding the courage to become who you've always wanted to be, from the internationally bestselling author of 101 Essays That Will Change The Way You Think, The Mountain Is You, and more.",
+            "name": "The Pivot Year",
+            "price": 17.99,
+            "quantity": 96,
+            "rating": 4.2
+          },
+          "productId": "60306208",
+          "quantity": 1,
+          "total": 17.99
+        }
+      ],
+      "totalBill": 18.7096,
+      "typePayment": "cash",
+      "username": "nguyenduc2710"
+    },
+    "4967762": {
+      "address": "123 đường 321",
+      "dateBuy": "2023-07-28 10:34:00",
+      "email": "staff@gmail.com",
+      "fullName": "Đức",
+      "phoneNumber": 1234567890,
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Dolly Parton, James Patterson",
+            "book_id": 58505877,
+            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1628699768i/58505877.jpg",
+            "descriptions": "From America's most beloved superstar and its greatest storyteller — a thriller about a young singer-songwriter on the rise and on the run, and determined to do whatever it takes to survive. Every song tells a story. She's a star on the rise, singing about the hard life behind her. She's also on the run. Find a future, lose a past. Nashville is where she's come to claim her destiny. It's also where the darkness she's fled might find her. And destroy her. Run, Rose, Run is a novel glittering with danger and desire — a story that only America's #1 beloved entertainer and its #1 bestselling author could have created.",
+            "name": "Run, Rose, Run",
+            "price": 14.95,
+            "quantity": 98,
+            "rating": 3.84
+          },
+          "productId": "58505877",
+          "quantity": 1,
+          "total": 14.95
+        }
+      ],
+      "totalBill": 15.548,
+      "typePayment": "cash",
+      "username": "nguyenduc2710"
+    }
   },
   "books": {
     "b_0": {
@@ -9,7 +402,7 @@
       "descriptions": "Lorrie Moore's first novel since A Gate at the Stairs — a daring, meditative exploration of love and death, passion and grief, and what it means to be haunted by the past, both by history and the human heart. From ''one of the most acute and lasting writers of her generation'' (Caryn James; The New York Times) — a ghost story set in the nineteenth and twenty-first centuries, an elegiac consideration of grief, devotion (filial and romantic), and the vanishing and persistence of all things — seen and unseen. A teacher visiting his dying brother in the Bronx. A mysterious journal from the nineteenth century stolen from a boarding house. A therapy clown and an assassin, both presumed dead, but perhaps not dead at all… With her distinctive, irresistible wordplay and singular wry humor and wisdom, Lorrie Moore has given us a magic box of longing and surprise as she writes about love and rebirth and the pull towards life. Bold, meditative, theatrical, this new novel is an inventive, poetic portrait of lovers and siblings as it questions the stories we have been told which may or may not be true. I Am Homeless If This Is Not My Home takes us through a trap door, into a windswept, imagined journey to the tragic-comic landscape that is, unmistakably, the world of Lorrie Moore.",
       "name": "I Am Homeless If This Is Not My Home",
       "price": 27,
-      "quantity": 98,
+      "quantity": 95,
       "rating": 4
     },
     "b_1": {
@@ -22,87 +415,87 @@
       "quantity": 93,
       "rating": 3.62
     },
-    "b_10": {
+    "b_2": {
       "author": "Robert T Kiyosaki",
       "book_id": 57007401,
       "cover": "https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UF1000,1000_QL80_.jpg",
       "descriptions": "April 2017 marks 20 years since Robert Kiyosaki's Rich Dad Poor Dad first made waves in the Personal Finance arena. It has since become the #1 Personal Finance book of all time... translated into dozens of languages and sold around the world. Rich Dad Poor Dad is Robert's story of growing up with two dads -- his real father and the father of his best friend, his rich dad -- and the ways in which both men shaped his thoughts about money and investing. The book explodes the myth that you need to earn a high income to be rich and explains the difference between working for money and having your money work for you. 20 Years... 20/20 Hindsight In the 20th Anniversary Edition of this classic, Robert offers an update on what we've seen over the past 20 years related to money, investing, and the global economy. Sidebars throughout the book will take readers 'fast forward' -- from 1997 to today -- as Robert assesses how the principles taught by his rich dad have stood the test of time. In many ways, the messages of Rich Dad Poor Dad, messages that were criticized and challenged two decades ago, are more meaningful, relevant and important today than they were 20 years ago. As always, readers can expect that Robert will be candid, insightful... and continue to rock more than a few boats in his retrospective. Will there be a few surprises? Count on it.",
       "name": "Rich Dad Poor Dad",
       "price": 5.95,
-      "quantity": 95,
+      "quantity": 93,
       "rating": 4.6
     },
-    "b_11": {
+    "b_3": {
       "author": "Dolly Parton, James Patterson",
       "book_id": 58505877,
       "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1628699768i/58505877.jpg",
       "descriptions": "From America's most beloved superstar and its greatest storyteller — a thriller about a young singer-songwriter on the rise and on the run, and determined to do whatever it takes to survive. Every song tells a story. She's a star on the rise, singing about the hard life behind her. She's also on the run. Find a future, lose a past. Nashville is where she's come to claim her destiny. It's also where the darkness she's fled might find her. And destroy her. Run, Rose, Run is a novel glittering with danger and desire — a story that only America's #1 beloved entertainer and its #1 bestselling author could have created.",
       "name": "Run, Rose, Run",
       "price": 14.95,
-      "quantity": 100,
+      "quantity": 97,
       "rating": 3.84
     },
-    "b_12": {
+    "b_4": {
       "author": "Barbara Kingsolver",
       "book_id": 58536005,
       "cover": "https://m.media-amazon.com/images/I/918DFDx5ZRL._AC_UF1000,1000_QL80_.jpg",
       "descriptions": "'Kingsolver is a writer who can help us understand and navigate the chaos of these times.' — Minneapolis Star Tribune. From the New York Times bestselling author of Unsheltered and Flight Behavior, a brilliant novel which enthralls, compels, and captures the heart as it evokes a young hero's unforgettable journey to maturity. 'Anyone will tell you the born of this world are marked from the get-out, win or lose.' Demon Copperhead is set in the mountains of southern Appalachia. It's the story of a boy born to a teenaged single mother in a single-wide trailer, with no assets beyond his dead father's good looks and copper-colored hair, a caustic wit, and a fierce talent for survival. In a plot that never pauses for breath, relayed in his own unsparing voice, he braves the modern perils of foster care, child labor, derelict schools, athletic success, addiction, disastrous loves, and crushing losses. Through all of it, he reckons with his own invisibility in a popular culture where even the superheroes have abandoned rural people in favor of cities. Many generations ago, Charles Dickens wrote David Copperfield from his experience as a survivor of institutional poverty and its damages to children in his society. Those problems have yet to be solved in ours. Dickens is not a prerequisite for readers of this novel, but he provided its inspiration. In transposing a Victorian epic novel to the contemporary American South, Barbara Kingsolver enlists Dickens' anger and compassion, and above all, his faith in the transformative powers of a good story. Demon Copperhead speaks for a new generation of lost boys, and all those born into beautiful, cursed places they can't imagine leaving behind.",
       "name": "Demon Copperhead",
       "price": 32.5,
-      "quantity": 100,
+      "quantity": 97,
       "rating": 3.9
     },
-    "b_120": {
+    "b_5": {
       "author": "Brianna Wiest",
       "book_id": 60306208,
       "cover": "https://images-eu.ssl-images-amazon.com/images/I/81OvOzDu3fL._AC_UL600_SR600,600_.jpg",
       "descriptions": "This is the year you change your life. If you're in a pivot period — if you're still bridging the space between where you are and where you want to be — remember that the person you're becoming is already within you. The journey is convincing your mind to act consistently on what your heart already knows it wants to do. The Pivot Year is a book of 365 daily meditations on finding the courage to become who you've always wanted to be, from the internationally bestselling author of 101 Essays That Will Change The Way You Think, The Mountain Is You, and more.",
       "name": "The Pivot Year",
       "price": 17.99,
-      "quantity": 97,
+      "quantity": 95,
       "rating": 4.2
     },
-    "b_13": {
+    "b_6": {
       "author": "Sabaa Tahir",
       "book_id": 57899793,
       "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629908086i/57899793.jpg",
       "descriptions": "From #1 New York Times bestselling author Sabaa Tahir comes a brilliant, unforgettable, and heart-wrenching contemporary YA novel about family and forgiveness, love and loss, in a sweeping story that crosses generations and continents. Lahore, Pakistan. Then. Misbah is a dreamer and storyteller, newly married to Toufiq in an arranged match. After their young life is shaken by tragedy, they come to the United States and open the Clouds' Rest Inn Motel, hoping for a new start. Juniper, California. Now. Salahudin and Noor are more than best friends; they are family. Growing up as outcasts in the small desert town of Juniper, California, they understand each other the way no one else does. Until The Fight, which destroys their bond with the swift fury of a star exploding. Now, Sal scrambles to run the family motel as his mother Misbah's health fails and his grieving father loses himself to alcoholism. Noor, meanwhile, walks a harrowing tightrope: working at her wrathful uncle's liquor store while hiding the fact that she's applying to college so she can escape him — and Juniper — forever. When Sal's attempts to save the motel spiral out of control, he and Noor must ask themselves what friendship is worth — and what it takes to defeat the monsters in their pasts and the ones in their midst. From one of today's most cherished and bestselling young adult authors comes a breathtaking novel of young love, old regrets, and forgiveness — one that's both tragic and poignant in its tender ferocity.",
       "name": "All My Rage",
       "price": 9.98,
-      "quantity": 100,
+      "quantity": 98,
       "rating": 4.54
     },
-    "b_2": {
+    "b_7": {
       "author": "Greer Hendricks",
       "book_id": 57693416,
       "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1633973719i/57693416.jpg",
       "descriptions": "The Golden Couple is the next electrifying novel from Greer Hendricks and Sarah Pekkanen, the #1 New York Times bestselling author duo behind The Wife Between Us. Propulsive and thrilling....A page-turner that will keep you guessing until the very end.--Taylor Jenkins Reid, author of Malibu Rising Wealthy Washington suburbanites Marissa and Matthew Bishop seem to have it all--until Marissa is unfaithful. Beneath their veneer of perfection is a relationship riven by work and a lack of intimacy. She wants to repair things for the sake of their eight-year-old son and because she loves her husband. Enter Avery Chambers. Avery is a therapist who lost her professional license. Still, it doesn't stop her from counseling those in crisis, though they have to adhere to her unorthodox methods. And the Bishops are desperate. When they glide through Avery's door and Marissa reveals her infidelity, all three are set on a collision course. Because the biggest secrets in the room are still hidden, and it's no longer simply a marriage that's in danger.",
       "name": "The Golden Couple",
       "price": 17.99,
-      "quantity": 97,
+      "quantity": 96,
       "rating": 4
     },
-    "b_27": {
+    "b_8": {
       "author": "Dunno",
       "book_id": 2710,
-      "cover": "data:image/jpeg;base64,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",
+      "cover": "https://m.media-amazon.com/images/I/61cKlGq4PWL.jpg",
       "descriptions": "My firstly book, novel that I read",
       "name": "SAO - Sword Art Online 1",
       "price": 8.95,
       "quantity": 100,
       "rating": 4.65
     },
-    "b_3": {
+    "b_9": {
       "author": "Simone St James",
       "book_id": 58371432,
       "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1624553583i/58371432.jpg",
       "descriptions": "A true crime blogger gets more than she bargained for while interviewing the woman acquitted of two cold case slayings in this chilling new novel from the New York Times bestselling author of The Sun Down Motel. In 1977, Claire Lake, Oregon, was shaken by the Lady Killer Murders: Two men, seemingly randomly, were murdered with the same gun, with strange notes left behind. Beth Greer was the perfect suspect--a rich, eccentric twenty-three-year-old woman, seen fleeing one of the crimes. But she was acquitted, and she retreated to the isolation of her mansion. Oregon, 2017. Shea Collins is a receptionist, but by night, she runs a true crime website, the Book of Cold Cases--a passion fueled by the attempted abduction she escaped as a child. When she meets Beth by chance, Shea asks her for an interview. To Shea's surprise, Beth says yes. They meet regularly at Beth's mansion, though Shea is never comfortable there. Items move when she's not looking, and she could swear she's seen a girl outside the window. The allure of learning the truth about the case from the smart, charming Beth is too much to resist, but even as they grow closer, Shea senses something isn't right. Is she making friends with a manipulative murderer, or are there other dangers lurking in the darkness of the Greer house?",
       "name": "The Book of Cold Cases",
       "price": 17,
-      "quantity": 100,
+      "quantity": 98,
       "rating": 3.8
     },
-    "b_4": {
+    "b_10": {
       "author": "V. E. Schwab",
       "book_id": 58064046,
       "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1635862579i/58064046.jpg",
@@ -112,17 +505,17 @@
       "quantity": 100,
       "rating": 3.75
     },
-    "b_5": {
+    "b_11": {
       "author": "Kate Quinn",
       "book_id": 58490567,
       "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1641777418i/58490567.jpg",
       "descriptions": "The New York Times bestselling author of The Rose Code returns with an unforgettable World War II tale of a quiet bookworm who becomes history's deadliest female sniper. Based on a true story. In 1937 in the snowbound city of Kiev (now known as Kyiv), wry and bookish history student Mila Pavlichenko organizes her life around her library job and her young son--but Hitler's invasion of Ukraine and Russia sends her on a different path. Given a rifle and sent to join the fight, Mila must forge herself from studious girl to deadly sniper--a lethal hunter of Nazis known as Lady Death. When news of her three hundredth kill makes her a national heroine, Mila finds herself torn from the bloody battlefields of the eastern front and sent to America on a goodwill tour. Still reeling from war wounds and devastated by loss, Mila finds herself isolated and lonely in the glittering world of Washington, DC--until an unexpected friendship with First Lady Eleanor Roosevelt and an even more unexpected connection with a silent fellow sniper offer the possibility of happiness. But when an old enemy from Mila's past joins forces with a deadly new foe lurking in the shadows, Lady Death finds herself battling her own demons and enemy bullets in the deadliest duel of her life. Based on a true story, The Diamond Eye is a haunting novel of heroism born of desperation, of a mother who became a soldier, of a woman who found her place in the world and changed the course of history forever.",
       "name": "The Diamond Eye",
       "price": 19.95,
-      "quantity": 100,
+      "quantity": 98,
       "rating": 4.29
     },
-    "b_6": {
+    "b_12": {
       "author": "Stephen McGinty",
       "book_id": 57815107,
       "cover": "https://m.media-amazon.com/images/I/710SuUsNOvL._AC_UF1000,1000_QL80_.jpg",
@@ -132,7 +525,7 @@
       "quantity": 100,
       "rating": 4.07
     },
-    "b_7": {
+    "b_13": {
       "author": "Merlin Sheldrake",
       "book_id": 55004093,
       "cover": "https://m.media-amazon.com/images/I/A1yr44oyywL._AC_UF1000,1000_QL80_.jpg",
@@ -142,7 +535,7 @@
       "quantity": 99,
       "rating": 4.1
     },
-    "b_8": {
+    "b_14": {
       "author": "Nathan Hale",
       "book_id": 58419108,
       "cover": "https://m.media-amazon.com/images/I/51EQM6hd7pL.jpg",
@@ -152,15 +545,75 @@
       "quantity": 100,
       "rating": 3.72
     },
-    "b_9": {
+    "b_15": {
       "author": "Phil Rosenzweig",
       "book_id": 57693427,
       "cover": "https://m.media-amazon.com/images/I/41TrPxT4jJL.jpg",
-      "descriptions": "With two new chapters and a new preface, the award-winning book The Halo Effect continues to unmask the delusions found in the corporate world and provides a sharp understanding of what drives business success and failure. Too many of today's most prominent management gurus make steel-clad guarantees based on claims of irrefutable research, promising to reveal the secrets of why one company fails and another succeeds, and how you can become the latter. Combining equal measures of solemn-faced hype and a wide range of popular business delusions, statistical and otherwise, these self-styled experts cloud our ability to think critically about the nature of success. Central among these delusions is the Halo Effect—the tendency to focus on the high financial performance of a successful company and then spread its golden glow to all its attributes—clear strategy, strong values, brilliant leadership, and outstanding execution. But should the same company's sales head south, the very same attributes are universally derided—suddenly the strategy was wrong, the culture was complacent, and the leader became arrogant. The Halo Effect not only identifies these delusions that keep us from understanding business performance, but also suggests a more accurate way to think about leading a company. This approach—focusing on strategic choice and execution, while recognizing the inherent riskiness of both—clarifies the priorities that managers face. Brilliant and unconventional, irreverent and witty, The Halo Effect is essential reading for anyone wanting to separate fact from fiction in the world of business.",
+      "descriptions": "I hope you guys love this book as much as I do!! (Let me just say...Hawk *swoon*!!)” ~ NYT bestseller Sarah J. Maas Captivating and action-packed, From Blood and Ash is a sexy, addictive, and unexpected fantasy perfect for fans of Sarah J. Maas and Laura Thalassa. A Maiden… Chosen from birth to usher in a new era, Poppy's life has never been her own. The life of the Maiden is solitary. Never to be touched. Never to be looked upon. Never to be spoken to. Never to experience pleasure. Waiting for the day of her Ascension, she would rather be with the guards, fighting back the evil that took her family, than preparing to be found worthy by the gods. But the choice has never been hers.",
       "name": "The Halo Effect... and the Eight Other Business Delusions That Deceive Managers",
-      "price": 18,
+      "price": 7.99,
       "quantity": 100,
-      "rating": 4.5
+      "rating": 4.6
+    },
+    "b_16": {
+      "author": "Jennifer L. Armentrout",
+      "book_id": 584191000,
+      "cover": "https://m.media-amazon.com/images/I/51nh3JnQNsL.jpg",
+      "descriptions": "Nathan Hale, the author's historical namesake, was America's first spy, a Revolutionary War hero who famously said 'I regret that I have but one life to give for my country' before being hanged by the British. In the Nathan Hale's Hazardous Tales series, author Nathan Hale channels his namesake to present history's roughest, toughest, and craziest stories in the graphic novel format. One Dead Spy tackles the story of Hale himself, who was an officer and spy for the American rebels during the Revolutionary War. Author Hale highlights the unusual, gruesome, and just plain unbelievable truth of historical Nathan Hale—from his early unlucky days at Yale to his later unlucky days as an officer—and America during the Revolutionary War.",
+      "name": "From Blood and Ash #1",
+      "price": 7.98,
+      "quantity": 100,
+      "rating": 3.72
+    },
+    "b_17": {
+      "author": "Jennifer L. Armentrout",
+      "book_id": 58410001,
+      "cover": "https://m.media-amazon.com/images/I/518nA6KLZPL.jpg",
+      "descriptions": "From #1 New York Times bestselling author Jennifer L. Armentrout comes a new novel in her Blood and Ash series… Is Love Stronger Than Vengeance? A Betrayal… Everything Poppy has ever believed in is a lie, including the man she was falling in love with. Thrust among those who see her as a symbol of a monstrous kingdom, she barely knows who she is without the veil of the Maiden. But what she does know is that nothing is as dangerous to her as him. The Dark One. The Prince of Atlantia. He wants her to fight him, and that's one order she's more than happy to obey. He may have taken her, but he will never have her.",
+      "name": "A Kingdom of Flesh and Fire (From Blood and Ash #2)",
+      "price": 7.98,
+      "quantity": 100,
+      "rating": 4.7
+    },
+    "b_18": {
+      "author": "Jennifer L. Armentrout",
+      "book_id": 58410002,
+      "cover": "https://m.media-amazon.com/images/I/51iVADM40EL.jpg",
+      "descriptions": "Bow Before Your Queen Or Bleed Before Her… From #1 New York Times bestselling author Jennifer L. Armentrout comes book three in her Blood and Ash series. She's been the victim and the survivor… Poppy never dreamed she would find the love she's found with Prince Casteel. She wants to revel in her happiness but first they must free his brother and find hers. It's a dangerous mission and one with far-reaching consequences neither dreamed of. Because Poppy is the Chosen, the Blessed. The true ruler of Atlantia. She carries the blood of the King of Gods within her. By right the crown and the kingdom are hers. The enemy and the warrior… Poppy has only ever wanted to control her own life, not the lives of others, but now she must choose to either forsake her birthright or seize the gilded crown and become the Queen of Flesh and Fire. But as the kingdoms' dark sins and blood-drenched secrets finally unravel, a long-forgotten power rises to pose a genuine threat. And they will stop at nothing to ensure that the crown never sits upon Poppy's head.",
+      "name": "The Crown of Gilded Bones (From Blood and Ash #3)",
+      "price": 7.98,
+      "quantity": 100,
+      "rating": 3.72
+    },
+    "b_19": {
+      "author": "Rebecca Serl",
+      "book_id": 50093704,
+      "cover": "https://m.media-amazon.com/images/I/71bSVuBd7IL.jpg",
+      "descriptions": "A NEW YORK TIMES BESTSELLER A Good Morning America, FabFitFun, and Marie Claire Book Club Pick “In Five Years is as clever as it is moving, the rare read-in-one-sitting novel you won't forget.” —Chloe Benjamin, New York Times bestselling author of The Immortalists Perfect for fans of Me Before You and One Day—a striking, powerful, and moving love story following an ambitious lawyer who experiences an astonishing vision that could change her life forever. Where do you see yourself in five years? Dannie Kohan lives her life by the numbers. She is nothing like her lifelong best friend—the wild, whimsical, believes-in-fate Bella. Her meticulous planning seems to have paid off after she nails the most important job interview of her career and accepts her boyfriend's marriage proposal in one fell swoop, falling asleep completely content. But when she awakens, she's suddenly in a different apartment, with a different ring on her finger, and beside a very different man. Dannie spends one hour exactly five years in the future before she wakes again in her own home on the brink of midnight—but it is one hour she cannot shake. In Five Years is an unforgettable love story, but it is not the one you're expecting.",
+      "name": "In Five Years",
+      "price": 12.98,
+      "quantity": 100,
+      "rating": 4.3
+    },
+    "b_20": {
+      "author": "Syren Nagakyrie",
+      "book_id": 581249108,
+      "cover": "https://m.media-amazon.com/images/I/81O6H+fxVvL.jpg",
+      "descriptions": "The Disabled Hiker's Guide to Western Washington and Oregon is the first book of its kind to consider the diverse needs of disabled people in the outdoors. This groundbreaking guidebook includes 60 outdoor adventures, including drive-up experiences, verified wheelchair accessible trails, and foot trails suitable for disabled hikers. This guide removes one of the barriers to access - a lack of information - by utilizing a rating system and detailed trail information designed for the disability community. Each trail is personally assessed according to Syren's skilled and detailed review and established accessibility guidelines.",
+      "name": "The Disabled Hiker's Guide to Western Washington and Oregon",
+      "price": 16.49,
+      "quantity": 100,
+      "rating": 4.7
+    },
+    "b_21": {
+      "author": "Kai Bird and Martin J. Sherwin",
+      "book_id": 58414508,
+      "cover": "https://m.media-amazon.com/images/I/81yfsIOijJL.jpg",
+      "descriptions": "#1 NEW YORK TIMES BESTSELLER • PULITZER PRIZE WINNER • The definitive biography of J. Robert Oppenheimer, one of the iconic figures of the twentieth century, a brilliant physicist who led the effort to build the atomic bomb for his country in a time of war, and who later found himself confronting the moral consequences of scientific progress. In this magisterial, acclaimed biography twenty-five years in the making, Kai Bird and Martin Sherwin capture Oppenheimer's life and times, from his early career to his central role in the Cold War. This is biography and history at its finest, riveting and deeply informative. “A masterful account of Oppenheimer's rise and fall, set in the context of the turbulent decades of America's own transformation. It is a tour de force.” —Los Angeles Times Book Review",
+      "name": "American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer",
+      "price": 14.99,
+      "quantity": 100,
+      "rating": 4.6
     }
   },
   "users": {

@@ -7,15 +7,17 @@ import { LoginAccountComponent } from './account-page/login-account/login-accoun
 import { RegisterAccountComponent } from './account-page/register-account/register-account.component';
 import { UserInfoComponent } from './account-page/user-info/user-info.component';
 import { NotFoundComponent } from './not-found.component';
+import { AdminPageComponent } from './admin/admin-page/admin-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'book', pathMatch: 'full' },
-  { path: 'book', component: BookListComponent , data: { animation: BookListComponent } },
-  { path: 'book/:id', component: BookItemComponent , data: { animation: BookItemComponent } },
-  { path: 'cart', component: CartPageComponent , data: { animation: CartPageComponent  } },
-  { path: 'register', component: RegisterAccountComponent , data: { animation: RegisterAccountComponent  } },
-  { path: 'login', component: LoginAccountComponent , data: { animation: LoginAccountComponent  } },
-  { path: 'user', component: UserInfoComponent , data: { animation: UserInfoComponent  } },
+  { path: 'book', component: BookListComponent, data: { animation: BookListComponent } },
+  { path: 'book/:id', component: BookItemComponent, data: { animation: BookItemComponent } },
+  { path: 'cart', component: CartPageComponent, data: { animation: CartPageComponent } },
+  { path: 'register', component: RegisterAccountComponent, data: { animation: RegisterAccountComponent } },
+  { path: 'login', component: LoginAccountComponent, data: { animation: LoginAccountComponent } },
+  { path: 'user', component: UserInfoComponent, data: { animation: UserInfoComponent } },
+  { path: 'admin', component: AdminPageComponent, data: { animation: AdminPageComponent } },
 
   {
     path: 'checkout',

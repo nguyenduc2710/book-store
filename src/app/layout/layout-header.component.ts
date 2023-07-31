@@ -39,7 +39,11 @@ import { BookService } from "../services/book.services";
             </li>
 
             <li *ngIf="isAuth == true" class="authenticate">
-              <a routerLink="user" class="authen-account"  rel="noopener noreferrer">User</a>
+              <a routerLink="user" class="authen-account" rel="noopener noreferrer">User</a>
+            </li>
+
+            <li nz-menu-item>
+              <a class="authen-account" routerLink="admin" rel="noopener noreferrer">Admin</a>
             </li>
         </ul>
       </nz-page-header-extra>
