@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { BookService } from 'src/app/services/book.services';
 import { Book } from 'src/app/model/books.model';
-import { Subject } from 'rxjs'
+import { Subject, takeUntil } from 'rxjs'
 import { CartService } from 'src/app/services/cart.service';
 import { CartStore } from 'src/app/store/cart.store';
 
@@ -69,7 +69,7 @@ export class BookItemComponent implements OnInit, OnDestroy {
     private store: CartStore) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe((param: Params) => {
+    this.route.params.pipe(takeUntil(this.destroy$)).subscribe((param: Params) => {
       this.bookId = param['id'];
       this.book = this.bookService.getBookById(this.bookId);
     })

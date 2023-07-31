@@ -22,8 +22,7 @@ export class BookListComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     // this.allBookOriginnal = this.bookService.getAll();
-    this.bookService.callApi();
-    this.bookService.book$.subscribe(book => {
+    this.bookService.book$.pipe(takeUntil(this.destroyed$)).subscribe(book => {
       this.allBookOriginnal = book;
       this.allBookFilter = this.allBookOriginnal;
     })

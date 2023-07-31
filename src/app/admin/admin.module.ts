@@ -7,9 +7,12 @@ import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { CommonModule } from "@angular/common";
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 const modules = [
-  CommonModule
+  CommonModule,
+  FormsModule,
+  ReactiveFormsModule
 ];
 
 const antd = [

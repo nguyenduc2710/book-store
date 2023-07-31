@@ -3,6 +3,7 @@ import { UserService } from "../services/user.service";
 import { FilterDataService } from "../services/filter.services";
 import { CartService } from "../services/cart.service";
 import { BookService } from "../services/book.services";
+import { Subject, takeUntil } from "rxjs";
 
 @Component({
   selector: 'app-layout-header',
@@ -69,6 +70,8 @@ import { BookService } from "../services/book.services";
 export class LayoutHeader implements OnInit, OnDestroy {
 
   @ViewChild("searchVal", { static: false }) searchVal!: ElementRef<HTMLInputElement>;
+  readonly destroyed$ = new Subject<void>;
+
   constructor(private userService: UserService,
     private filterService: FilterDataService,
     private cartService: CartService,
@@ -77,14 +80,14 @@ export class LayoutHeader implements OnInit, OnDestroy {
   isAuth: boolean = false;
   bookCount = 0;
   ngOnInit(): void {
-    this.userService.isAuthenticated.subscribe((isAuthen: boolean) => {
+    this.userService.isAuthenticated.pipe(takeUntil(this.destroyed$)).subscribe((isAuthen: boolean) => {
       if (isAuthen) {
         this.isAuth = true;
       } else {
         this.isAuth = false;
       }
     })
-    this.cartService.itemQuantity$.subscribe((quantity: number) => {
+    this.cartService.itemQuantity$.pipe(takeUntil(this.destroyed$)).subscribe((quantity: number) => {
       this.bookCount = quantity;
     })
   }
@@ -100,7 +103,8 @@ export class LayoutHeader implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.userService.isAuthenticated.unsubscribe();
+    this.destroyed$.next();
+    this.destroyed$.complete();
   }
   addCount(): void {
     this.bookCount++;

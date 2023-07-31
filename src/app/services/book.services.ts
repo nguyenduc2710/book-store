@@ -21,10 +21,6 @@ export class BookService {
   constructor(private db: AngularFireDatabase,
     private http: HttpClient) {
     this.bookRef = this.db.list(this.dbBookPath);
-  }
-
-  callApi() {
-    this.bookRef = this.db.list(this.dbBookPath);
     this.bookRef.snapshotChanges()
       .pipe(
         map(changes =>

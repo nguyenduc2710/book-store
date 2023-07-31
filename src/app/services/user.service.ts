@@ -6,6 +6,7 @@ import { getDatabase, ref, set } from "firebase/database"
 import { Message } from "../model/message.model";
 import { UserModel } from "../model/user.model";
 import { User } from "../model/user.class";
+import * as CryptoJS from "crypto-js";
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
@@ -38,6 +39,7 @@ export class UserService {
           changes.map(c => ({ id: c.key, value: c.payload.val() }))
         )
       ).subscribe(result => {
+        this.user = [];
         const format: any = {}
         result.map(item => {
           const key: any = item.id;
@@ -47,6 +49,7 @@ export class UserService {
         this.user.push(format);
       })
   }
+
   getUserAcc() {
     return this.user;
   }
@@ -59,10 +62,16 @@ export class UserService {
     return this.http.get(this.firebaseUrl + '/users.json');
   }
 
+  setUsers(users: UserModel){
+    this.user = [];
+    this.user.push(users);
+  }
+
   authUser(username: string, password: string){
     const user = new BehaviorSubject<User>(this.nullUser);
+    const encode = CryptoJS.SHA256(password + username);
     Object.values(this.user[0]).forEach((userInfo: any) => {
-      if (userInfo.username == username && userInfo.password == password) {
+      if (userInfo.username == username && userInfo.password == encode) {
         this.isAuthenticated.next(true);
         this.currentUser.next(userInfo);
         user.next(userInfo);
