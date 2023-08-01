@@ -21,11 +21,21 @@ import { CartStore } from 'src/app/store/cart.store';
     <div class="book-info" nz-col [nzSpan]="16">
       <div class="book-title">
         <div class="book-title_name">{{ book.name }}</div>
-        <p>
-          By <span class="book-title_author">{{ book.author }}</span>
-        </p>
-        <div>Price: <span class="book-title-price">{{ '$' + book.price }}</span></div>
-        <div>Store: {{ book.quantity }}</div>
+        <div class="title_detail row">
+          <div class="detail-book col-9">
+            <p>
+              By <span class="book-title_author">{{ book.author }}</span>
+            </p>
+            <div>Price: <span class="book-title-price">{{ '$' + book.price }}</span></div>
+            <div>Store: {{ book.quantity }}</div>
+          </div>
+
+          <div class="detail_book col-3 mt-2">
+            <div class="book_categories">
+              <nz-tag *ngFor="let tag of book.category">{{ tag }}</nz-tag>
+            </div>
+          </div>
+        </div>
       </div>
       <hr>
       <form class="book-add-to-cart">
@@ -58,6 +68,7 @@ export class BookItemComponent implements OnInit, OnDestroy {
     author: '',
     price: 0,
     quantity: 0,
+    category: [],
   };
   bookId: string = '';
   itemListSelected$ = this.store.cartItems$
@@ -89,7 +100,7 @@ export class BookItemComponent implements OnInit, OnDestroy {
 
   onAddItem() {
     //Still having bug constant adding product to cart
-    const currentItem = this.itemListSelected$.forEach(item => {return item})
+    const currentItem = this.itemListSelected$.forEach(item => { return item })
     if (this.book.quantity && this.bookQuantity > this.book.quantity) {
       this.bookService.sendBookMessage("warning", "Selected quantity exceeds available storage!");
     }

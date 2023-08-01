@@ -56,7 +56,8 @@ export class BookService {
       descriptions: '',
       author: '',
       price: 0,
-      quantity: 0
+      quantity: 0,
+      category: [],
     };
     this.books.forEach((book: Book) => {
       if (book.book_id.toString() === book_id) {

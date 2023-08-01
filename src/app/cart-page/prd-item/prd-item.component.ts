@@ -22,7 +22,8 @@ export class PrdItemComponent {
       descriptions: '',
       author: '',
       price: 0,
-      quantity: 0
+      quantity: 0,
+      category: [],
     };
 
     this.quantity = 0;

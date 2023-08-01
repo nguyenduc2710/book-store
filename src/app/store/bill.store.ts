@@ -14,6 +14,7 @@ export interface BillState {
   users: UserModel[];
   books: Book[];
   selectedBillId: string | null;
+  billReport?: undefined;
 }
 
 const initState = {
@@ -124,7 +125,8 @@ export class BillStore extends ComponentStore<BillState>{
             const formatedBill: OriginBill[] = [];
             for (const [key, value] of Object.entries(bills)) {
               formatedBill.push({ billId: key, bill: value });
-            }
+            };
+            console.log("Bill in store ", formatedBill);
             this.addBills(formatedBill);
           },
           err => console.log(err)
@@ -132,6 +134,8 @@ export class BillStore extends ComponentStore<BillState>{
       )
     )
   ));
+
+
 
 
 }

@@ -8,6 +8,7 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { CommonModule } from "@angular/common";
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 
 const modules = [
   CommonModule,
@@ -21,6 +22,7 @@ const antd = [
   NzDropDownModule,
   NzIconModule,
   NzAvatarModule,
+  NzDatePickerModule,
 ];
 
 const components = [

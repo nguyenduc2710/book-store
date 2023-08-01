@@ -4,20 +4,29 @@
   .book-info {
     padding: 0 20px;
 
-    .book-title_name {
-      font-size: 21px;
-      color: #575757;
-      font-weight: 700;
-    }
+    .book-title {
 
-    .book-title_author {
-      color: #326d7f;
+      .book-title_name {
+        font-size: 21px;
+        color: #575757;
+        font-weight: 700;
+      }
 
-    }
-    .book-title-price{
-      font-weight: 500;
-      font-size: 15px;
-      text-decoration: underline;
+      .title_detail {
+        display: flex;
+        justify-content: space-between;
+
+        .book-title_author {
+          color: #326d7f;
+
+        }
+
+        .book-title-price {
+          font-weight: 500;
+          font-size: 15px;
+          text-decoration: underline;
+        }
+      }
     }
   }
 
@@ -44,5 +53,3 @@
     visibility: hidden;
   }
 }
-
-
