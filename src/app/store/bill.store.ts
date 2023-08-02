@@ -7,6 +7,7 @@ import { BookService } from "../services/book.services";
 import { BillService } from "../services/bills.service";
 import { Injectable } from "@angular/core";
 import { switchMap } from "rxjs";
+import { BillReport } from "../model/bill_reports.model";
 
 export interface BillState {
   bills: OriginBill[];
@@ -14,7 +15,7 @@ export interface BillState {
   users: UserModel[];
   books: Book[];
   selectedBillId: string | null;
-  billReport?: undefined;
+  billReport?: BillReport[];
 }
 
 const initState = {
@@ -126,7 +127,7 @@ export class BillStore extends ComponentStore<BillState>{
             for (const [key, value] of Object.entries(bills)) {
               formatedBill.push({ billId: key, bill: value });
             };
-            console.log("Bill in store ", formatedBill);
+            // console.log("Bill in store ", formatedBill);
             this.addBills(formatedBill);
           },
           err => console.log(err)
@@ -134,6 +135,12 @@ export class BillStore extends ComponentStore<BillState>{
       )
     )
   ));
+
+  readonly initDashBoard = this.effect(param$ => param$.pipe(
+    // switchMap(() =>
+
+    // )
+  ))
 
 
 

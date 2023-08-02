@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js/auto';
+import { BillService } from 'src/app/services/bills.service';
+import { BillStore } from 'src/app/store/bill.store';
 
 
 @Component({
@@ -7,11 +9,13 @@ import { Chart } from 'chart.js/auto';
   templateUrl: './admin-page.component.html',
   styleUrls: ['./admin-page.component.css']
 })
+
 export class AdminPageComponent implements OnInit {
   isCollapsed = false;
   chart: any;
   date = null;
-
+  constructor(private billStore: BillStore,
+    private billService: BillService){}
 
   ngOnInit(): void {
     this.createChart();
@@ -54,7 +58,12 @@ export class AdminPageComponent implements OnInit {
   }
 
   onChangeCalendar(result: Date): void{
-    console.log('Change: ', result);
+    console.log(result.getFullYear());
+  }
+
+  test(){
+    // this.billStore.initDashBoard()
+    this.billService.initBillReports();
   }
 
 }

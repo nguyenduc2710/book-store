@@ -2,7 +2,7 @@
   "bills": {
     "99415": {
       "address": "server",
-      "dateBuy": "2023-07-28 10:24:05",
+      "dateBuy": "2022-07-28 10:24:05",
       "email": "testtest@gmail.com",
       "fullName": "admin siu cap vjppro",
       "phoneNumber": "0902222222",
@@ -44,7 +44,7 @@
     },
     "635878": {
       "address": "123 đường 321",
-      "dateBuy": "2023-07-28 10:26:01",
+      "dateBuy": "2022-07-28 10:26:01",
       "email": "testtest@gmail.com",
       "fullName": "Nguyễn Văn User",
       "phoneNumber": "09876543211",
@@ -86,7 +86,7 @@
     },
     "694577": {
       "address": "123 đường 321",
-      "dateBuy": "2023-07-28 10:27:09",
+      "dateBuy": "2021-07-28 10:27:09",
       "email": "staff@gmail.com",
       "fullName": "Đức",
       "phoneNumber": 1234567890,
@@ -621,7 +621,7 @@
       "rating": 4.2
     },
     "b_6": {
-      "category": [],
+      "category": ["Biographies", "Novel", "Loves"],
       "author": "Sabaa Tahir",
       "book_id": 57899793,
       "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629908086i/57899793.jpg",

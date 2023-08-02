@@ -8,7 +8,7 @@ export interface CartState {
   bookStorage: Book[],
   cartItems: CartItem[],
   totalPrice: number,
-  numbersOfItem: number
+  numbersOfItem: number,
 }
 
 export interface CartItem {
