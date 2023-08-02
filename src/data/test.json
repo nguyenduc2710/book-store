@@ -1,596 +1,1191 @@
 {
   "bills": {
-    "99415": {
-      "address": "server",
-      "dateBuy": "2022-07-28 10:24:05",
-      "email": "testtest@gmail.com",
-      "fullName": "admin siu cap vjppro",
-      "phoneNumber": "0902222222",
-      "product": [
-        {
-          "prdDetail": {
-            "author": "Robert T Kiyosaki",
-            "book_id": 57007401,
-            "cover": "https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UF1000,1000_QL80_.jpg",
-            "descriptions": "April 2017 marks 20 years since Robert Kiyosaki's Rich Dad Poor Dad first made waves in the Personal Finance arena. It has since become the #1 Personal Finance book of all time... translated into dozens of languages and sold around the world. Rich Dad Poor Dad is Robert's story of growing up with two dads -- his real father and the father of his best friend, his rich dad -- and the ways in which both men shaped his thoughts about money and investing. The book explodes the myth that you need to earn a high income to be rich and explains the difference between working for money and having your money work for you. 20 Years... 20/20 Hindsight In the 20th Anniversary Edition of this classic, Robert offers an update on what we've seen over the past 20 years related to money, investing, and the global economy. Sidebars throughout the book will take readers 'fast forward' -- from 1997 to today -- as Robert assesses how the principles taught by his rich dad have stood the test of time. In many ways, the messages of Rich Dad Poor Dad, messages that were criticized and challenged two decades ago, are more meaningful, relevant and important today than they were 20 years ago. As always, readers can expect that Robert will be candid, insightful... and continue to rock more than a few boats in his retrospective. Will there be a few surprises? Count on it.",
-            "name": "Rich Dad Poor Dad",
-            "price": 5.95,
-            "quantity": 95,
-            "rating": 4.6
-          },
-          "productId": "57007401",
-          "quantity": 1,
-          "total": 5.95
-        },
-        {
-          "prdDetail": {
-            "author": "Dolly Parton, James Patterson",
-            "book_id": 58505877,
-            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1628699768i/58505877.jpg",
-            "descriptions": "From America's most beloved superstar and its greatest storyteller — a thriller about a young singer-songwriter on the rise and on the run, and determined to do whatever it takes to survive. Every song tells a story. She's a star on the rise, singing about the hard life behind her. She's also on the run. Find a future, lose a past. Nashville is where she's come to claim her destiny. It's also where the darkness she's fled might find her. And destroy her. Run, Rose, Run is a novel glittering with danger and desire — a story that only America's #1 beloved entertainer and its #1 bestselling author could have created.",
-            "name": "Run, Rose, Run",
-            "price": 14.95,
-            "quantity": 100,
-            "rating": 3.84
-          },
-          "productId": "58505877",
-          "quantity": 1,
-          "total": 14.95
-        }
-      ],
-      "totalBill": 21.735999999999997,
-      "typePayment": "cash",
-      "username": "admin"
-    },
-    "635878": {
+    "125296": {
       "address": "123 đường 321",
-      "dateBuy": "2022-07-28 10:26:01",
-      "email": "testtest@gmail.com",
-      "fullName": "Nguyễn Văn User",
-      "phoneNumber": "09876543211",
-      "product": [
-        {
-          "prdDetail": {
-            "author": "Robert T Kiyosaki",
-            "book_id": 57007401,
-            "cover": "https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UF1000,1000_QL80_.jpg",
-            "descriptions": "April 2017 marks 20 years since Robert Kiyosaki's Rich Dad Poor Dad first made waves in the Personal Finance arena. It has since become the #1 Personal Finance book of all time... translated into dozens of languages and sold around the world. Rich Dad Poor Dad is Robert's story of growing up with two dads -- his real father and the father of his best friend, his rich dad -- and the ways in which both men shaped his thoughts about money and investing. The book explodes the myth that you need to earn a high income to be rich and explains the difference between working for money and having your money work for you. 20 Years... 20/20 Hindsight In the 20th Anniversary Edition of this classic, Robert offers an update on what we've seen over the past 20 years related to money, investing, and the global economy. Sidebars throughout the book will take readers 'fast forward' -- from 1997 to today -- as Robert assesses how the principles taught by his rich dad have stood the test of time. In many ways, the messages of Rich Dad Poor Dad, messages that were criticized and challenged two decades ago, are more meaningful, relevant and important today than they were 20 years ago. As always, readers can expect that Robert will be candid, insightful... and continue to rock more than a few boats in his retrospective. Will there be a few surprises? Count on it.",
-            "name": "Rich Dad Poor Dad",
-            "price": 5.95,
-            "quantity": 94,
-            "rating": 4.6
-          },
-          "productId": "57007401",
-          "quantity": 1,
-          "total": 5.95
-        },
-        {
-          "prdDetail": {
-            "author": "Lorrie Moore",
-            "book_id": 58283080,
-            "cover": "https://m.media-amazon.com/images/I/71U-MX-cYJL._AC_UF1000,1000_QL80_.jpg",
-            "descriptions": "Lorrie Moore's first novel since A Gate at the Stairs — a daring, meditative exploration of love and death, passion and grief, and what it means to be haunted by the past, both by history and the human heart. From ''one of the most acute and lasting writers of her generation'' (Caryn James; The New York Times) — a ghost story set in the nineteenth and twenty-first centuries, an elegiac consideration of grief, devotion (filial and romantic), and the vanishing and persistence of all things — seen and unseen. A teacher visiting his dying brother in the Bronx. A mysterious journal from the nineteenth century stolen from a boarding house. A therapy clown and an assassin, both presumed dead, but perhaps not dead at all… With her distinctive, irresistible wordplay and singular wry humor and wisdom, Lorrie Moore has given us a magic box of longing and surprise as she writes about love and rebirth and the pull towards life. Bold, meditative, theatrical, this new novel is an inventive, poetic portrait of lovers and siblings as it questions the stories we have been told which may or may not be true. I Am Homeless If This Is Not My Home takes us through a trap door, into a windswept, imagined journey to the tragic-comic landscape that is, unmistakably, the world of Lorrie Moore.",
-            "name": "I Am Homeless If This Is Not My Home",
-            "price": 27,
-            "quantity": 97,
-            "rating": 4
-          },
-          "productId": "58283080",
-          "quantity": 1,
-          "total": 27
-        }
-      ],
-      "totalBill": 34.268,
-      "typePayment": "cash",
-      "username": "user"
-    },
-    "694577": {
-      "address": "123 đường 321",
-      "dateBuy": "2021-07-28 10:27:09",
+      "dateBuy": "2023-07-02 13:54:05",
       "email": "staff@gmail.com",
       "fullName": "Đức",
       "phoneNumber": 1234567890,
       "product": [
         {
           "prdDetail": {
+            "author": "Dunno",
+            "book_id": 2710,
+            "category": [
+              "Novel",
+              "Actions",
+              "Sci-Fi & Fantasy"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/61cKlGq4PWL.jpg",
+            "descriptions": "My firstly book, novel that I read",
+            "name": "SAO - Sword Art Online 1",
+            "price": 8.95,
+            "quantity": 100,
+            "rating": 4.65
+          },
+          "productId": "2710",
+          "quantity": 1,
+          "total": 8.95
+        }
+      ],
+      "totalBill": 9.308,
+      "typePayment": "cash",
+      "username": "nguyenduc2710"
+    },
+    "173663": {
+      "address": "123 đường 321",
+      "dateBuy": "2023-07-02 11:23:30",
+      "email": "staff@gmail.com",
+      "fullName": "Đức",
+      "phoneNumber": 1234567890,
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Jennifer L. Armentrout",
+            "book_id": 584191000,
+            "category": [
+              "Mysteries",
+              "Horror",
+              "Novel",
+              "Entertainment"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/51nh3JnQNsL.jpg",
+            "descriptions": "Nathan Hale, the author's historical namesake, was America's first spy, a Revolutionary War hero who famously said 'I regret that I have but one life to give for my country' before being hanged by the British. In the Nathan Hale's Hazardous Tales series, author Nathan Hale channels his namesake to present history's roughest, toughest, and craziest stories in the graphic novel format. One Dead Spy tackles the story of Hale himself, who was an officer and spy for the American rebels during the Revolutionary War. Author Hale highlights the unusual, gruesome, and just plain unbelievable truth of historical Nathan Hale—from his early unlucky days at Yale to his later unlucky days as an officer—and America during the Revolutionary War.",
+            "name": "From Blood and Ash #1",
+            "price": 7.98,
+            "quantity": 98,
+            "rating": 3.72
+          },
+          "productId": "584191000",
+          "quantity": 1,
+          "total": 7.98
+        },
+        {
+          "prdDetail": {
+            "author": "Jennifer L. Armentrout",
+            "book_id": 58410001,
+            "category": [
+              "Mysteries",
+              "Horror",
+              "Novel",
+              "Entertainment"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/518nA6KLZPL.jpg",
+            "descriptions": "From #1 New York Times bestselling author Jennifer L. Armentrout comes a new novel in her Blood and Ash series… Is Love Stronger Than Vengeance? A Betrayal… Everything Poppy has ever believed in is a lie, including the man she was falling in love with. Thrust among those who see her as a symbol of a monstrous kingdom, she barely knows who she is without the veil of the Maiden. But what she does know is that nothing is as dangerous to her as him. The Dark One. The Prince of Atlantia. He wants her to fight him, and that's one order she's more than happy to obey. He may have taken her, but he will never have her.",
+            "name": "A Kingdom of Flesh and Fire (From Blood and Ash #2)",
+            "price": 7.98,
+            "quantity": 99,
+            "rating": 4.7
+          },
+          "productId": "58410001",
+          "quantity": 1,
+          "total": 7.98
+        }
+      ],
+      "totalBill": 16.5984,
+      "typePayment": "cash",
+      "username": "nguyenduc2710"
+    },
+    "313063": {
+      "address": "123 đường 321",
+      "dateBuy": "2023-01-02 13:54:29",
+      "email": "staff@gmail.com",
+      "fullName": "Đức",
+      "phoneNumber": 1234567890,
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Rebecca Serle",
+            "book_id": "47894246",
+            "category": [
+              "Literature & Fiction"
+            ],
+            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1626799802i/58438583.jpg",
+            "descriptions": "The New York Times bestselling author of the 'heartwarming, heartbreaking, and hard to put down' (Laurie Frankel, New York Times bestselling author) modern classic In Five Years returns with a moving and unforgettable exploration of the powerful bond between mother and daughter set on the breathtaking Amalfi Coast. When Katy's mother dies, she is left reeling. Carol wasn't just Katy's mom, but her best friend and first phone call. She had all the answers and now, when Katy needs her the most, she is gone. To make matters worse, their planned mother-daughter trip of a lifetime looms: one week in Positano, the magical town Carol spent the summer right before she met Katy's father. Katy has been waiting years for Carol to take her, and now she is faced with embarking on the adventure alone. But as soon as she steps foot on the Amalfi Coast, Katy begins to feel her mother's spirit. Buoyed by the stunning waters, beautiful cliffsides, delightful residents, and, of course, delectable food, Katy feels herself coming back to life. And then Carol appears--in the flesh, healthy, sun-tanned, and thirty years old. Katy doesn't understand what is happening, or how--all she can focus on is that she has somehow, impossibly, gotten her mother back. Over the course of one Italian summer, Katy gets to know Carol, not as her mother, but as the young woman before her. She is not exactly who Katy imagined she might be, however, and soon Katy must reconcile the mother who knew everything with the young woman who does not yet have a clue. Rebecca Serle's next great love story is here, and this time it's between a mother and a daughter. With her signature 'heartbreaking, redemptive, and authentic' (Jamie Ford, New York Times bestselling author) prose, Serle has crafted a transcendent novel about how we move on after loss, and how the people we love never truly leave us",
+            "name": "One Italian Summer",
+            "price": 13.95,
+            "quantity": 91,
+            "rating": 3.62
+          },
+          "productId": "47894246",
+          "quantity": 4,
+          "total": 55.8
+        },
+        {
+          "prdDetail": {
             "author": "Barbara Kingsolver",
             "book_id": 58536005,
+            "category": [
+              "Novel",
+              "Self-Help"
+            ],
             "cover": "https://m.media-amazon.com/images/I/918DFDx5ZRL._AC_UF1000,1000_QL80_.jpg",
             "descriptions": "'Kingsolver is a writer who can help us understand and navigate the chaos of these times.' — Minneapolis Star Tribune. From the New York Times bestselling author of Unsheltered and Flight Behavior, a brilliant novel which enthralls, compels, and captures the heart as it evokes a young hero's unforgettable journey to maturity. 'Anyone will tell you the born of this world are marked from the get-out, win or lose.' Demon Copperhead is set in the mountains of southern Appalachia. It's the story of a boy born to a teenaged single mother in a single-wide trailer, with no assets beyond his dead father's good looks and copper-colored hair, a caustic wit, and a fierce talent for survival. In a plot that never pauses for breath, relayed in his own unsparing voice, he braves the modern perils of foster care, child labor, derelict schools, athletic success, addiction, disastrous loves, and crushing losses. Through all of it, he reckons with his own invisibility in a popular culture where even the superheroes have abandoned rural people in favor of cities. Many generations ago, Charles Dickens wrote David Copperfield from his experience as a survivor of institutional poverty and its damages to children in his society. Those problems have yet to be solved in ours. Dickens is not a prerequisite for readers of this novel, but he provided its inspiration. In transposing a Victorian epic novel to the contemporary American South, Barbara Kingsolver enlists Dickens' anger and compassion, and above all, his faith in the transformative powers of a good story. Demon Copperhead speaks for a new generation of lost boys, and all those born into beautiful, cursed places they can't imagine leaving behind.",
             "name": "Demon Copperhead",
             "price": 32.5,
-            "quantity": 99,
+            "quantity": 92,
             "rating": 3.9
           },
           "productId": "58536005",
           "quantity": 2,
           "total": 65
-        },
-        {
-          "prdDetail": {
-            "author": "Kate Quinn",
-            "book_id": 58490567,
-            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1641777418i/58490567.jpg",
-            "descriptions": "The New York Times bestselling author of The Rose Code returns with an unforgettable World War II tale of a quiet bookworm who becomes history's deadliest female sniper. Based on a true story. In 1937 in the snowbound city of Kiev (now known as Kyiv), wry and bookish history student Mila Pavlichenko organizes her life around her library job and her young son--but Hitler's invasion of Ukraine and Russia sends her on a different path. Given a rifle and sent to join the fight, Mila must forge herself from studious girl to deadly sniper--a lethal hunter of Nazis known as Lady Death. When news of her three hundredth kill makes her a national heroine, Mila finds herself torn from the bloody battlefields of the eastern front and sent to America on a goodwill tour. Still reeling from war wounds and devastated by loss, Mila finds herself isolated and lonely in the glittering world of Washington, DC--until an unexpected friendship with First Lady Eleanor Roosevelt and an even more unexpected connection with a silent fellow sniper offer the possibility of happiness. But when an old enemy from Mila's past joins forces with a deadly new foe lurking in the shadows, Lady Death finds herself battling her own demons and enemy bullets in the deadliest duel of her life. Based on a true story, The Diamond Eye is a haunting novel of heroism born of desperation, of a mother who became a soldier, of a woman who found her place in the world and changed the course of history forever.",
-            "name": "The Diamond Eye",
-            "price": 19.95,
-            "quantity": 99,
-            "rating": 4.29
-          },
-          "productId": "58490567",
-          "quantity": 1,
-          "total": 19.95
-        },
-        {
-          "prdDetail": {
-            "author": "Simone St James",
-            "book_id": 58371432,
-            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1624553583i/58371432.jpg",
-            "descriptions": "A true crime blogger gets more than she bargained for while interviewing the woman acquitted of two cold case slayings in this chilling new novel from the New York Times bestselling author of The Sun Down Motel. In 1977, Claire Lake, Oregon, was shaken by the Lady Killer Murders: Two men, seemingly randomly, were murdered with the same gun, with strange notes left behind. Beth Greer was the perfect suspect--a rich, eccentric twenty-three-year-old woman, seen fleeing one of the crimes. But she was acquitted, and she retreated to the isolation of her mansion. Oregon, 2017. Shea Collins is a receptionist, but by night, she runs a true crime website, the Book of Cold Cases--a passion fueled by the attempted abduction she escaped as a child. When she meets Beth by chance, Shea asks her for an interview. To Shea's surprise, Beth says yes. They meet regularly at Beth's mansion, though Shea is never comfortable there. Items move when she's not looking, and she could swear she's seen a girl outside the window. The allure of learning the truth about the case from the smart, charming Beth is too much to resist, but even as they grow closer, Shea senses something isn't right. Is she making friends with a manipulative murderer, or are there other dangers lurking in the darkness of the Greer house?",
-            "name": "The Book of Cold Cases",
-            "price": 17,
-            "quantity": 99,
-            "rating": 3.8
-          },
-          "productId": "58371432",
-          "quantity": 1,
-          "total": 17
         }
       ],
-      "totalBill": 106.028,
+      "totalBill": 125.63199999999999,
       "typePayment": "cash",
       "username": "nguyenduc2710"
     },
-    "887298": {
+    "637340": {
       "address": "123 đường 321",
-      "dateBuy": "2023-07-28 10:26:34",
-      "email": "testtest@gmail.com",
-      "fullName": "Nguyễn Văn User",
-      "phoneNumber": "09876543211",
-      "product": [
-        {
-          "prdDetail": {
-            "author": "Dolly Parton, James Patterson",
-            "book_id": 58505877,
-            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1628699768i/58505877.jpg",
-            "descriptions": "From America's most beloved superstar and its greatest storyteller — a thriller about a young singer-songwriter on the rise and on the run, and determined to do whatever it takes to survive. Every song tells a story. She's a star on the rise, singing about the hard life behind her. She's also on the run. Find a future, lose a past. Nashville is where she's come to claim her destiny. It's also where the darkness she's fled might find her. And destroy her. Run, Rose, Run is a novel glittering with danger and desire — a story that only America's #1 beloved entertainer and its #1 bestselling author could have created.",
-            "name": "Run, Rose, Run",
-            "price": 14.95,
-            "quantity": 99,
-            "rating": 3.84
-          },
-          "productId": "58505877",
-          "quantity": 1,
-          "total": 14.95
-        }
-      ],
-      "totalBill": 15.548,
-      "typePayment": "cash",
-      "username": "user"
-    },
-    "1410495": {
-      "address": "123 đường 321",
-      "dateBuy": "2023-07-28 10:35:33",
+      "dateBuy": "2023-02-02 11:23:16",
       "email": "staff@gmail.com",
       "fullName": "Đức",
       "phoneNumber": 1234567890,
       "product": [
         {
           "prdDetail": {
-            "author": "Lorrie Moore",
-            "book_id": 58283080,
-            "cover": "https://m.media-amazon.com/images/I/71U-MX-cYJL._AC_UF1000,1000_QL80_.jpg",
-            "descriptions": "Lorrie Moore's first novel since A Gate at the Stairs — a daring, meditative exploration of love and death, passion and grief, and what it means to be haunted by the past, both by history and the human heart. From ''one of the most acute and lasting writers of her generation'' (Caryn James; The New York Times) — a ghost story set in the nineteenth and twenty-first centuries, an elegiac consideration of grief, devotion (filial and romantic), and the vanishing and persistence of all things — seen and unseen. A teacher visiting his dying brother in the Bronx. A mysterious journal from the nineteenth century stolen from a boarding house. A therapy clown and an assassin, both presumed dead, but perhaps not dead at all… With her distinctive, irresistible wordplay and singular wry humor and wisdom, Lorrie Moore has given us a magic box of longing and surprise as she writes about love and rebirth and the pull towards life. Bold, meditative, theatrical, this new novel is an inventive, poetic portrait of lovers and siblings as it questions the stories we have been told which may or may not be true. I Am Homeless If This Is Not My Home takes us through a trap door, into a windswept, imagined journey to the tragic-comic landscape that is, unmistakably, the world of Lorrie Moore.",
-            "name": "I Am Homeless If This Is Not My Home",
-            "price": 27,
-            "quantity": 96,
-            "rating": 4
+            "author": "Stephen McGinty",
+            "book_id": 57815107,
+            "category": [
+              "History"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/710SuUsNOvL._AC_UF1000,1000_QL80_.jpg",
+            "descriptions": "An undersea adventure narrated from the suffocating depths of the ocean floor--as time and oxygen are quickly running out--The Dive is the harrowing and heroic story of the rescue of submarine Pisces III. They were out of their depth, out of breath and out of time. Two men, trapped in a crippled submarine. Outside was pitch darkness and the icy chill of the ocean's depths--and the crushing weight of 1,700 feet of water. On the surface a flotilla of ships and a rescue operation under the command of an eccentric retired naval commander. For three days, the world watched and held its breath. On August 29th, 1973, a routine dive to the telecommunication cable that snakes along the Atlantic sea bed went badly wrong. Pisces III, with Roger Chapman and Roger Mallinson onboard, had tried to surface when a catastrophic fault suddenly sent the mini-submarine tumbling to the ocean bed--almost half a mile below. Badly damaged, buried nose first in a bed of sand, the submarine and the two men were now trapped far beyond the depth of all previous sub-sea rescues. They had just two days' worth of oxygen. Rescue was three days away.",
+            "name": "Dive The Untold Story of the Worlds Deepest Submarine Rescue",
+            "price": 19.95,
+            "quantity": 100,
+            "rating": 4.07
           },
-          "productId": "58283080",
+          "productId": "57815107",
           "quantity": 1,
-          "total": 27
+          "total": 19.95
         },
         {
           "prdDetail": {
-            "author": "Sabaa Tahir",
-            "book_id": 57899793,
-            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629908086i/57899793.jpg",
-            "descriptions": "From #1 New York Times bestselling author Sabaa Tahir comes a brilliant, unforgettable, and heart-wrenching contemporary YA novel about family and forgiveness, love and loss, in a sweeping story that crosses generations and continents. Lahore, Pakistan. Then. Misbah is a dreamer and storyteller, newly married to Toufiq in an arranged match. After their young life is shaken by tragedy, they come to the United States and open the Clouds' Rest Inn Motel, hoping for a new start. Juniper, California. Now. Salahudin and Noor are more than best friends; they are family. Growing up as outcasts in the small desert town of Juniper, California, they understand each other the way no one else does. Until The Fight, which destroys their bond with the swift fury of a star exploding. Now, Sal scrambles to run the family motel as his mother Misbah's health fails and his grieving father loses himself to alcoholism. Noor, meanwhile, walks a harrowing tightrope: working at her wrathful uncle's liquor store while hiding the fact that she's applying to college so she can escape him — and Juniper — forever. When Sal's attempts to save the motel spiral out of control, he and Noor must ask themselves what friendship is worth — and what it takes to defeat the monsters in their pasts and the ones in their midst. From one of today's most cherished and bestselling young adult authors comes a breathtaking novel of young love, old regrets, and forgiveness — one that's both tragic and poignant in its tender ferocity.",
-            "name": "All My Rage",
-            "price": 9.98,
-            "quantity": 99,
-            "rating": 4.54
+            "author": "Merlin Sheldrake",
+            "book_id": 55004093,
+            "category": [
+              "Edu & Reference"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/A1yr44oyywL._AC_UF1000,1000_QL80_.jpg",
+            "descriptions": "'Merlin Sheldrake's marvelous tour of these diverse and extraordinary life forms is eye-opening on why humans should consider fungi among the greatest of earth's marvels.... Wondrous.' — Time A mind-bending journey into the hidden universe of fungi, 'one of those rare books that can truly change the way you see the world around you.' — Helen Macdonald, author of H Is for Hawk. NAMED ONE OF THE BEST BOOKS OF THE YEAR BY Time - New Statesman - London Evening Standard - Science Friday When we think of fungi, we likely think of mushrooms. But mushrooms are only fruiting bodies, analogous to apples on a tree. Most fungi live out of sight, yet make up a massively diverse kingdom of organisms that supports and sustains nearly all living systems. Fungi provide a key to understanding the planet on which we live, and the ways we think, feel, and behave. In Entangled Life, the brilliant young biologist Merlin Sheldrake shows us the world from a fungal point of view, providing an exhilarating change of perspective. Sheldrake's vivid exploration takes us from yeast to psychedelics, to the fungi that range for miles underground and are the largest organisms on the planet, to those that link plants together in complex networks known as the 'Wood Wide Web' to those that infiltrate and manipulate insect bodies with devastating precision. Fungi throw our concepts of individuality and even intelligence into question. They are metabolic masters, earth makers, and key players in most of life's processes. They can change our minds, heal our bodies, and even help us remediate environmental disaster. By examining fungi on their own terms, Sheldrake reveals how these extraordinary organisms — and our relationships with them — are changing our understanding of how life works.",
+            "name": "How Fungi Make Our Worlds, Change Our Minds and Shape Our Futures",
+            "price": 18,
+            "quantity": 97,
+            "rating": 4.1
           },
-          "productId": "57899793",
+          "productId": "55004093",
           "quantity": 1,
-          "total": 9.98
+          "total": 18
+        },
+        {
+          "prdDetail": {
+            "author": "Nathan Hale",
+            "book_id": 58419108,
+            "category": [
+              "Entertainment",
+              "Actions",
+              "Novel"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/51EQM6hd7pL.jpg",
+            "descriptions": "Nathan Hale, the author's historical namesake, was America's first spy, a Revolutionary War hero who famously said 'I regret that I have but one life to give for my country' before being hanged by the British. In the Nathan Hale's Hazardous Tales series, author Nathan Hale channels his namesake to present history's roughest, toughest, and craziest stories in the graphic novel format. One Dead Spy tackles the story of Hale himself, who was an officer and spy for the American rebels during the Revolutionary War. Author Hale highlights the unusual, gruesome, and just plain unbelievable truth of historical Nathan Hale—from his early unlucky days at Yale to his later unlucky days as an officer—and America during the Revolutionary War.",
+            "name": "One Dead Spy: Nathan Hale's Hazardous Tales #1",
+            "price": 7.98,
+            "quantity": 100,
+            "rating": 3.72
+          },
+          "productId": "58419108",
+          "quantity": 1,
+          "total": 7.98
+        },
+        {
+          "prdDetail": {
+            "author": "Phil Rosenzweig",
+            "book_id": 57693427,
+            "category": [
+              "Business"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/41TrPxT4jJL.jpg",
+            "descriptions": "I hope you guys love this book as much as I do!! (Let me just say...Hawk *swoon*!!)” ~ NYT bestseller Sarah J. Maas Captivating and action-packed, From Blood and Ash is a sexy, addictive, and unexpected fantasy perfect for fans of Sarah J. Maas and Laura Thalassa. A Maiden… Chosen from birth to usher in a new era, Poppy's life has never been her own. The life of the Maiden is solitary. Never to be touched. Never to be looked upon. Never to be spoken to. Never to experience pleasure. Waiting for the day of her Ascension, she would rather be with the guards, fighting back the evil that took her family, than preparing to be found worthy by the gods. But the choice has never been hers.",
+            "name": "The Halo Effect... and the Eight Other Business Delusions That Deceive Managers",
+            "price": 7.99,
+            "quantity": 98,
+            "rating": 4.6
+          },
+          "productId": "57693427",
+          "quantity": 1,
+          "total": 7.99
         }
       ],
-      "totalBill": 38.4592,
+      "totalBill": 56.076800000000006,
       "typePayment": "cash",
       "username": "nguyenduc2710"
     },
-    "2521686": {
+    "639146": {
+      "address": "Earth",
+      "dateBuy": "2023-02-02 13:49:35",
+      "email": "testtest@gmail.com",
+      "fullName": "Nguyễn Đức",
+      "phoneNumber": "083629999",
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Nathan Hale",
+            "book_id": 58419108,
+            "category": [
+              "Entertainment",
+              "Actions",
+              "Novel"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/51EQM6hd7pL.jpg",
+            "descriptions": "Nathan Hale, the author's historical namesake, was America's first spy, a Revolutionary War hero who famously said 'I regret that I have but one life to give for my country' before being hanged by the British. In the Nathan Hale's Hazardous Tales series, author Nathan Hale channels his namesake to present history's roughest, toughest, and craziest stories in the graphic novel format. One Dead Spy tackles the story of Hale himself, who was an officer and spy for the American rebels during the Revolutionary War. Author Hale highlights the unusual, gruesome, and just plain unbelievable truth of historical Nathan Hale—from his early unlucky days at Yale to his later unlucky days as an officer—and America during the Revolutionary War.",
+            "name": "One Dead Spy: Nathan Hale's Hazardous Tales #1",
+            "price": 7.98,
+            "quantity": 95,
+            "rating": 3.72
+          },
+          "productId": "58419108",
+          "quantity": 5,
+          "total": 39.900000000000006
+        }
+      ],
+      "totalBill": 41.49600000000001,
+      "typePayment": "cash",
+      "username": "nguyenduc"
+    },
+    "721330": {
+      "address": "Earth",
+      "dateBuy": "2023-08-02 13:49:23",
+      "email": "testtest@gmail.com",
+      "fullName": "Nguyễn Đức",
+      "phoneNumber": "083629999",
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Merlin Sheldrake",
+            "book_id": 55004093,
+            "category": [
+              "Edu & Reference"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/A1yr44oyywL._AC_UF1000,1000_QL80_.jpg",
+            "descriptions": "'Merlin Sheldrake's marvelous tour of these diverse and extraordinary life forms is eye-opening on why humans should consider fungi among the greatest of earth's marvels.... Wondrous.' — Time A mind-bending journey into the hidden universe of fungi, 'one of those rare books that can truly change the way you see the world around you.' — Helen Macdonald, author of H Is for Hawk. NAMED ONE OF THE BEST BOOKS OF THE YEAR BY Time - New Statesman - London Evening Standard - Science Friday When we think of fungi, we likely think of mushrooms. But mushrooms are only fruiting bodies, analogous to apples on a tree. Most fungi live out of sight, yet make up a massively diverse kingdom of organisms that supports and sustains nearly all living systems. Fungi provide a key to understanding the planet on which we live, and the ways we think, feel, and behave. In Entangled Life, the brilliant young biologist Merlin Sheldrake shows us the world from a fungal point of view, providing an exhilarating change of perspective. Sheldrake's vivid exploration takes us from yeast to psychedelics, to the fungi that range for miles underground and are the largest organisms on the planet, to those that link plants together in complex networks known as the 'Wood Wide Web' to those that infiltrate and manipulate insect bodies with devastating precision. Fungi throw our concepts of individuality and even intelligence into question. They are metabolic masters, earth makers, and key players in most of life's processes. They can change our minds, heal our bodies, and even help us remediate environmental disaster. By examining fungi on their own terms, Sheldrake reveals how these extraordinary organisms — and our relationships with them — are changing our understanding of how life works.",
+            "name": "How Fungi Make Our Worlds, Change Our Minds and Shape Our Futures",
+            "price": 18,
+            "quantity": 96,
+            "rating": 4.1
+          },
+          "productId": "55004093",
+          "quantity": 3,
+          "total": 54
+        },
+        {
+          "prdDetail": {
+            "author": "Nathan Hale",
+            "book_id": 58419108,
+            "category": [
+              "Entertainment",
+              "Actions",
+              "Novel"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/51EQM6hd7pL.jpg",
+            "descriptions": "Nathan Hale, the author's historical namesake, was America's first spy, a Revolutionary War hero who famously said 'I regret that I have but one life to give for my country' before being hanged by the British. In the Nathan Hale's Hazardous Tales series, author Nathan Hale channels his namesake to present history's roughest, toughest, and craziest stories in the graphic novel format. One Dead Spy tackles the story of Hale himself, who was an officer and spy for the American rebels during the Revolutionary War. Author Hale highlights the unusual, gruesome, and just plain unbelievable truth of historical Nathan Hale—from his early unlucky days at Yale to his later unlucky days as an officer—and America during the Revolutionary War.",
+            "name": "One Dead Spy: Nathan Hale's Hazardous Tales #1",
+            "price": 7.98,
+            "quantity": 97,
+            "rating": 3.72
+          },
+          "productId": "58419108",
+          "quantity": 2,
+          "total": 15.96
+        }
+      ],
+      "totalBill": 72.75840000000001,
+      "typePayment": "cash",
+      "username": "nguyenduc"
+    },
+    "878557": {
       "address": "server",
-      "dateBuy": "2023-07-31 17:11:13",
+      "dateBuy": "2023-02-02 11:21:10",
       "email": "testtest@gmail.com",
       "fullName": "admin siu cap vjppro",
       "phoneNumber": "0902222222",
       "product": [
         {
           "prdDetail": {
-            "author": "Kate Quinn",
-            "book_id": 58490567,
-            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1641777418i/58490567.jpg",
-            "descriptions": "The New York Times bestselling author of The Rose Code returns with an unforgettable World War II tale of a quiet bookworm who becomes history's deadliest female sniper. Based on a true story. In 1937 in the snowbound city of Kiev (now known as Kyiv), wry and bookish history student Mila Pavlichenko organizes her life around her library job and her young son--but Hitler's invasion of Ukraine and Russia sends her on a different path. Given a rifle and sent to join the fight, Mila must forge herself from studious girl to deadly sniper--a lethal hunter of Nazis known as Lady Death. When news of her three hundredth kill makes her a national heroine, Mila finds herself torn from the bloody battlefields of the eastern front and sent to America on a goodwill tour. Still reeling from war wounds and devastated by loss, Mila finds herself isolated and lonely in the glittering world of Washington, DC--until an unexpected friendship with First Lady Eleanor Roosevelt and an even more unexpected connection with a silent fellow sniper offer the possibility of happiness. But when an old enemy from Mila's past joins forces with a deadly new foe lurking in the shadows, Lady Death finds herself battling her own demons and enemy bullets in the deadliest duel of her life. Based on a true story, The Diamond Eye is a haunting novel of heroism born of desperation, of a mother who became a soldier, of a woman who found her place in the world and changed the course of history forever.",
-            "name": "The Diamond Eye",
-            "price": 19.95,
-            "quantity": 98,
-            "rating": 4.29
+            "author": "Rebecca Serl",
+            "book_id": 50093704,
+            "category": [
+              "Novel",
+              "Sci-Fi & Fantasy"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/71bSVuBd7IL.jpg",
+            "descriptions": "A NEW YORK TIMES BESTSELLER A Good Morning America, FabFitFun, and Marie Claire Book Club Pick “In Five Years is as clever as it is moving, the rare read-in-one-sitting novel you won't forget.” —Chloe Benjamin, New York Times bestselling author of The Immortalists Perfect for fans of Me Before You and One Day—a striking, powerful, and moving love story following an ambitious lawyer who experiences an astonishing vision that could change her life forever. Where do you see yourself in five years? Dannie Kohan lives her life by the numbers. She is nothing like her lifelong best friend—the wild, whimsical, believes-in-fate Bella. Her meticulous planning seems to have paid off after she nails the most important job interview of her career and accepts her boyfriend's marriage proposal in one fell swoop, falling asleep completely content. But when she awakens, she's suddenly in a different apartment, with a different ring on her finger, and beside a very different man. Dannie spends one hour exactly five years in the future before she wakes again in her own home on the brink of midnight—but it is one hour she cannot shake. In Five Years is an unforgettable love story, but it is not the one you're expecting.",
+            "name": "In Five Years",
+            "price": 12.98,
+            "quantity": 99,
+            "rating": 4.3
           },
-          "productId": "58490567",
+          "productId": "50093704",
           "quantity": 1,
-          "total": 19.95
+          "total": 12.98
+        },
+        {
+          "prdDetail": {
+            "author": "Rebecca Serle",
+            "book_id": "47894246",
+            "category": [
+              "Literature & Fiction"
+            ],
+            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1626799802i/58438583.jpg",
+            "descriptions": "The New York Times bestselling author of the 'heartwarming, heartbreaking, and hard to put down' (Laurie Frankel, New York Times bestselling author) modern classic In Five Years returns with a moving and unforgettable exploration of the powerful bond between mother and daughter set on the breathtaking Amalfi Coast. When Katy's mother dies, she is left reeling. Carol wasn't just Katy's mom, but her best friend and first phone call. She had all the answers and now, when Katy needs her the most, she is gone. To make matters worse, their planned mother-daughter trip of a lifetime looms: one week in Positano, the magical town Carol spent the summer right before she met Katy's father. Katy has been waiting years for Carol to take her, and now she is faced with embarking on the adventure alone. But as soon as she steps foot on the Amalfi Coast, Katy begins to feel her mother's spirit. Buoyed by the stunning waters, beautiful cliffsides, delightful residents, and, of course, delectable food, Katy feels herself coming back to life. And then Carol appears--in the flesh, healthy, sun-tanned, and thirty years old. Katy doesn't understand what is happening, or how--all she can focus on is that she has somehow, impossibly, gotten her mother back. Over the course of one Italian summer, Katy gets to know Carol, not as her mother, but as the young woman before her. She is not exactly who Katy imagined she might be, however, and soon Katy must reconcile the mother who knew everything with the young woman who does not yet have a clue. Rebecca Serle's next great love story is here, and this time it's between a mother and a daughter. With her signature 'heartbreaking, redemptive, and authentic' (Jamie Ford, New York Times bestselling author) prose, Serle has crafted a transcendent novel about how we move on after loss, and how the people we love never truly leave us",
+            "name": "One Italian Summer",
+            "price": 13.95,
+            "quantity": 92,
+            "rating": 3.62
+          },
+          "productId": "47894246",
+          "quantity": 1,
+          "total": 13.95
         }
       ],
-      "totalBill": 20.747999999999998,
+      "totalBill": 28.0072,
       "typePayment": "cash",
       "username": "admin"
     },
-    "2738771": {
+    "1171934": {
       "address": "123 đường 321",
-      "dateBuy": "2023-07-28 10:26:22",
+      "dateBuy": "2023-03-02 13:53:38",
       "email": "testtest@gmail.com",
       "fullName": "Nguyễn Văn User",
       "phoneNumber": "09876543211",
       "product": [
         {
           "prdDetail": {
-            "author": "Kate Quinn",
-            "book_id": 58490567,
-            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1641777418i/58490567.jpg",
-            "descriptions": "The New York Times bestselling author of The Rose Code returns with an unforgettable World War II tale of a quiet bookworm who becomes history's deadliest female sniper. Based on a true story. In 1937 in the snowbound city of Kiev (now known as Kyiv), wry and bookish history student Mila Pavlichenko organizes her life around her library job and her young son--but Hitler's invasion of Ukraine and Russia sends her on a different path. Given a rifle and sent to join the fight, Mila must forge herself from studious girl to deadly sniper--a lethal hunter of Nazis known as Lady Death. When news of her three hundredth kill makes her a national heroine, Mila finds herself torn from the bloody battlefields of the eastern front and sent to America on a goodwill tour. Still reeling from war wounds and devastated by loss, Mila finds herself isolated and lonely in the glittering world of Washington, DC--until an unexpected friendship with First Lady Eleanor Roosevelt and an even more unexpected connection with a silent fellow sniper offer the possibility of happiness. But when an old enemy from Mila's past joins forces with a deadly new foe lurking in the shadows, Lady Death finds herself battling her own demons and enemy bullets in the deadliest duel of her life. Based on a true story, The Diamond Eye is a haunting novel of heroism born of desperation, of a mother who became a soldier, of a woman who found her place in the world and changed the course of history forever.",
-            "name": "The Diamond Eye",
-            "price": 19.95,
-            "quantity": 100,
-            "rating": 4.29
+            "author": "Kai Bird and Martin J. Sherwin",
+            "book_id": 58414508,
+            "category": [
+              "History",
+              "Biographies",
+              "Actions"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/81yfsIOijJL.jpg",
+            "descriptions": "#1 NEW YORK TIMES BESTSELLER • PULITZER PRIZE WINNER • The definitive biography of J. Robert Oppenheimer, one of the iconic figures of the twentieth century, a brilliant physicist who led the effort to build the atomic bomb for his country in a time of war, and who later found himself confronting the moral consequences of scientific progress. In this magisterial, acclaimed biography twenty-five years in the making, Kai Bird and Martin Sherwin capture Oppenheimer's life and times, from his early career to his central role in the Cold War. This is biography and history at its finest, riveting and deeply informative. “A masterful account of Oppenheimer's rise and fall, set in the context of the turbulent decades of America's own transformation. It is a tour de force.” —Los Angeles Times Book Review",
+            "name": "American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer",
+            "price": 14.99,
+            "quantity": 93,
+            "rating": 4.6
           },
-          "productId": "58490567",
-          "quantity": 1,
-          "total": 19.95
-        },
-        {
-          "prdDetail": {
-            "author": "Simone St James",
-            "book_id": 58371432,
-            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1624553583i/58371432.jpg",
-            "descriptions": "A true crime blogger gets more than she bargained for while interviewing the woman acquitted of two cold case slayings in this chilling new novel from the New York Times bestselling author of The Sun Down Motel. In 1977, Claire Lake, Oregon, was shaken by the Lady Killer Murders: Two men, seemingly randomly, were murdered with the same gun, with strange notes left behind. Beth Greer was the perfect suspect--a rich, eccentric twenty-three-year-old woman, seen fleeing one of the crimes. But she was acquitted, and she retreated to the isolation of her mansion. Oregon, 2017. Shea Collins is a receptionist, but by night, she runs a true crime website, the Book of Cold Cases--a passion fueled by the attempted abduction she escaped as a child. When she meets Beth by chance, Shea asks her for an interview. To Shea's surprise, Beth says yes. They meet regularly at Beth's mansion, though Shea is never comfortable there. Items move when she's not looking, and she could swear she's seen a girl outside the window. The allure of learning the truth about the case from the smart, charming Beth is too much to resist, but even as they grow closer, Shea senses something isn't right. Is she making friends with a manipulative murderer, or are there other dangers lurking in the darkness of the Greer house?",
-            "name": "The Book of Cold Cases",
-            "price": 17,
-            "quantity": 100,
-            "rating": 3.8
-          },
-          "productId": "58371432",
-          "quantity": 1,
-          "total": 17
-        }
-      ],
-      "totalBill": 38.428000000000004,
-      "typePayment": "cash",
-      "username": "user"
-    },
-    "3121874": {
-      "address": "server",
-      "dateBuy": "2023-07-28 10:24:55",
-      "email": "testtest@gmail.com",
-      "fullName": "admin siu cap vjppro",
-      "phoneNumber": "0902222222",
-      "product": [
-        {
-          "prdDetail": {
-            "author": "Lorrie Moore",
-            "book_id": 58283080,
-            "cover": "https://m.media-amazon.com/images/I/71U-MX-cYJL._AC_UF1000,1000_QL80_.jpg",
-            "descriptions": "Lorrie Moore's first novel since A Gate at the Stairs — a daring, meditative exploration of love and death, passion and grief, and what it means to be haunted by the past, both by history and the human heart. From ''one of the most acute and lasting writers of her generation'' (Caryn James; The New York Times) — a ghost story set in the nineteenth and twenty-first centuries, an elegiac consideration of grief, devotion (filial and romantic), and the vanishing and persistence of all things — seen and unseen. A teacher visiting his dying brother in the Bronx. A mysterious journal from the nineteenth century stolen from a boarding house. A therapy clown and an assassin, both presumed dead, but perhaps not dead at all… With her distinctive, irresistible wordplay and singular wry humor and wisdom, Lorrie Moore has given us a magic box of longing and surprise as she writes about love and rebirth and the pull towards life. Bold, meditative, theatrical, this new novel is an inventive, poetic portrait of lovers and siblings as it questions the stories we have been told which may or may not be true. I Am Homeless If This Is Not My Home takes us through a trap door, into a windswept, imagined journey to the tragic-comic landscape that is, unmistakably, the world of Lorrie Moore.",
-            "name": "I Am Homeless If This Is Not My Home",
-            "price": 27,
-            "quantity": 98,
-            "rating": 4
-          },
-          "productId": "58283080",
-          "quantity": 1,
-          "total": 27
+          "productId": "58414508",
+          "quantity": 5,
+          "total": 74.95
         },
         {
           "prdDetail": {
             "author": "Barbara Kingsolver",
             "book_id": 58536005,
+            "category": [
+              "Novel",
+              "Self-Help"
+            ],
             "cover": "https://m.media-amazon.com/images/I/918DFDx5ZRL._AC_UF1000,1000_QL80_.jpg",
             "descriptions": "'Kingsolver is a writer who can help us understand and navigate the chaos of these times.' — Minneapolis Star Tribune. From the New York Times bestselling author of Unsheltered and Flight Behavior, a brilliant novel which enthralls, compels, and captures the heart as it evokes a young hero's unforgettable journey to maturity. 'Anyone will tell you the born of this world are marked from the get-out, win or lose.' Demon Copperhead is set in the mountains of southern Appalachia. It's the story of a boy born to a teenaged single mother in a single-wide trailer, with no assets beyond his dead father's good looks and copper-colored hair, a caustic wit, and a fierce talent for survival. In a plot that never pauses for breath, relayed in his own unsparing voice, he braves the modern perils of foster care, child labor, derelict schools, athletic success, addiction, disastrous loves, and crushing losses. Through all of it, he reckons with his own invisibility in a popular culture where even the superheroes have abandoned rural people in favor of cities. Many generations ago, Charles Dickens wrote David Copperfield from his experience as a survivor of institutional poverty and its damages to children in his society. Those problems have yet to be solved in ours. Dickens is not a prerequisite for readers of this novel, but he provided its inspiration. In transposing a Victorian epic novel to the contemporary American South, Barbara Kingsolver enlists Dickens' anger and compassion, and above all, his faith in the transformative powers of a good story. Demon Copperhead speaks for a new generation of lost boys, and all those born into beautiful, cursed places they can't imagine leaving behind.",
             "name": "Demon Copperhead",
             "price": 32.5,
-            "quantity": 100,
+            "quantity": 97,
             "rating": 3.9
           },
           "productId": "58536005",
-          "quantity": 1,
-          "total": 32.5
+          "quantity": 5,
+          "total": 162.5
         },
         {
           "prdDetail": {
             "author": "Brianna Wiest",
             "book_id": 60306208,
+            "category": [
+              "Self-Help"
+            ],
             "cover": "https://images-eu.ssl-images-amazon.com/images/I/81OvOzDu3fL._AC_UL600_SR600,600_.jpg",
             "descriptions": "This is the year you change your life. If you're in a pivot period — if you're still bridging the space between where you are and where you want to be — remember that the person you're becoming is already within you. The journey is convincing your mind to act consistently on what your heart already knows it wants to do. The Pivot Year is a book of 365 daily meditations on finding the courage to become who you've always wanted to be, from the internationally bestselling author of 101 Essays That Will Change The Way You Think, The Mountain Is You, and more.",
             "name": "The Pivot Year",
             "price": 17.99,
-            "quantity": 97,
+            "quantity": 95,
             "rating": 4.2
           },
           "productId": "60306208",
-          "quantity": 1,
-          "total": 17.99
+          "quantity": 5,
+          "total": 89.94999999999999
         },
         {
           "prdDetail": {
-            "author": "Sabaa Tahir",
-            "book_id": 57899793,
-            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629908086i/57899793.jpg",
-            "descriptions": "From #1 New York Times bestselling author Sabaa Tahir comes a brilliant, unforgettable, and heart-wrenching contemporary YA novel about family and forgiveness, love and loss, in a sweeping story that crosses generations and continents. Lahore, Pakistan. Then. Misbah is a dreamer and storyteller, newly married to Toufiq in an arranged match. After their young life is shaken by tragedy, they come to the United States and open the Clouds' Rest Inn Motel, hoping for a new start. Juniper, California. Now. Salahudin and Noor are more than best friends; they are family. Growing up as outcasts in the small desert town of Juniper, California, they understand each other the way no one else does. Until The Fight, which destroys their bond with the swift fury of a star exploding. Now, Sal scrambles to run the family motel as his mother Misbah's health fails and his grieving father loses himself to alcoholism. Noor, meanwhile, walks a harrowing tightrope: working at her wrathful uncle's liquor store while hiding the fact that she's applying to college so she can escape him — and Juniper — forever. When Sal's attempts to save the motel spiral out of control, he and Noor must ask themselves what friendship is worth — and what it takes to defeat the monsters in their pasts and the ones in their midst. From one of today's most cherished and bestselling young adult authors comes a breathtaking novel of young love, old regrets, and forgiveness — one that's both tragic and poignant in its tender ferocity.",
-            "name": "All My Rage",
-            "price": 9.98,
-            "quantity": 100,
-            "rating": 4.54
+            "author": "Syren Nagakyrie",
+            "book_id": 581249108,
+            "category": [
+              "Self-Help",
+              "Health & Fitness"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/81O6H+fxVvL.jpg",
+            "descriptions": "The Disabled Hiker's Guide to Western Washington and Oregon is the first book of its kind to consider the diverse needs of disabled people in the outdoors. This groundbreaking guidebook includes 60 outdoor adventures, including drive-up experiences, verified wheelchair accessible trails, and foot trails suitable for disabled hikers. This guide removes one of the barriers to access - a lack of information - by utilizing a rating system and detailed trail information designed for the disability community. Each trail is personally assessed according to Syren's skilled and detailed review and established accessibility guidelines.",
+            "name": "The Disabled Hiker's Guide to Western Washington and Oregon",
+            "price": 16.49,
+            "quantity": 98,
+            "rating": 4.7
           },
-          "productId": "57899793",
-          "quantity": 1,
-          "total": 9.98
-        },
-        {
-          "prdDetail": {
-            "author": "Greer Hendricks",
-            "book_id": 57693416,
-            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1633973719i/57693416.jpg",
-            "descriptions": "The Golden Couple is the next electrifying novel from Greer Hendricks and Sarah Pekkanen, the #1 New York Times bestselling author duo behind The Wife Between Us. Propulsive and thrilling....A page-turner that will keep you guessing until the very end.--Taylor Jenkins Reid, author of Malibu Rising Wealthy Washington suburbanites Marissa and Matthew Bishop seem to have it all--until Marissa is unfaithful. Beneath their veneer of perfection is a relationship riven by work and a lack of intimacy. She wants to repair things for the sake of their eight-year-old son and because she loves her husband. Enter Avery Chambers. Avery is a therapist who lost her professional license. Still, it doesn't stop her from counseling those in crisis, though they have to adhere to her unorthodox methods. And the Bishops are desperate. When they glide through Avery's door and Marissa reveals her infidelity, all three are set on a collision course. Because the biggest secrets in the room are still hidden, and it's no longer simply a marriage that's in danger.",
-            "name": "The Golden Couple",
-            "price": 17.99,
-            "quantity": 97,
-            "rating": 4
-          },
-          "productId": "57693416",
-          "quantity": 1,
-          "total": 17.99
+          "productId": "581249108",
+          "quantity": 5,
+          "total": 82.44999999999999
         }
       ],
-      "totalBill": 109.6784,
+      "totalBill": 426.24399999999997,
+      "typePayment": "cash",
+      "username": "user"
+    },
+    "1172929": {
+      "address": "123 đường 321",
+      "dateBuy": "2023-03-02 11:22:12",
+      "email": "testtest@gmail.com",
+      "fullName": "Nguyễn Văn User",
+      "phoneNumber": "09876543211",
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Kai Bird and Martin J. Sherwin",
+            "book_id": 58414508,
+            "category": [
+              "History",
+              "Biographies",
+              "Actions"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/81yfsIOijJL.jpg",
+            "descriptions": "#1 NEW YORK TIMES BESTSELLER • PULITZER PRIZE WINNER • The definitive biography of J. Robert Oppenheimer, one of the iconic figures of the twentieth century, a brilliant physicist who led the effort to build the atomic bomb for his country in a time of war, and who later found himself confronting the moral consequences of scientific progress. In this magisterial, acclaimed biography twenty-five years in the making, Kai Bird and Martin Sherwin capture Oppenheimer's life and times, from his early career to his central role in the Cold War. This is biography and history at its finest, riveting and deeply informative. “A masterful account of Oppenheimer's rise and fall, set in the context of the turbulent decades of America's own transformation. It is a tour de force.” —Los Angeles Times Book Review",
+            "name": "American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer",
+            "price": 14.99,
+            "quantity": 98,
+            "rating": 4.6
+          },
+          "productId": "58414508",
+          "quantity": 5,
+          "total": 74.95
+        }
+      ],
+      "totalBill": 77.94800000000001,
+      "typePayment": "cash",
+      "username": "user"
+    },
+    "1594990": {
+      "address": "1",
+      "dateBuy": "2023-04-02 13:51:57",
+      "email": "user@gmail.com",
+      "fullName": "1",
+      "phoneNumber": 1234567890,
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Stephen McGinty",
+            "book_id": 57815107,
+            "category": [
+              "History"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/710SuUsNOvL._AC_UF1000,1000_QL80_.jpg",
+            "descriptions": "An undersea adventure narrated from the suffocating depths of the ocean floor--as time and oxygen are quickly running out--The Dive is the harrowing and heroic story of the rescue of submarine Pisces III. They were out of their depth, out of breath and out of time. Two men, trapped in a crippled submarine. Outside was pitch darkness and the icy chill of the ocean's depths--and the crushing weight of 1,700 feet of water. On the surface a flotilla of ships and a rescue operation under the command of an eccentric retired naval commander. For three days, the world watched and held its breath. On August 29th, 1973, a routine dive to the telecommunication cable that snakes along the Atlantic sea bed went badly wrong. Pisces III, with Roger Chapman and Roger Mallinson onboard, had tried to surface when a catastrophic fault suddenly sent the mini-submarine tumbling to the ocean bed--almost half a mile below. Badly damaged, buried nose first in a bed of sand, the submarine and the two men were now trapped far beyond the depth of all previous sub-sea rescues. They had just two days' worth of oxygen. Rescue was three days away.",
+            "name": "Dive The Untold Story of the Worlds Deepest Submarine Rescue",
+            "price": 19.95,
+            "quantity": 95,
+            "rating": 4.07
+          },
+          "productId": "57815107",
+          "quantity": 2,
+          "total": 39.9
+        }
+      ],
+      "totalBill": 41.495999999999995,
+      "typePayment": "cash",
+      "username": "testencode002"
+    },
+    "1627927": {
+      "address": "server",
+      "dateBuy": "2023-04-02 11:20:21",
+      "email": "testtest@gmail.com",
+      "fullName": "admin siu cap vjppro",
+      "phoneNumber": "0902222222",
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Lorrie Moore",
+            "book_id": 58283080,
+            "category": [
+              "Novel",
+              "Literature & Fiction"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/71U-MX-cYJL._AC_UF1000,1000_QL80_.jpg",
+            "descriptions": "Lorrie Moore's first novel since A Gate at the Stairs — a daring, meditative exploration of love and death, passion and grief, and what it means to be haunted by the past, both by history and the human heart. From ''one of the most acute and lasting writers of her generation'' (Caryn James; The New York Times) — a ghost story set in the nineteenth and twenty-first centuries, an elegiac consideration of grief, devotion (filial and romantic), and the vanishing and persistence of all things — seen and unseen. A teacher visiting his dying brother in the Bronx. A mysterious journal from the nineteenth century stolen from a boarding house. A therapy clown and an assassin, both presumed dead, but perhaps not dead at all… With her distinctive, irresistible wordplay and singular wry humor and wisdom, Lorrie Moore has given us a magic box of longing and surprise as she writes about love and rebirth and the pull towards life. Bold, meditative, theatrical, this new novel is an inventive, poetic portrait of lovers and siblings as it questions the stories we have been told which may or may not be true. I Am Homeless If This Is Not My Home takes us through a trap door, into a windswept, imagined journey to the tragic-comic landscape that is, unmistakably, the world of Lorrie Moore.",
+            "name": "I Am Homeless If This Is Not My Home",
+            "price": 27,
+            "quantity": 95,
+            "rating": 4
+          },
+          "productId": "58283080",
+          "quantity": 2,
+          "total": 54
+        },
+        {
+          "prdDetail": {
+            "author": "Rebecca Serle",
+            "book_id": "47894246",
+            "category": [
+              "Literature & Fiction"
+            ],
+            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1626799802i/58438583.jpg",
+            "descriptions": "The New York Times bestselling author of the 'heartwarming, heartbreaking, and hard to put down' (Laurie Frankel, New York Times bestselling author) modern classic In Five Years returns with a moving and unforgettable exploration of the powerful bond between mother and daughter set on the breathtaking Amalfi Coast. When Katy's mother dies, she is left reeling. Carol wasn't just Katy's mom, but her best friend and first phone call. She had all the answers and now, when Katy needs her the most, she is gone. To make matters worse, their planned mother-daughter trip of a lifetime looms: one week in Positano, the magical town Carol spent the summer right before she met Katy's father. Katy has been waiting years for Carol to take her, and now she is faced with embarking on the adventure alone. But as soon as she steps foot on the Amalfi Coast, Katy begins to feel her mother's spirit. Buoyed by the stunning waters, beautiful cliffsides, delightful residents, and, of course, delectable food, Katy feels herself coming back to life. And then Carol appears--in the flesh, healthy, sun-tanned, and thirty years old. Katy doesn't understand what is happening, or how--all she can focus on is that she has somehow, impossibly, gotten her mother back. Over the course of one Italian summer, Katy gets to know Carol, not as her mother, but as the young woman before her. She is not exactly who Katy imagined she might be, however, and soon Katy must reconcile the mother who knew everything with the young woman who does not yet have a clue. Rebecca Serle's next great love story is here, and this time it's between a mother and a daughter. With her signature 'heartbreaking, redemptive, and authentic' (Jamie Ford, New York Times bestselling author) prose, Serle has crafted a transcendent novel about how we move on after loss, and how the people we love never truly leave us",
+            "name": "One Italian Summer",
+            "price": 13.95,
+            "quantity": 93,
+            "rating": 3.62
+          },
+          "productId": "47894246",
+          "quantity": 1,
+          "total": 13.95
+        },
+        {
+          "prdDetail": {
+            "author": "V. E. Schwab",
+            "book_id": 58064046,
+            "category": [
+              "Teen",
+              "Literature & Fiction"
+            ],
+            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1635862579i/58064046.jpg",
+            "descriptions": "Everything casts a shadow. Even the world we live in. And as with every shadow, there is a place where it must touch. A seam, where the shadow meets its source. #1 New York Times-bestselling author V. E. Schwab weaves a dark and original tale about the place where the world meets its shadow, and the young woman beckoned by both sides. The Secret Garden meets Crimson Peak in this stand-alone novel perfect for readers of Holly Black and Neil Gaiman. Olivia Prior has grown up in Merilance School for Girls, and all she has of her past is her mother's journal--which seems to unravel into madness. Then, a letter invites Olivia to come home to Gallant. Yet when Olivia arrives, no one is expecting her. But Olivia is not about to leave the first place that feels like home; it doesn't matter if her cousin Matthew is hostile, or if she sees half-formed ghouls haunting the hallways. Olivia knows that Gallant is hiding secrets, and she is determined to uncover them. When she crosses a ruined wall at just the right moment, Olivia finds herself in a place that is Gallant--but not. The manor is crumbling, the ghouls are solid, and a mysterious figure rules over all. Now Olivia sees what has unraveled generations of her family, and where her father may have come from....",
+            "name": "Gallant",
+            "price": 12.95,
+            "quantity": 100,
+            "rating": 3.75
+          },
+          "productId": "58064046",
+          "quantity": 1,
+          "total": 12.95
+        },
+        {
+          "prdDetail": {
+            "author": "Kate Quinn",
+            "book_id": 58490567,
+            "category": [
+              "History"
+            ],
+            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1641777418i/58490567.jpg",
+            "descriptions": "The New York Times bestselling author of The Rose Code returns with an unforgettable World War II tale of a quiet bookworm who becomes history's deadliest female sniper. Based on a true story. In 1937 in the snowbound city of Kiev (now known as Kyiv), wry and bookish history student Mila Pavlichenko organizes her life around her library job and her young son--but Hitler's invasion of Ukraine and Russia sends her on a different path. Given a rifle and sent to join the fight, Mila must forge herself from studious girl to deadly sniper--a lethal hunter of Nazis known as Lady Death. When news of her three hundredth kill makes her a national heroine, Mila finds herself torn from the bloody battlefields of the eastern front and sent to America on a goodwill tour. Still reeling from war wounds and devastated by loss, Mila finds herself isolated and lonely in the glittering world of Washington, DC--until an unexpected friendship with First Lady Eleanor Roosevelt and an even more unexpected connection with a silent fellow sniper offer the possibility of happiness. But when an old enemy from Mila's past joins forces with a deadly new foe lurking in the shadows, Lady Death finds herself battling her own demons and enemy bullets in the deadliest duel of her life. Based on a true story, The Diamond Eye is a haunting novel of heroism born of desperation, of a mother who became a soldier, of a woman who found her place in the world and changed the course of history forever.",
+            "name": "The Diamond Eye",
+            "price": 19.95,
+            "quantity": 97,
+            "rating": 4.29
+          },
+          "productId": "58490567",
+          "quantity": 1,
+          "total": 19.95
+        }
+      ],
+      "totalBill": 104.88400000000001,
       "typePayment": "cash",
       "username": "admin"
     },
-    "3170042": {
-      "address": "123 đường 321",
-      "dateBuy": "2023-07-28 10:35:10",
-      "email": "staff@gmail.com",
-      "fullName": "Đức",
-      "phoneNumber": 1234567890,
+    "2094057": {
+      "address": "server",
+      "dateBuy": "2023-05-02 11:20:52",
+      "email": "testtest@gmail.com",
+      "fullName": "admin siu cap vjppro",
+      "phoneNumber": "0902222222",
       "product": [
         {
           "prdDetail": {
-            "author": "Brianna Wiest",
-            "book_id": 60306208,
-            "cover": "https://images-eu.ssl-images-amazon.com/images/I/81OvOzDu3fL._AC_UL600_SR600,600_.jpg",
-            "descriptions": "This is the year you change your life. If you're in a pivot period — if you're still bridging the space between where you are and where you want to be — remember that the person you're becoming is already within you. The journey is convincing your mind to act consistently on what your heart already knows it wants to do. The Pivot Year is a book of 365 daily meditations on finding the courage to become who you've always wanted to be, from the internationally bestselling author of 101 Essays That Will Change The Way You Think, The Mountain Is You, and more.",
-            "name": "The Pivot Year",
-            "price": 17.99,
-            "quantity": 96,
-            "rating": 4.2
+            "author": "Jennifer L. Armentrout",
+            "book_id": 584191000,
+            "category": [
+              "Mysteries",
+              "Horror",
+              "Novel",
+              "Entertainment"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/51nh3JnQNsL.jpg",
+            "descriptions": "Nathan Hale, the author's historical namesake, was America's first spy, a Revolutionary War hero who famously said 'I regret that I have but one life to give for my country' before being hanged by the British. In the Nathan Hale's Hazardous Tales series, author Nathan Hale channels his namesake to present history's roughest, toughest, and craziest stories in the graphic novel format. One Dead Spy tackles the story of Hale himself, who was an officer and spy for the American rebels during the Revolutionary War. Author Hale highlights the unusual, gruesome, and just plain unbelievable truth of historical Nathan Hale—from his early unlucky days at Yale to his later unlucky days as an officer—and America during the Revolutionary War.",
+            "name": "From Blood and Ash #1",
+            "price": 7.98,
+            "quantity": 100,
+            "rating": 3.72
           },
-          "productId": "60306208",
+          "productId": "584191000",
           "quantity": 1,
-          "total": 17.99
+          "total": 7.98
         }
       ],
-      "totalBill": 18.7096,
+      "totalBill": 8.2992,
       "typePayment": "cash",
-      "username": "nguyenduc2710"
+      "username": "admin"
     },
-    "4967762": {
+    "2246654": {
+      "address": "server",
+      "dateBuy": "2023-05-02 11:20:43",
+      "email": "testtest@gmail.com",
+      "fullName": "admin siu cap vjppro",
+      "phoneNumber": "0902222222",
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Merlin Sheldrake",
+            "book_id": 55004093,
+            "category": [
+              "Edu & Reference"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/A1yr44oyywL._AC_UF1000,1000_QL80_.jpg",
+            "descriptions": "'Merlin Sheldrake's marvelous tour of these diverse and extraordinary life forms is eye-opening on why humans should consider fungi among the greatest of earth's marvels.... Wondrous.' — Time A mind-bending journey into the hidden universe of fungi, 'one of those rare books that can truly change the way you see the world around you.' — Helen Macdonald, author of H Is for Hawk. NAMED ONE OF THE BEST BOOKS OF THE YEAR BY Time - New Statesman - London Evening Standard - Science Friday When we think of fungi, we likely think of mushrooms. But mushrooms are only fruiting bodies, analogous to apples on a tree. Most fungi live out of sight, yet make up a massively diverse kingdom of organisms that supports and sustains nearly all living systems. Fungi provide a key to understanding the planet on which we live, and the ways we think, feel, and behave. In Entangled Life, the brilliant young biologist Merlin Sheldrake shows us the world from a fungal point of view, providing an exhilarating change of perspective. Sheldrake's vivid exploration takes us from yeast to psychedelics, to the fungi that range for miles underground and are the largest organisms on the planet, to those that link plants together in complex networks known as the 'Wood Wide Web' to those that infiltrate and manipulate insect bodies with devastating precision. Fungi throw our concepts of individuality and even intelligence into question. They are metabolic masters, earth makers, and key players in most of life's processes. They can change our minds, heal our bodies, and even help us remediate environmental disaster. By examining fungi on their own terms, Sheldrake reveals how these extraordinary organisms — and our relationships with them — are changing our understanding of how life works.",
+            "name": "How Fungi Make Our Worlds, Change Our Minds and Shape Our Futures",
+            "price": 18,
+            "quantity": 99,
+            "rating": 4.1
+          },
+          "productId": "55004093",
+          "quantity": 2,
+          "total": 36
+        },
+        {
+          "prdDetail": {
+            "author": "Phil Rosenzweig",
+            "book_id": 57693427,
+            "category": [
+              "Business"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/41TrPxT4jJL.jpg",
+            "descriptions": "I hope you guys love this book as much as I do!! (Let me just say...Hawk *swoon*!!)” ~ NYT bestseller Sarah J. Maas Captivating and action-packed, From Blood and Ash is a sexy, addictive, and unexpected fantasy perfect for fans of Sarah J. Maas and Laura Thalassa. A Maiden… Chosen from birth to usher in a new era, Poppy's life has never been her own. The life of the Maiden is solitary. Never to be touched. Never to be looked upon. Never to be spoken to. Never to experience pleasure. Waiting for the day of her Ascension, she would rather be with the guards, fighting back the evil that took her family, than preparing to be found worthy by the gods. But the choice has never been hers.",
+            "name": "The Halo Effect... and the Eight Other Business Delusions That Deceive Managers",
+            "price": 7.99,
+            "quantity": 100,
+            "rating": 4.6
+          },
+          "productId": "57693427",
+          "quantity": 2,
+          "total": 15.98
+        }
+      ],
+      "totalBill": 54.059200000000004,
+      "typePayment": "cash",
+      "username": "admin"
+    },
+    "2658636": {
       "address": "123 đường 321",
-      "dateBuy": "2023-07-28 10:34:00",
+      "dateBuy": "2023-06-02 11:21:55",
+      "email": "testtest@gmail.com",
+      "fullName": "Nguyễn Văn User",
+      "phoneNumber": "09876543211",
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Jennifer L. Armentrout",
+            "book_id": 58410002,
+            "category": [
+              "Mysteries",
+              "Horror",
+              "Novel",
+              "Entertainment"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/51iVADM40EL.jpg",
+            "descriptions": "Bow Before Your Queen Or Bleed Before Her… From #1 New York Times bestselling author Jennifer L. Armentrout comes book three in her Blood and Ash series. She's been the victim and the survivor… Poppy never dreamed she would find the love she's found with Prince Casteel. She wants to revel in her happiness but first they must free his brother and find hers. It's a dangerous mission and one with far-reaching consequences neither dreamed of. Because Poppy is the Chosen, the Blessed. The true ruler of Atlantia. She carries the blood of the King of Gods within her. By right the crown and the kingdom are hers. The enemy and the warrior… Poppy has only ever wanted to control her own life, not the lives of others, but now she must choose to either forsake her birthright or seize the gilded crown and become the Queen of Flesh and Fire. But as the kingdoms' dark sins and blood-drenched secrets finally unravel, a long-forgotten power rises to pose a genuine threat. And they will stop at nothing to ensure that the crown never sits upon Poppy's head.",
+            "name": "The Crown of Gilded Bones (From Blood and Ash #3)",
+            "price": 7.98,
+            "quantity": 100,
+            "rating": 3.72
+          },
+          "productId": "58410002",
+          "quantity": 1,
+          "total": 7.98
+        },
+        {
+          "prdDetail": {
+            "author": "Jennifer L. Armentrout",
+            "book_id": 584191000,
+            "category": [
+              "Mysteries",
+              "Horror",
+              "Novel",
+              "Entertainment"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/51nh3JnQNsL.jpg",
+            "descriptions": "Nathan Hale, the author's historical namesake, was America's first spy, a Revolutionary War hero who famously said 'I regret that I have but one life to give for my country' before being hanged by the British. In the Nathan Hale's Hazardous Tales series, author Nathan Hale channels his namesake to present history's roughest, toughest, and craziest stories in the graphic novel format. One Dead Spy tackles the story of Hale himself, who was an officer and spy for the American rebels during the Revolutionary War. Author Hale highlights the unusual, gruesome, and just plain unbelievable truth of historical Nathan Hale—from his early unlucky days at Yale to his later unlucky days as an officer—and America during the Revolutionary War.",
+            "name": "From Blood and Ash #1",
+            "price": 7.98,
+            "quantity": 99,
+            "rating": 3.72
+          },
+          "productId": "584191000",
+          "quantity": 1,
+          "total": 7.98
+        },
+        {
+          "prdDetail": {
+            "author": "Jennifer L. Armentrout",
+            "book_id": 58410001,
+            "category": [
+              "Mysteries",
+              "Horror",
+              "Novel",
+              "Entertainment"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/518nA6KLZPL.jpg",
+            "descriptions": "From #1 New York Times bestselling author Jennifer L. Armentrout comes a new novel in her Blood and Ash series… Is Love Stronger Than Vengeance? A Betrayal… Everything Poppy has ever believed in is a lie, including the man she was falling in love with. Thrust among those who see her as a symbol of a monstrous kingdom, she barely knows who she is without the veil of the Maiden. But what she does know is that nothing is as dangerous to her as him. The Dark One. The Prince of Atlantia. He wants her to fight him, and that's one order she's more than happy to obey. He may have taken her, but he will never have her.",
+            "name": "A Kingdom of Flesh and Fire (From Blood and Ash #2)",
+            "price": 7.98,
+            "quantity": 100,
+            "rating": 4.7
+          },
+          "productId": "58410001",
+          "quantity": 1,
+          "total": 7.98
+        }
+      ],
+      "totalBill": 24.8976,
+      "typePayment": "cash",
+      "username": "user"
+    },
+    "2739631": {
+      "address": "123 đường 321",
+      "dateBuy": "2023-05-02 11:22:25",
+      "email": "testtest@gmail.com",
+      "fullName": "Nguyễn Văn User",
+      "phoneNumber": "09876543211",
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Syren Nagakyrie",
+            "book_id": 581249108,
+            "category": [
+              "Self-Help",
+              "Health & Fitness"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/81O6H+fxVvL.jpg",
+            "descriptions": "The Disabled Hiker's Guide to Western Washington and Oregon is the first book of its kind to consider the diverse needs of disabled people in the outdoors. This groundbreaking guidebook includes 60 outdoor adventures, including drive-up experiences, verified wheelchair accessible trails, and foot trails suitable for disabled hikers. This guide removes one of the barriers to access - a lack of information - by utilizing a rating system and detailed trail information designed for the disability community. Each trail is personally assessed according to Syren's skilled and detailed review and established accessibility guidelines.",
+            "name": "The Disabled Hiker's Guide to Western Washington and Oregon",
+            "price": 16.49,
+            "quantity": 100,
+            "rating": 4.7
+          },
+          "productId": "581249108",
+          "quantity": 2,
+          "total": 32.98
+        }
+      ],
+      "totalBill": 34.2992,
+      "typePayment": "cash",
+      "username": "user"
+    },
+    "3072859": {
+      "address": "1",
+      "dateBuy": "2023-03-02 13:50:50",
+      "email": "user@gmail.com",
+      "fullName": "1",
+      "phoneNumber": 1234567890,
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Rebecca Serl",
+            "book_id": 50093704,
+            "category": [
+              "Novel",
+              "Sci-Fi & Fantasy"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/71bSVuBd7IL.jpg",
+            "descriptions": "A NEW YORK TIMES BESTSELLER A Good Morning America, FabFitFun, and Marie Claire Book Club Pick “In Five Years is as clever as it is moving, the rare read-in-one-sitting novel you won't forget.” —Chloe Benjamin, New York Times bestselling author of The Immortalists Perfect for fans of Me Before You and One Day—a striking, powerful, and moving love story following an ambitious lawyer who experiences an astonishing vision that could change her life forever. Where do you see yourself in five years? Dannie Kohan lives her life by the numbers. She is nothing like her lifelong best friend—the wild, whimsical, believes-in-fate Bella. Her meticulous planning seems to have paid off after she nails the most important job interview of her career and accepts her boyfriend's marriage proposal in one fell swoop, falling asleep completely content. But when she awakens, she's suddenly in a different apartment, with a different ring on her finger, and beside a very different man. Dannie spends one hour exactly five years in the future before she wakes again in her own home on the brink of midnight—but it is one hour she cannot shake. In Five Years is an unforgettable love story, but it is not the one you're expecting.",
+            "name": "In Five Years",
+            "price": 12.98,
+            "quantity": 98,
+            "rating": 4.3
+          },
+          "productId": "50093704",
+          "quantity": 5,
+          "total": 64.9
+        },
+        {
+          "prdDetail": {
+            "author": "Stephen McGinty",
+            "book_id": 57815107,
+            "category": [
+              "History"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/710SuUsNOvL._AC_UF1000,1000_QL80_.jpg",
+            "descriptions": "An undersea adventure narrated from the suffocating depths of the ocean floor--as time and oxygen are quickly running out--The Dive is the harrowing and heroic story of the rescue of submarine Pisces III. They were out of their depth, out of breath and out of time. Two men, trapped in a crippled submarine. Outside was pitch darkness and the icy chill of the ocean's depths--and the crushing weight of 1,700 feet of water. On the surface a flotilla of ships and a rescue operation under the command of an eccentric retired naval commander. For three days, the world watched and held its breath. On August 29th, 1973, a routine dive to the telecommunication cable that snakes along the Atlantic sea bed went badly wrong. Pisces III, with Roger Chapman and Roger Mallinson onboard, had tried to surface when a catastrophic fault suddenly sent the mini-submarine tumbling to the ocean bed--almost half a mile below. Badly damaged, buried nose first in a bed of sand, the submarine and the two men were now trapped far beyond the depth of all previous sub-sea rescues. They had just two days' worth of oxygen. Rescue was three days away.",
+            "name": "Dive The Untold Story of the Worlds Deepest Submarine Rescue",
+            "price": 19.95,
+            "quantity": 99,
+            "rating": 4.07
+          },
+          "productId": "57815107",
+          "quantity": 4,
+          "total": 79.8
+        }
+      ],
+      "totalBill": 150.488,
+      "typePayment": "cash",
+      "username": "testencode002"
+    },
+    "4981696": {
+      "address": "Earth",
+      "dateBuy": "2023-04-02 13:49:06",
+      "email": "testtest@gmail.com",
+      "fullName": "Nguyễn Đức",
+      "phoneNumber": "083629999",
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Nathan Hale",
+            "book_id": 58419108,
+            "category": [
+              "Entertainment",
+              "Actions",
+              "Novel"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/51EQM6hd7pL.jpg",
+            "descriptions": "Nathan Hale, the author's historical namesake, was America's first spy, a Revolutionary War hero who famously said 'I regret that I have but one life to give for my country' before being hanged by the British. In the Nathan Hale's Hazardous Tales series, author Nathan Hale channels his namesake to present history's roughest, toughest, and craziest stories in the graphic novel format. One Dead Spy tackles the story of Hale himself, who was an officer and spy for the American rebels during the Revolutionary War. Author Hale highlights the unusual, gruesome, and just plain unbelievable truth of historical Nathan Hale—from his early unlucky days at Yale to his later unlucky days as an officer—and America during the Revolutionary War.",
+            "name": "One Dead Spy: Nathan Hale's Hazardous Tales #1",
+            "price": 7.98,
+            "quantity": 99,
+            "rating": 3.72
+          },
+          "productId": "58419108",
+          "quantity": 2,
+          "total": 15.96
+        },
+        {
+          "prdDetail": {
+            "author": "Jennifer L. Armentrout",
+            "book_id": 58410001,
+            "category": [
+              "Mysteries",
+              "Horror",
+              "Novel",
+              "Entertainment"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/518nA6KLZPL.jpg",
+            "descriptions": "From #1 New York Times bestselling author Jennifer L. Armentrout comes a new novel in her Blood and Ash series… Is Love Stronger Than Vengeance? A Betrayal… Everything Poppy has ever believed in is a lie, including the man she was falling in love with. Thrust among those who see her as a symbol of a monstrous kingdom, she barely knows who she is without the veil of the Maiden. But what she does know is that nothing is as dangerous to her as him. The Dark One. The Prince of Atlantia. He wants her to fight him, and that's one order she's more than happy to obey. He may have taken her, but he will never have her.",
+            "name": "A Kingdom of Flesh and Fire (From Blood and Ash #2)",
+            "price": 7.98,
+            "quantity": 98,
+            "rating": 4.7
+          },
+          "productId": "58410001",
+          "quantity": 2,
+          "total": 15.96
+        },
+        {
+          "prdDetail": {
+            "author": "Jennifer L. Armentrout",
+            "book_id": 58410002,
+            "category": [
+              "Mysteries",
+              "Horror",
+              "Novel",
+              "Entertainment"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/51iVADM40EL.jpg",
+            "descriptions": "Bow Before Your Queen Or Bleed Before Her… From #1 New York Times bestselling author Jennifer L. Armentrout comes book three in her Blood and Ash series. She's been the victim and the survivor… Poppy never dreamed she would find the love she's found with Prince Casteel. She wants to revel in her happiness but first they must free his brother and find hers. It's a dangerous mission and one with far-reaching consequences neither dreamed of. Because Poppy is the Chosen, the Blessed. The true ruler of Atlantia. She carries the blood of the King of Gods within her. By right the crown and the kingdom are hers. The enemy and the warrior… Poppy has only ever wanted to control her own life, not the lives of others, but now she must choose to either forsake her birthright or seize the gilded crown and become the Queen of Flesh and Fire. But as the kingdoms' dark sins and blood-drenched secrets finally unravel, a long-forgotten power rises to pose a genuine threat. And they will stop at nothing to ensure that the crown never sits upon Poppy's head.",
+            "name": "The Crown of Gilded Bones (From Blood and Ash #3)",
+            "price": 7.98,
+            "quantity": 99,
+            "rating": 3.72
+          },
+          "productId": "58410002",
+          "quantity": 2,
+          "total": 15.96
+        }
+      ],
+      "totalBill": 49.7952,
+      "typePayment": "cash",
+      "username": "nguyenduc"
+    },
+    "5406621": {
+      "address": "Earth",
+      "dateBuy": "2023-07-02 13:49:50",
+      "email": "testtest@gmail.com",
+      "fullName": "Nguyễn Đức",
+      "phoneNumber": "083629999",
+      "product": [
+        {
+          "prdDetail": {
+            "author": "Robert T Kiyosaki",
+            "book_id": 57007401,
+            "category": [
+              "Edu & Reference",
+              "Parenting",
+              "Business"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UF1000,1000_QL80_.jpg",
+            "descriptions": "April 2017 marks 20 years since Robert Kiyosaki's Rich Dad Poor Dad first made waves in the Personal Finance arena. It has since become the #1 Personal Finance book of all time... translated into dozens of languages and sold around the world. Rich Dad Poor Dad is Robert's story of growing up with two dads -- his real father and the father of his best friend, his rich dad -- and the ways in which both men shaped his thoughts about money and investing. The book explodes the myth that you need to earn a high income to be rich and explains the difference between working for money and having your money work for you. 20 Years... 20/20 Hindsight In the 20th Anniversary Edition of this classic, Robert offers an update on what we've seen over the past 20 years related to money, investing, and the global economy. Sidebars throughout the book will take readers 'fast forward' -- from 1997 to today -- as Robert assesses how the principles taught by his rich dad have stood the test of time. In many ways, the messages of Rich Dad Poor Dad, messages that were criticized and challenged two decades ago, are more meaningful, relevant and important today than they were 20 years ago. As always, readers can expect that Robert will be candid, insightful... and continue to rock more than a few boats in his retrospective. Will there be a few surprises? Count on it.",
+            "name": "Rich Dad Poor Dad",
+            "price": 5.95,
+            "quantity": 89,
+            "rating": 4.6
+          },
+          "productId": "57007401",
+          "quantity": 3,
+          "total": 17.85
+        }
+      ],
+      "totalBill": 18.564,
+      "typePayment": "cash",
+      "username": "nguyenduc"
+    },
+    "7486318": {
+      "address": "123 đường 321",
+      "dateBuy": "2023-07-02 11:25:41",
       "email": "staff@gmail.com",
       "fullName": "Đức",
       "phoneNumber": 1234567890,
       "product": [
         {
           "prdDetail": {
-            "author": "Dolly Parton, James Patterson",
-            "book_id": 58505877,
-            "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1628699768i/58505877.jpg",
-            "descriptions": "From America's most beloved superstar and its greatest storyteller — a thriller about a young singer-songwriter on the rise and on the run, and determined to do whatever it takes to survive. Every song tells a story. She's a star on the rise, singing about the hard life behind her. She's also on the run. Find a future, lose a past. Nashville is where she's come to claim her destiny. It's also where the darkness she's fled might find her. And destroy her. Run, Rose, Run is a novel glittering with danger and desire — a story that only America's #1 beloved entertainer and its #1 bestselling author could have created.",
-            "name": "Run, Rose, Run",
-            "price": 14.95,
-            "quantity": 98,
-            "rating": 3.84
+            "author": "Robert T Kiyosaki",
+            "book_id": 57007401,
+            "category": [
+              "Edu & Reference",
+              "Parenting",
+              "Business"
+            ],
+            "cover": "https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UF1000,1000_QL80_.jpg",
+            "descriptions": "April 2017 marks 20 years since Robert Kiyosaki's Rich Dad Poor Dad first made waves in the Personal Finance arena. It has since become the #1 Personal Finance book of all time... translated into dozens of languages and sold around the world. Rich Dad Poor Dad is Robert's story of growing up with two dads -- his real father and the father of his best friend, his rich dad -- and the ways in which both men shaped his thoughts about money and investing. The book explodes the myth that you need to earn a high income to be rich and explains the difference between working for money and having your money work for you. 20 Years... 20/20 Hindsight In the 20th Anniversary Edition of this classic, Robert offers an update on what we've seen over the past 20 years related to money, investing, and the global economy. Sidebars throughout the book will take readers 'fast forward' -- from 1997 to today -- as Robert assesses how the principles taught by his rich dad have stood the test of time. In many ways, the messages of Rich Dad Poor Dad, messages that were criticized and challenged two decades ago, are more meaningful, relevant and important today than they were 20 years ago. As always, readers can expect that Robert will be candid, insightful... and continue to rock more than a few boats in his retrospective. Will there be a few surprises? Count on it.",
+            "name": "Rich Dad Poor Dad",
+            "price": 5.95,
+            "quantity": 92,
+            "rating": 4.6
           },
-          "productId": "58505877",
-          "quantity": 1,
-          "total": 14.95
+          "productId": "57007401",
+          "quantity": 3,
+          "total": 17.85
         }
       ],
-      "totalBill": 15.548,
+      "totalBill": 18.564,
       "typePayment": "cash",
       "username": "nguyenduc2710"
     }
   },
   "books": {
     "b_0": {
-      "category": ["Novel", "Literature & Fiction"],
       "author": "Lorrie Moore",
       "book_id": 58283080,
+      "category": [
+        "Novel",
+        "Literature & Fiction"
+      ],
       "cover": "https://m.media-amazon.com/images/I/71U-MX-cYJL._AC_UF1000,1000_QL80_.jpg",
       "descriptions": "Lorrie Moore's first novel since A Gate at the Stairs — a daring, meditative exploration of love and death, passion and grief, and what it means to be haunted by the past, both by history and the human heart. From ''one of the most acute and lasting writers of her generation'' (Caryn James; The New York Times) — a ghost story set in the nineteenth and twenty-first centuries, an elegiac consideration of grief, devotion (filial and romantic), and the vanishing and persistence of all things — seen and unseen. A teacher visiting his dying brother in the Bronx. A mysterious journal from the nineteenth century stolen from a boarding house. A therapy clown and an assassin, both presumed dead, but perhaps not dead at all… With her distinctive, irresistible wordplay and singular wry humor and wisdom, Lorrie Moore has given us a magic box of longing and surprise as she writes about love and rebirth and the pull towards life. Bold, meditative, theatrical, this new novel is an inventive, poetic portrait of lovers and siblings as it questions the stories we have been told which may or may not be true. I Am Homeless If This Is Not My Home takes us through a trap door, into a windswept, imagined journey to the tragic-comic landscape that is, unmistakably, the world of Lorrie Moore.",
       "name": "I Am Homeless If This Is Not My Home",
       "price": 27,
-      "quantity": 95,
+      "quantity": 93,
       "rating": 4
     },
     "b_1": {
-      "category": ["Literature & Fiction"],
       "author": "Rebecca Serle",
       "book_id": "47894246",
+      "category": [
+        "Literature & Fiction"
+      ],
       "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1626799802i/58438583.jpg",
       "descriptions": "The New York Times bestselling author of the 'heartwarming, heartbreaking, and hard to put down' (Laurie Frankel, New York Times bestselling author) modern classic In Five Years returns with a moving and unforgettable exploration of the powerful bond between mother and daughter set on the breathtaking Amalfi Coast. When Katy's mother dies, she is left reeling. Carol wasn't just Katy's mom, but her best friend and first phone call. She had all the answers and now, when Katy needs her the most, she is gone. To make matters worse, their planned mother-daughter trip of a lifetime looms: one week in Positano, the magical town Carol spent the summer right before she met Katy's father. Katy has been waiting years for Carol to take her, and now she is faced with embarking on the adventure alone. But as soon as she steps foot on the Amalfi Coast, Katy begins to feel her mother's spirit. Buoyed by the stunning waters, beautiful cliffsides, delightful residents, and, of course, delectable food, Katy feels herself coming back to life. And then Carol appears--in the flesh, healthy, sun-tanned, and thirty years old. Katy doesn't understand what is happening, or how--all she can focus on is that she has somehow, impossibly, gotten her mother back. Over the course of one Italian summer, Katy gets to know Carol, not as her mother, but as the young woman before her. She is not exactly who Katy imagined she might be, however, and soon Katy must reconcile the mother who knew everything with the young woman who does not yet have a clue. Rebecca Serle's next great love story is here, and this time it's between a mother and a daughter. With her signature 'heartbreaking, redemptive, and authentic' (Jamie Ford, New York Times bestselling author) prose, Serle has crafted a transcendent novel about how we move on after loss, and how the people we love never truly leave us",
       "name": "One Italian Summer",
       "price": 13.95,
-      "quantity": 93,
+      "quantity": 87,
       "rating": 3.62
     },
     "b_10": {
-      "category": ["Teen", "Literature & Fiction"],
       "author": "V. E. Schwab",
       "book_id": 58064046,
+      "category": [
+        "Teen",
+        "Literature & Fiction"
+      ],
       "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1635862579i/58064046.jpg",
       "descriptions": "Everything casts a shadow. Even the world we live in. And as with every shadow, there is a place where it must touch. A seam, where the shadow meets its source. #1 New York Times-bestselling author V. E. Schwab weaves a dark and original tale about the place where the world meets its shadow, and the young woman beckoned by both sides. The Secret Garden meets Crimson Peak in this stand-alone novel perfect for readers of Holly Black and Neil Gaiman. Olivia Prior has grown up in Merilance School for Girls, and all she has of her past is her mother's journal--which seems to unravel into madness. Then, a letter invites Olivia to come home to Gallant. Yet when Olivia arrives, no one is expecting her. But Olivia is not about to leave the first place that feels like home; it doesn't matter if her cousin Matthew is hostile, or if she sees half-formed ghouls haunting the hallways. Olivia knows that Gallant is hiding secrets, and she is determined to uncover them. When she crosses a ruined wall at just the right moment, Olivia finds herself in a place that is Gallant--but not. The manor is crumbling, the ghouls are solid, and a mysterious figure rules over all. Now Olivia sees what has unraveled generations of her family, and where her father may have come from....",
       "name": "Gallant",
       "price": 12.95,
-      "quantity": 100,
+      "quantity": 99,
       "rating": 3.75
     },
     "b_11": {
-      "category": ["History"],
       "author": "Kate Quinn",
       "book_id": 58490567,
+      "category": [
+        "History"
+      ],
       "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1641777418i/58490567.jpg",
       "descriptions": "The New York Times bestselling author of The Rose Code returns with an unforgettable World War II tale of a quiet bookworm who becomes history's deadliest female sniper. Based on a true story. In 1937 in the snowbound city of Kiev (now known as Kyiv), wry and bookish history student Mila Pavlichenko organizes her life around her library job and her young son--but Hitler's invasion of Ukraine and Russia sends her on a different path. Given a rifle and sent to join the fight, Mila must forge herself from studious girl to deadly sniper--a lethal hunter of Nazis known as Lady Death. When news of her three hundredth kill makes her a national heroine, Mila finds herself torn from the bloody battlefields of the eastern front and sent to America on a goodwill tour. Still reeling from war wounds and devastated by loss, Mila finds herself isolated and lonely in the glittering world of Washington, DC--until an unexpected friendship with First Lady Eleanor Roosevelt and an even more unexpected connection with a silent fellow sniper offer the possibility of happiness. But when an old enemy from Mila's past joins forces with a deadly new foe lurking in the shadows, Lady Death finds herself battling her own demons and enemy bullets in the deadliest duel of her life. Based on a true story, The Diamond Eye is a haunting novel of heroism born of desperation, of a mother who became a soldier, of a woman who found her place in the world and changed the course of history forever.",
       "name": "The Diamond Eye",
       "price": 19.95,
-      "quantity": 97,
+      "quantity": 96,
       "rating": 4.29
     },
     "b_12": {
-      "category": ["History"],
       "author": "Stephen McGinty",
       "book_id": 57815107,
+      "category": [
+        "History"
+      ],
       "cover": "https://m.media-amazon.com/images/I/710SuUsNOvL._AC_UF1000,1000_QL80_.jpg",
       "descriptions": "An undersea adventure narrated from the suffocating depths of the ocean floor--as time and oxygen are quickly running out--The Dive is the harrowing and heroic story of the rescue of submarine Pisces III. They were out of their depth, out of breath and out of time. Two men, trapped in a crippled submarine. Outside was pitch darkness and the icy chill of the ocean's depths--and the crushing weight of 1,700 feet of water. On the surface a flotilla of ships and a rescue operation under the command of an eccentric retired naval commander. For three days, the world watched and held its breath. On August 29th, 1973, a routine dive to the telecommunication cable that snakes along the Atlantic sea bed went badly wrong. Pisces III, with Roger Chapman and Roger Mallinson onboard, had tried to surface when a catastrophic fault suddenly sent the mini-submarine tumbling to the ocean bed--almost half a mile below. Badly damaged, buried nose first in a bed of sand, the submarine and the two men were now trapped far beyond the depth of all previous sub-sea rescues. They had just two days' worth of oxygen. Rescue was three days away.",
       "name": "Dive The Untold Story of the Worlds Deepest Submarine Rescue",
       "price": 19.95,
-      "quantity": 100,
+      "quantity": 93,
       "rating": 4.07
     },
     "b_13": {
-      "category": ["Edu & Reference"],
       "author": "Merlin Sheldrake",
       "book_id": 55004093,
+      "category": [
+        "Edu & Reference"
+      ],
       "cover": "https://m.media-amazon.com/images/I/A1yr44oyywL._AC_UF1000,1000_QL80_.jpg",
       "descriptions": "'Merlin Sheldrake's marvelous tour of these diverse and extraordinary life forms is eye-opening on why humans should consider fungi among the greatest of earth's marvels.... Wondrous.' — Time A mind-bending journey into the hidden universe of fungi, 'one of those rare books that can truly change the way you see the world around you.' — Helen Macdonald, author of H Is for Hawk. NAMED ONE OF THE BEST BOOKS OF THE YEAR BY Time - New Statesman - London Evening Standard - Science Friday When we think of fungi, we likely think of mushrooms. But mushrooms are only fruiting bodies, analogous to apples on a tree. Most fungi live out of sight, yet make up a massively diverse kingdom of organisms that supports and sustains nearly all living systems. Fungi provide a key to understanding the planet on which we live, and the ways we think, feel, and behave. In Entangled Life, the brilliant young biologist Merlin Sheldrake shows us the world from a fungal point of view, providing an exhilarating change of perspective. Sheldrake's vivid exploration takes us from yeast to psychedelics, to the fungi that range for miles underground and are the largest organisms on the planet, to those that link plants together in complex networks known as the 'Wood Wide Web' to those that infiltrate and manipulate insect bodies with devastating precision. Fungi throw our concepts of individuality and even intelligence into question. They are metabolic masters, earth makers, and key players in most of life's processes. They can change our minds, heal our bodies, and even help us remediate environmental disaster. By examining fungi on their own terms, Sheldrake reveals how these extraordinary organisms — and our relationships with them — are changing our understanding of how life works.",
       "name": "How Fungi Make Our Worlds, Change Our Minds and Shape Our Futures",
       "price": 18,
-      "quantity": 99,
+      "quantity": 93,
       "rating": 4.1
     },
     "b_14": {
-      "category": ["Entertainment", "Actions", "Novel"],
       "author": "Nathan Hale",
       "book_id": 58419108,
+      "category": [
+        "Entertainment",
+        "Actions",
+        "Novel"
+      ],
       "cover": "https://m.media-amazon.com/images/I/51EQM6hd7pL.jpg",
       "descriptions": "Nathan Hale, the author's historical namesake, was America's first spy, a Revolutionary War hero who famously said 'I regret that I have but one life to give for my country' before being hanged by the British. In the Nathan Hale's Hazardous Tales series, author Nathan Hale channels his namesake to present history's roughest, toughest, and craziest stories in the graphic novel format. One Dead Spy tackles the story of Hale himself, who was an officer and spy for the American rebels during the Revolutionary War. Author Hale highlights the unusual, gruesome, and just plain unbelievable truth of historical Nathan Hale—from his early unlucky days at Yale to his later unlucky days as an officer—and America during the Revolutionary War.",
       "name": "One Dead Spy: Nathan Hale's Hazardous Tales #1",
       "price": 7.98,
-      "quantity": 100,
+      "quantity": 90,
       "rating": 3.72
     },
     "b_15": {
-      "category": ["Business"],
       "author": "Phil Rosenzweig",
       "book_id": 57693427,
+      "category": [
+        "Business"
+      ],
       "cover": "https://m.media-amazon.com/images/I/41TrPxT4jJL.jpg",
       "descriptions": "I hope you guys love this book as much as I do!! (Let me just say...Hawk *swoon*!!)” ~ NYT bestseller Sarah J. Maas Captivating and action-packed, From Blood and Ash is a sexy, addictive, and unexpected fantasy perfect for fans of Sarah J. Maas and Laura Thalassa. A Maiden… Chosen from birth to usher in a new era, Poppy's life has never been her own. The life of the Maiden is solitary. Never to be touched. Never to be looked upon. Never to be spoken to. Never to experience pleasure. Waiting for the day of her Ascension, she would rather be with the guards, fighting back the evil that took her family, than preparing to be found worthy by the gods. But the choice has never been hers.",
       "name": "The Halo Effect... and the Eight Other Business Delusions That Deceive Managers",
       "price": 7.99,
-      "quantity": 100,
+      "quantity": 97,
       "rating": 4.6
     },
     "b_16": {
-      "category": ["Mysteries", "Horror", "Novel", "Entertainment"],
       "author": "Jennifer L. Armentrout",
       "book_id": 584191000,
+      "category": [
+        "Mysteries",
+        "Horror",
+        "Novel",
+        "Entertainment"
+      ],
       "cover": "https://m.media-amazon.com/images/I/51nh3JnQNsL.jpg",
       "descriptions": "Nathan Hale, the author's historical namesake, was America's first spy, a Revolutionary War hero who famously said 'I regret that I have but one life to give for my country' before being hanged by the British. In the Nathan Hale's Hazardous Tales series, author Nathan Hale channels his namesake to present history's roughest, toughest, and craziest stories in the graphic novel format. One Dead Spy tackles the story of Hale himself, who was an officer and spy for the American rebels during the Revolutionary War. Author Hale highlights the unusual, gruesome, and just plain unbelievable truth of historical Nathan Hale—from his early unlucky days at Yale to his later unlucky days as an officer—and America during the Revolutionary War.",
       "name": "From Blood and Ash #1",
       "price": 7.98,
-      "quantity": 100,
+      "quantity": 97,
       "rating": 3.72
     },
     "b_17": {
-      "category": ["Mysteries", "Horror", "Novel", "Entertainment"],
       "author": "Jennifer L. Armentrout",
       "book_id": 58410001,
+      "category": [
+        "Mysteries",
+        "Horror",
+        "Novel",
+        "Entertainment"
+      ],
       "cover": "https://m.media-amazon.com/images/I/518nA6KLZPL.jpg",
       "descriptions": "From #1 New York Times bestselling author Jennifer L. Armentrout comes a new novel in her Blood and Ash series… Is Love Stronger Than Vengeance? A Betrayal… Everything Poppy has ever believed in is a lie, including the man she was falling in love with. Thrust among those who see her as a symbol of a monstrous kingdom, she barely knows who she is without the veil of the Maiden. But what she does know is that nothing is as dangerous to her as him. The Dark One. The Prince of Atlantia. He wants her to fight him, and that's one order she's more than happy to obey. He may have taken her, but he will never have her.",
       "name": "A Kingdom of Flesh and Fire (From Blood and Ash #2)",
       "price": 7.98,
-      "quantity": 100,
+      "quantity": 96,
       "rating": 4.7
     },
     "b_18": {
-      "category": ["Mysteries", "Horror", "Novel", "Entertainment"],
       "author": "Jennifer L. Armentrout",
       "book_id": 58410002,
+      "category": [
+        "Mysteries",
+        "Horror",
+        "Novel",
+        "Entertainment"
+      ],
       "cover": "https://m.media-amazon.com/images/I/51iVADM40EL.jpg",
       "descriptions": "Bow Before Your Queen Or Bleed Before Her… From #1 New York Times bestselling author Jennifer L. Armentrout comes book three in her Blood and Ash series. She's been the victim and the survivor… Poppy never dreamed she would find the love she's found with Prince Casteel. She wants to revel in her happiness but first they must free his brother and find hers. It's a dangerous mission and one with far-reaching consequences neither dreamed of. Because Poppy is the Chosen, the Blessed. The true ruler of Atlantia. She carries the blood of the King of Gods within her. By right the crown and the kingdom are hers. The enemy and the warrior… Poppy has only ever wanted to control her own life, not the lives of others, but now she must choose to either forsake her birthright or seize the gilded crown and become the Queen of Flesh and Fire. But as the kingdoms' dark sins and blood-drenched secrets finally unravel, a long-forgotten power rises to pose a genuine threat. And they will stop at nothing to ensure that the crown never sits upon Poppy's head.",
       "name": "The Crown of Gilded Bones (From Blood and Ash #3)",
       "price": 7.98,
-      "quantity": 100,
+      "quantity": 97,
       "rating": 3.72
     },
     "b_19": {
-      "category": ["Novel", "Sci-Fi & Fantasy"],
       "author": "Rebecca Serl",
       "book_id": 50093704,
+      "category": [
+        "Novel",
+        "Sci-Fi & Fantasy"
+      ],
       "cover": "https://m.media-amazon.com/images/I/71bSVuBd7IL.jpg",
       "descriptions": "A NEW YORK TIMES BESTSELLER A Good Morning America, FabFitFun, and Marie Claire Book Club Pick “In Five Years is as clever as it is moving, the rare read-in-one-sitting novel you won't forget.” —Chloe Benjamin, New York Times bestselling author of The Immortalists Perfect for fans of Me Before You and One Day—a striking, powerful, and moving love story following an ambitious lawyer who experiences an astonishing vision that could change her life forever. Where do you see yourself in five years? Dannie Kohan lives her life by the numbers. She is nothing like her lifelong best friend—the wild, whimsical, believes-in-fate Bella. Her meticulous planning seems to have paid off after she nails the most important job interview of her career and accepts her boyfriend's marriage proposal in one fell swoop, falling asleep completely content. But when she awakens, she's suddenly in a different apartment, with a different ring on her finger, and beside a very different man. Dannie spends one hour exactly five years in the future before she wakes again in her own home on the brink of midnight—but it is one hour she cannot shake. In Five Years is an unforgettable love story, but it is not the one you're expecting.",
       "name": "In Five Years",
       "price": 12.98,
-      "quantity": 100,
+      "quantity": 93,
       "rating": 4.3
     },
     "b_2": {
-      "category": ["Edu & Reference", "Parenting", "Business"],
       "author": "Robert T Kiyosaki",
       "book_id": 57007401,
+      "category": [
+        "Edu & Reference",
+        "Parenting",
+        "Business"
+      ],
       "cover": "https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UF1000,1000_QL80_.jpg",
       "descriptions": "April 2017 marks 20 years since Robert Kiyosaki's Rich Dad Poor Dad first made waves in the Personal Finance arena. It has since become the #1 Personal Finance book of all time... translated into dozens of languages and sold around the world. Rich Dad Poor Dad is Robert's story of growing up with two dads -- his real father and the father of his best friend, his rich dad -- and the ways in which both men shaped his thoughts about money and investing. The book explodes the myth that you need to earn a high income to be rich and explains the difference between working for money and having your money work for you. 20 Years... 20/20 Hindsight In the 20th Anniversary Edition of this classic, Robert offers an update on what we've seen over the past 20 years related to money, investing, and the global economy. Sidebars throughout the book will take readers 'fast forward' -- from 1997 to today -- as Robert assesses how the principles taught by his rich dad have stood the test of time. In many ways, the messages of Rich Dad Poor Dad, messages that were criticized and challenged two decades ago, are more meaningful, relevant and important today than they were 20 years ago. As always, readers can expect that Robert will be candid, insightful... and continue to rock more than a few boats in his retrospective. Will there be a few surprises? Count on it.",
       "name": "Rich Dad Poor Dad",
       "price": 5.95,
-      "quantity": 93,
+      "quantity": 86,
       "rating": 4.6
     },
     "b_20": {
-      "category": ["Self-Help", "Health & Fitness"],
       "author": "Syren Nagakyrie",
       "book_id": 581249108,
+      "category": [
+        "Self-Help",
+        "Health & Fitness"
+      ],
       "cover": "https://m.media-amazon.com/images/I/81O6H+fxVvL.jpg",
       "descriptions": "The Disabled Hiker's Guide to Western Washington and Oregon is the first book of its kind to consider the diverse needs of disabled people in the outdoors. This groundbreaking guidebook includes 60 outdoor adventures, including drive-up experiences, verified wheelchair accessible trails, and foot trails suitable for disabled hikers. This guide removes one of the barriers to access - a lack of information - by utilizing a rating system and detailed trail information designed for the disability community. Each trail is personally assessed according to Syren's skilled and detailed review and established accessibility guidelines.",
       "name": "The Disabled Hiker's Guide to Western Washington and Oregon",
       "price": 16.49,
-      "quantity": 100,
+      "quantity": 93,
       "rating": 4.7
     },
     "b_21": {
-      "category": ["History", "Biographies", "Actions"],
       "author": "Kai Bird and Martin J. Sherwin",
       "book_id": 58414508,
+      "category": [
+        "History",
+        "Biographies",
+        "Actions"
+      ],
       "cover": "https://m.media-amazon.com/images/I/81yfsIOijJL.jpg",
       "descriptions": "#1 NEW YORK TIMES BESTSELLER • PULITZER PRIZE WINNER • The definitive biography of J. Robert Oppenheimer, one of the iconic figures of the twentieth century, a brilliant physicist who led the effort to build the atomic bomb for his country in a time of war, and who later found himself confronting the moral consequences of scientific progress. In this magisterial, acclaimed biography twenty-five years in the making, Kai Bird and Martin Sherwin capture Oppenheimer's life and times, from his early career to his central role in the Cold War. This is biography and history at its finest, riveting and deeply informative. “A masterful account of Oppenheimer's rise and fall, set in the context of the turbulent decades of America's own transformation. It is a tour de force.” —Los Angeles Times Book Review",
       "name": "American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer",
       "price": 14.99,
-      "quantity": 100,
+      "quantity": 88,
       "rating": 4.6
     },
     "b_3": {
-      "category": ["Novel", "Entertainment", "Loves"],
       "author": "Dolly Parton, James Patterson",
       "book_id": 58505877,
+      "category": [
+        "Novel",
+        "Entertainment",
+        "Loves"
+      ],
       "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1628699768i/58505877.jpg",
       "descriptions": "From America's most beloved superstar and its greatest storyteller — a thriller about a young singer-songwriter on the rise and on the run, and determined to do whatever it takes to survive. Every song tells a story. She's a star on the rise, singing about the hard life behind her. She's also on the run. Find a future, lose a past. Nashville is where she's come to claim her destiny. It's also where the darkness she's fled might find her. And destroy her. Run, Rose, Run is a novel glittering with danger and desire — a story that only America's #1 beloved entertainer and its #1 bestselling author could have created.",
       "name": "Run, Rose, Run",
@@ -599,31 +1194,40 @@
       "rating": 3.84
     },
     "b_4": {
-      "category": ["Novel", "Self-Help"],
       "author": "Barbara Kingsolver",
       "book_id": 58536005,
+      "category": [
+        "Novel",
+        "Self-Help"
+      ],
       "cover": "https://m.media-amazon.com/images/I/918DFDx5ZRL._AC_UF1000,1000_QL80_.jpg",
       "descriptions": "'Kingsolver is a writer who can help us understand and navigate the chaos of these times.' — Minneapolis Star Tribune. From the New York Times bestselling author of Unsheltered and Flight Behavior, a brilliant novel which enthralls, compels, and captures the heart as it evokes a young hero's unforgettable journey to maturity. 'Anyone will tell you the born of this world are marked from the get-out, win or lose.' Demon Copperhead is set in the mountains of southern Appalachia. It's the story of a boy born to a teenaged single mother in a single-wide trailer, with no assets beyond his dead father's good looks and copper-colored hair, a caustic wit, and a fierce talent for survival. In a plot that never pauses for breath, relayed in his own unsparing voice, he braves the modern perils of foster care, child labor, derelict schools, athletic success, addiction, disastrous loves, and crushing losses. Through all of it, he reckons with his own invisibility in a popular culture where even the superheroes have abandoned rural people in favor of cities. Many generations ago, Charles Dickens wrote David Copperfield from his experience as a survivor of institutional poverty and its damages to children in his society. Those problems have yet to be solved in ours. Dickens is not a prerequisite for readers of this novel, but he provided its inspiration. In transposing a Victorian epic novel to the contemporary American South, Barbara Kingsolver enlists Dickens' anger and compassion, and above all, his faith in the transformative powers of a good story. Demon Copperhead speaks for a new generation of lost boys, and all those born into beautiful, cursed places they can't imagine leaving behind.",
       "name": "Demon Copperhead",
       "price": 32.5,
-      "quantity": 97,
+      "quantity": 90,
       "rating": 3.9
     },
     "b_5": {
-      "category": ["Self-Help"],
       "author": "Brianna Wiest",
       "book_id": 60306208,
+      "category": [
+        "Self-Help"
+      ],
       "cover": "https://images-eu.ssl-images-amazon.com/images/I/81OvOzDu3fL._AC_UL600_SR600,600_.jpg",
       "descriptions": "This is the year you change your life. If you're in a pivot period — if you're still bridging the space between where you are and where you want to be — remember that the person you're becoming is already within you. The journey is convincing your mind to act consistently on what your heart already knows it wants to do. The Pivot Year is a book of 365 daily meditations on finding the courage to become who you've always wanted to be, from the internationally bestselling author of 101 Essays That Will Change The Way You Think, The Mountain Is You, and more.",
       "name": "The Pivot Year",
       "price": 17.99,
-      "quantity": 95,
+      "quantity": 90,
       "rating": 4.2
     },
     "b_6": {
-      "category": ["Biographies", "Novel", "Loves"],
       "author": "Sabaa Tahir",
       "book_id": 57899793,
+      "category": [
+        "Biographies",
+        "Novel",
+        "Loves"
+      ],
       "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629908086i/57899793.jpg",
       "descriptions": "From #1 New York Times bestselling author Sabaa Tahir comes a brilliant, unforgettable, and heart-wrenching contemporary YA novel about family and forgiveness, love and loss, in a sweeping story that crosses generations and continents. Lahore, Pakistan. Then. Misbah is a dreamer and storyteller, newly married to Toufiq in an arranged match. After their young life is shaken by tragedy, they come to the United States and open the Clouds' Rest Inn Motel, hoping for a new start. Juniper, California. Now. Salahudin and Noor are more than best friends; they are family. Growing up as outcasts in the small desert town of Juniper, California, they understand each other the way no one else does. Until The Fight, which destroys their bond with the swift fury of a star exploding. Now, Sal scrambles to run the family motel as his mother Misbah's health fails and his grieving father loses himself to alcoholism. Noor, meanwhile, walks a harrowing tightrope: working at her wrathful uncle's liquor store while hiding the fact that she's applying to college so she can escape him — and Juniper — forever. When Sal's attempts to save the motel spiral out of control, he and Noor must ask themselves what friendship is worth — and what it takes to defeat the monsters in their pasts and the ones in their midst. From one of today's most cherished and bestselling young adult authors comes a breathtaking novel of young love, old regrets, and forgiveness — one that's both tragic and poignant in its tender ferocity.",
       "name": "All My Rage",
@@ -632,9 +1236,12 @@
       "rating": 4.54
     },
     "b_7": {
-      "category": ["Novel", "Loves"],
       "author": "Greer Hendricks",
       "book_id": 57693416,
+      "category": [
+        "Novel",
+        "Loves"
+      ],
       "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1633973719i/57693416.jpg",
       "descriptions": "The Golden Couple is the next electrifying novel from Greer Hendricks and Sarah Pekkanen, the #1 New York Times bestselling author duo behind The Wife Between Us. Propulsive and thrilling....A page-turner that will keep you guessing until the very end.--Taylor Jenkins Reid, author of Malibu Rising Wealthy Washington suburbanites Marissa and Matthew Bishop seem to have it all--until Marissa is unfaithful. Beneath their veneer of perfection is a relationship riven by work and a lack of intimacy. She wants to repair things for the sake of their eight-year-old son and because she loves her husband. Enter Avery Chambers. Avery is a therapist who lost her professional license. Still, it doesn't stop her from counseling those in crisis, though they have to adhere to her unorthodox methods. And the Bishops are desperate. When they glide through Avery's door and Marissa reveals her infidelity, all three are set on a collision course. Because the biggest secrets in the room are still hidden, and it's no longer simply a marriage that's in danger.",
       "name": "The Golden Couple",
@@ -643,20 +1250,27 @@
       "rating": 4
     },
     "b_8": {
-      "category": ["Novel", "Actions", "Sci-Fi & Fantasy"],
       "author": "Dunno",
       "book_id": 2710,
+      "category": [
+        "Novel",
+        "Actions",
+        "Sci-Fi & Fantasy"
+      ],
       "cover": "https://m.media-amazon.com/images/I/61cKlGq4PWL.jpg",
       "descriptions": "My firstly book, novel that I read",
       "name": "SAO - Sword Art Online 1",
       "price": 8.95,
-      "quantity": 100,
+      "quantity": 99,
       "rating": 4.65
     },
     "b_9": {
-      "category": ["History", "True Crime"],
       "author": "Simone St James",
       "book_id": 58371432,
+      "category": [
+        "History",
+        "True Crime"
+      ],
       "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1624553583i/58371432.jpg",
       "descriptions": "A true crime blogger gets more than she bargained for while interviewing the woman acquitted of two cold case slayings in this chilling new novel from the New York Times bestselling author of The Sun Down Motel. In 1977, Claire Lake, Oregon, was shaken by the Lady Killer Murders: Two men, seemingly randomly, were murdered with the same gun, with strange notes left behind. Beth Greer was the perfect suspect--a rich, eccentric twenty-three-year-old woman, seen fleeing one of the crimes. But she was acquitted, and she retreated to the isolation of her mansion. Oregon, 2017. Shea Collins is a receptionist, but by night, she runs a true crime website, the Book of Cold Cases--a passion fueled by the attempted abduction she escaped as a child. When she meets Beth by chance, Shea asks her for an interview. To Shea's surprise, Beth says yes. They meet regularly at Beth's mansion, though Shea is never comfortable there. Items move when she's not looking, and she could swear she's seen a girl outside the window. The allure of learning the truth about the case from the smart, charming Beth is too much to resist, but even as they grow closer, Shea senses something isn't right. Is she making friends with a manipulative murderer, or are there other dangers lurking in the darkness of the Greer house?",
       "name": "The Book of Cold Cases",

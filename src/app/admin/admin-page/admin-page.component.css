@@ -2,6 +2,45 @@ nz-layout {
   height: 100vh;
 }
 
+nz-header {
+  background: #fff;
+  padding: 0;
+}
+
+nz-breadcrumb {
+  margin: 16px 0;
+}
+
+nz-footer {
+  text-align: center;
+}
+
+nz-avatar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Common class */
+.component{
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+  height: fit-content;
+  padding: 5px 12px;
+}
+.right-element{
+  width: 60%;
+  height: inherit;
+}
+.left-element{
+  width: 38%;
+  height: inherit;
+}
+.tripple{
+  width: 32%;
+}
+
+
 .trigger {
   font-size: 18px;
   line-height: 64px;
@@ -26,28 +65,10 @@ nz-layout {
   text-decoration: none;
 }
 
-nz-header {
-  background: #fff;
-  padding: 0;
-}
-
-nz-content {
-  margin: 0 16px;
-}
-
-nz-breadcrumb {
-  margin: 16px 0;
-}
-
 .inner-content {
   padding: 24px;
-  background: #fff;
-  /* min-height: 360px; */
+  background: #F4F6F9;
   height: 100%;
-}
-
-nz-footer {
-  text-align: center;
 }
 
 .admin-header{
@@ -65,11 +86,33 @@ nz-footer {
     }
   }
 }
-nz-avatar{
+
+.chart-card{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0 0 10px 0;
 }
+
+.top-selling-container{
+
+  .top-selling_header{
+    margin: 6px 0;
+  }
+
+  .top-sellers-list{
+    padding-left: 16px;
+
+    .top-seller_item{
+
+      .item-image{
+
+      }
+
+    }
+  }
+}
+
 /* nz-avatar {
   margin-top: 16px;
   margin-right: 16px;

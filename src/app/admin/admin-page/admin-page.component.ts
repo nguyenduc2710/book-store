@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Chart } from 'chart.js/auto';
+import { Subject, takeUntil } from 'rxjs';
+import { YearReport } from 'src/app/model/bill_reports.model';
 import { BillService } from 'src/app/services/bills.service';
 import { BillStore } from 'src/app/store/bill.store';
 
@@ -10,36 +12,39 @@ import { BillStore } from 'src/app/store/bill.store';
   styleUrls: ['./admin-page.component.css']
 })
 
-export class AdminPageComponent implements OnInit {
+export class AdminPageComponent implements OnInit, OnDestroy {
+  year = 2023;
   isCollapsed = false;
-  chart: any;
+  salesChart: any;
+  categoryChart: any;
   date = null;
+  readonly destroy$ = new Subject<void>;
   constructor(private billStore: BillStore,
-    private billService: BillService){}
+    private billService: BillService) { }
 
   ngOnInit(): void {
-    this.createChart();
+    this.test();
   }
 
-  createChart(){
-    this.chart = new Chart("MyChart", {
+  createSalesChart(saleNProfitRp: YearReport) {
+    this.salesChart = new Chart("salesChart", {
       type: 'line', //this denotes tha type of chart
 
       data: {// values on X-Axis
-        labels: ['2022-05-10', '2022-05-11', '2022-05-12','2022-05-13',
-								 '2022-05-14', '2022-05-15', '2022-05-16','2022-05-17', '2022-05-12','2022-05-13', ],
-	       datasets: [
+        labels: ['Jan', 'Feb', 'Mar', 'April',
+          'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [
           {
             label: "Sales",
-            data: ['467','576', '572', '79', '92',
-								 '574', '573', '576', '467','976',],
-            backgroundColor: 'blue'
+            data: saleNProfitRp.sales,
+            backgroundColor: '#F18F01',
+            borderColor: '#F18F01'
           },
           {
             label: "Profit",
-            data: ['542', '542', '536', '327', '17',
-									 '0.00', '538', '541'],
-            backgroundColor: 'limegreen'
+            data: saleNProfitRp.profits,
+            backgroundColor: '#48639C',
+            borderColor: '#48639C'
           }
         ]
       },
@@ -47,23 +52,33 @@ export class AdminPageComponent implements OnInit {
         aspectRatio: 2.5,
         elements: {
           line: {
-            borderColor: '#D74E09',
             tension: 0.4,
-
-
           }
         },
       }
     });
   }
 
-  onChangeCalendar(result: Date): void{
+  // createCategoryChart(){
+  //   this.categoryChart = new Chart()
+  // }
+
+  onChangeCalendar(result: Date): void {
     console.log(result.getFullYear());
   }
 
-  test(){
-    // this.billStore.initDashBoard()
-    this.billService.initBillReports();
-  }
+  test() {
+    const reportDatas = this.billService.initBillReports(this.year.toString());
+    reportDatas.pipe(takeUntil(this.destroy$)).subscribe(data => {
+      if(data.categoriesRp && data.topProducts && data.yearReports && data.bills){
+        this.createSalesChart(data.yearReports);
+      }
+    })
+  };
 
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
 }

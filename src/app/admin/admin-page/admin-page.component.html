@@ -53,20 +53,57 @@
       </div>
     </nz-header>
     <nz-content>
-      <nz-breadcrumb>
-        <nz-breadcrumb-item>Overview</nz-breadcrumb-item>
-        <span>
-          <nz-date-picker nzMode="year" [(ngModel)]="date" (ngModelChange)="onChangeCalendar($event)"></nz-date-picker>
-        </span>
-      </nz-breadcrumb>
-      <div class="inner-content row">
-        <div class="chart-container col-8">
-          <canvas id="MyChart">{{ chart }}</canvas>
+      <div class="inner-content">
+        <div class="content-header d-flex justify-content-between p-2">
+          <h3>
+            Overview
+          </h3>
+          <div>
+            <nz-date-picker nzMode="year" [(ngModel)]="date"
+              (ngModelChange)="onChangeCalendar($event)"></nz-date-picker>
+          </div>
         </div>
-        <button (click)="test()">Test Init BillRp function</button>
+
+        <div class="row d-flex justify-content-around mt-1">
+
+          <div class="chart-container right-element">
+            <div class="row chart-card">
+              <div class="component tripple">
+                <div class="chart-card_title">Total Profits</div>
+                <div class="chart-card_info">$95,595</div>
+              </div>
+              <div class="component tripple">
+                <div class="chart-card_title">Total Expenses</div>
+                <div class="chart-card_info">$12,789</div>
+              </div>
+              <div class="component tripple">
+                <div class="chart-card_title">Current Users</div>
+                <div class="chart-card_info">212</div>
+              </div>
+            </div>
+            <div class="component">
+              <canvas id="salesChart">{{ salesChart }}</canvas>
+            </div>
+          </div>
+
+          <div class="left-element component top-selling-container">
+            <h4 class="top-selling_header">Top Selling Products</h4>
+            <ul class="top-sellers-list">
+              <li class="row top-seller_item">
+                <div class="col-4 item-image">
+                  <img class="img-fluid" src="https://images-eu.ssl-images-amazon.com/images/I/81OvOzDu3fL._AC_UL600_SR600,600_.jpg" alt="">
+                </div>
+                <div class="col-6">The Pivot Year</div>
+                <div class="col-2">941$</div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- <button (click)="test()">Test Init BillRp function</button> -->
       </div>
     </nz-content>
-    <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
+
   </nz-layout>
 </nz-layout>
-

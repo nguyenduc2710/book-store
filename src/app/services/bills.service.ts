@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { BehaviorSubject, Observable, Subscription, catchError, of, take } from "rxjs";
+import { BehaviorSubject, Observable, Subscription, catchError, map, of, switchMap, take } from "rxjs";
 import { getDatabase, ref, set } from "firebase/database";
 import { BookService } from "./book.services";
 import * as moment from "moment";
@@ -77,36 +77,55 @@ export class BillService {
     );
   };
 
-  initBillReports() {
-    const bills$ = this.getBills();
+  initBillReports(year: string): Observable<BillReport> {
+    const sales: number[] = [];
+    const profits: number[] = [];
+    // const bills$ = this.getBills();
     const data: OriginBill[] = [];
-    const billReport: BillReport[] = [];
+    const billReport: BillReport = {
+      bills: [],
+      topProducts: [],
+      categoriesRp: undefined,
+      yearReports: undefined,
+      year: ''
+    };
 
-    bills$.pipe(take(1)).subscribe((bills: any[]) => {
-      for (const [key, value] of Object.entries(bills)) {
-        data.push({ billId: key, bill: value });
-      };
+    return this.getBills().pipe(
+      take(1),
+      map((bills: any[]) => {
+        for (const [key, value] of Object.entries(bills)) {
+          data.push({ billId: key, bill: value });
+        };
+        billReport.bills = data;
+        billReport.topProducts = this.top8BestSellers(data);
+        billReport.categoriesRp = this.categoryReports(data);
+        billReport.year = year;
+        const yearRpData = this.salesProfitsReport(data);
+        for(let i = 0; i < yearRpData.length; i++){
+          sales.push(yearRpData[i].sales);
+          profits.push(yearRpData[i].profits);
+        }
+        billReport.yearReports = {sales: sales, profits: profits};
 
-      console.log("cal topbook func ", this.calculateTopSellers(data));
-      console.log("cal top cate func ", this.popularCategory(data));
-
-    });
+        return billReport;
+      })
+    );
   };
 
   //return top 8 best sellers (FILTER DATA BEFORE USE FUNCTION)
-  calculateTopSellers(bills: OriginBill[]): { book: Book, quantity: number }[] {
-    const bookMap = new Map<string, {book: Book, quantity: number}>();
+  top8BestSellers(bills: OriginBill[]): { book: Book, quantity: number }[] {
+    const bookMap = new Map<string, { book: Book, quantity: number }>();
 
     bills.forEach(bill => {
       bill.bill.product.forEach(bill => {
         const bookId = bill.productId;
         const quantity = bill.quantity;
 
-        if(bookMap.has(bookId)){
+        if (bookMap.has(bookId)) {
           const existing = bookMap.get(bookId);
-          if(existing) existing.quantity += quantity;
-        }else{
-          bookMap.set(bookId, {book: bill.prdDetail, quantity: quantity});
+          if (existing) existing.quantity += quantity;
+        } else {
+          bookMap.set(bookId, { book: bill.prdDetail, quantity: quantity });
         };
       });
     });
@@ -114,18 +133,18 @@ export class BillService {
     return sortedBooks.splice(0, 8);
   }
 
-  //return top 6 poplular categories (FILTER DATA BEFORE USE FUNCTION)
-  popularCategory(bills: OriginBill[]): {categories: {category: Category, quantity: number}[], totalBooksSelled: number}{
-    const categoryMap = new Map<Category,{category: Category, quantity: number}>();
+  //(FILTER DATA BEFORE USE FUNCTION)
+  categoryReports(bills: OriginBill[]): { categories: { category: Category, quantity: number }[], totalBooksSelled: number } {
+    const categoryMap = new Map<Category, { category: Category, quantity: number }>();
     let totalBooksSelled = 0;
     bills.forEach(bill => {
       bill.bill.product.forEach(book => {
         book.prdDetail.category.forEach(cate => {
-          if(categoryMap.has(cate)){
+          if (categoryMap.has(cate)) {
             const existing = categoryMap.get(cate);
-            if(existing) existing.quantity += book.quantity;
-          } else{
-            categoryMap.set(cate, {category: cate, quantity: book.quantity});
+            if (existing) existing.quantity += book.quantity;
+          } else {
+            categoryMap.set(cate, { category: cate, quantity: book.quantity });
           }
         });
 
@@ -133,12 +152,44 @@ export class BillService {
       });
     });
     const categoryChartInfo = {
-      categories: [...categoryMap.values()].sort((a,b) => b.quantity - a.quantity),
+      categories: [...categoryMap.values()].sort((a, b) => b.quantity - a.quantity),
       totalBooksSelled: totalBooksSelled
     };
 
     return categoryChartInfo;
   }
+
+  //Data through years
+  salesProfitsReport(bills: OriginBill[]) {
+    const reports = new Map<string, { month: string, sales: number, profits: number }>();
+
+    bills.forEach(bill => {
+      const year = bill.bill.dateBuy.split('-')[0];
+      const month = bill.bill.dateBuy.split('-')[1];
+      let sales = bill.bill.totalBill;
+      let profits = +this.randomProfits(sales);
+
+      if (reports.has(month)) {
+        const existing = reports.get(month);
+        if(existing){
+          existing.sales += sales;
+          existing.profits += profits;
+        }
+      } else{
+        reports.set(month, {month: month, sales: sales, profits: profits});
+      }
+    })
+    return [...reports.values()].sort((a, b) => (+a.month) - (+b.month))
+  }
+
+  //Random profit return 75 - 90% from origin price;
+  randomProfits(sales: number) {
+    const randomPercent = ((Math.random() * 25) + 10) / 100;
+    const profits = sales - (sales * randomPercent);
+    return profits.toFixed(3);
+  }
+
+
 
 
 }
