@@ -4,7 +4,7 @@ import { Book } from "./books.model";
 export interface BillReport{
   bills: OriginBill[],
   topProducts: topProducts[],
-  categoriesRp: categoryRp | undefined,
+  categoriesRp: categoryRp,
   yearReports: YearReport | undefined,
   year: string
 }
@@ -15,8 +15,8 @@ export interface topProducts{
 }
 
 export interface categoryRp{
-  categories: categories[] | undefined,
-  totalBooksSelled: number
+  categories: categories[] | [],
+  totalBooksSold: number
 }
 
 export interface categories{

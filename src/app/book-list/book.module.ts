@@ -13,6 +13,7 @@ import { NzButtonModule } from "ng-zorro-antd/button";
 import { NzIconModule } from "ng-zorro-antd/icon";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NzTagModule } from 'ng-zorro-antd/tag';
+import { NzBackTopModule } from "ng-zorro-antd/back-top";
 
 const modules = [
   BrowserModule,
@@ -30,6 +31,7 @@ const antd = [
   NzButtonModule,
   NzIconModule,
   NzTagModule,
+  NzBackTopModule,
 ]
 @NgModule({
   declarations: [BookListComponent, BookItemComponent],

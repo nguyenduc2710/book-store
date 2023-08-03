@@ -15,28 +15,37 @@ nz-footer {
   text-align: center;
 }
 
-nz-avatar{
+nz-avatar {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 /* Common class */
-.component{
+.component {
   background-color: white;
   border-radius: 4px;
   overflow: hidden;
   height: fit-content;
   padding: 5px 12px;
 }
-.right-element{
+
+.component-seperate {
+  margin: 10px 0;
+}
+
+.right-element {
   width: 60%;
+  padding: 0;
   height: inherit;
 }
-.left-element{
+
+.left-element {
   width: 38%;
   height: inherit;
 }
-.tripple{
+
+.tripple {
   width: 32%;
 }
 
@@ -65,53 +74,104 @@ nz-avatar{
   text-decoration: none;
 }
 
-.inner-content {
-  padding: 24px;
-  background: #F4F6F9;
-  height: 100%;
-}
-
-.admin-header{
+.admin-header {
   display: flex;
   justify-content: space-between;
   padding-right: 16px;
 
-  .header-setting{
+  .header-setting {
     display: flex;
     align-items: center;
 
-    .home-icon{
+    .home-icon {
       margin-right: 10px;
       font-size: 20px;
     }
   }
 }
 
-.chart-card{
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  margin: 0 0 10px 0;
-}
+.inner-content {
+  padding: 24px;
+  background: #F4F6F9;
+  height: 100%;
+  overflow: auto;
 
-.top-selling-container{
+  /* RIGHT CONTENT */
+  .profit-info-chart {
 
-  .top-selling_header{
-    margin: 6px 0;
+    .chart-card {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin: 0 0 10px 0;
+    }
   }
 
-  .top-sellers-list{
-    padding-left: 16px;
+  .upcoming-events {
 
-    .top-seller_item{
+    .upcoming-events_title {
+      margin: 6px 0 10px;
+    }
 
-      .item-image{
+    .upcoming-events_list {
+      padding-left: 16px;
 
+      .event-item {
+        display: flex;
+        align-items: center;
+        margin-top: 12px;
+      }
+    }
+
+    .upcoming-detail-btn {
+      margin: 0 0 10px 10px;
+    }
+  }
+
+
+  /* LEFT CONTENT */
+  .top-selling-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .top-selling_header {
+      margin: 6px 0 10px;
+    }
+
+    .top-sellers-list {
+      padding-left: 16px;
+
+      .top-seller_item {
+        display: flex;
+        align-items: center;
+        margin-top: 12px;
+
+        .item_sales {
+          font-weight: 500;
+        }
       }
 
+      .top-seller_item:not(:last-child)::after {
+        border-bottom: 1px solid #c1c1c1;
+        content: "";
+        display: block;
+        width: 96%;
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .categories-container {
+
+    .total-books-sold {
+      text-align: center;
+      text-decoration: overline;
+      margin-top: 4px;
     }
   }
 }
+
 
 /* nz-avatar {
   margin-top: 16px;

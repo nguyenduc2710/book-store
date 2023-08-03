@@ -85,7 +85,10 @@ export class BillService {
     const billReport: BillReport = {
       bills: [],
       topProducts: [],
-      categoriesRp: undefined,
+      categoriesRp: {
+        categories: [],
+        totalBooksSold: 0
+      },
       yearReports: undefined,
       year: ''
     };
@@ -97,15 +100,15 @@ export class BillService {
           data.push({ billId: key, bill: value });
         };
         billReport.bills = data;
-        billReport.topProducts = this.top8BestSellers(data);
+        billReport.topProducts = this.top6BestSellers(data);
         billReport.categoriesRp = this.categoryReports(data);
         billReport.year = year;
         const yearRpData = this.salesProfitsReport(data);
-        for(let i = 0; i < yearRpData.length; i++){
+        for (let i = 0; i < yearRpData.length; i++) {
           sales.push(yearRpData[i].sales);
           profits.push(yearRpData[i].profits);
         }
-        billReport.yearReports = {sales: sales, profits: profits};
+        billReport.yearReports = { sales: sales, profits: profits };
 
         return billReport;
       })
@@ -113,7 +116,7 @@ export class BillService {
   };
 
   //return top 8 best sellers (FILTER DATA BEFORE USE FUNCTION)
-  top8BestSellers(bills: OriginBill[]): { book: Book, quantity: number }[] {
+  top6BestSellers(bills: OriginBill[]): { book: Book, quantity: number }[] {
     const bookMap = new Map<string, { book: Book, quantity: number }>();
 
     bills.forEach(bill => {
@@ -129,14 +132,14 @@ export class BillService {
         };
       });
     });
-    const sortedBooks = [...bookMap.values()].sort((a, b) => b.quantity - a.quantity);
-    return sortedBooks.splice(0, 8);
+    const sortedBooks = [...bookMap.values()].sort((a, b) => (b.book.price * b.quantity) - (a.book.price * a.quantity));
+    return sortedBooks.splice(0, 6);
   }
 
   //(FILTER DATA BEFORE USE FUNCTION)
-  categoryReports(bills: OriginBill[]): { categories: { category: Category, quantity: number }[], totalBooksSelled: number } {
+  categoryReports(bills: OriginBill[]): { categories: { category: Category, quantity: number }[], totalBooksSold: number } {
     const categoryMap = new Map<Category, { category: Category, quantity: number }>();
-    let totalBooksSelled = 0;
+    let totalBooksSold = 0;
     bills.forEach(bill => {
       bill.bill.product.forEach(book => {
         book.prdDetail.category.forEach(cate => {
@@ -148,12 +151,12 @@ export class BillService {
           }
         });
 
-        totalBooksSelled += book.quantity;
+        totalBooksSold += book.quantity;
       });
     });
     const categoryChartInfo = {
-      categories: [...categoryMap.values()].sort((a, b) => b.quantity - a.quantity),
-      totalBooksSelled: totalBooksSelled
+      categories: [...categoryMap.values()].sort((a, b) => b.quantity - a.quantity).splice(0,8),
+      totalBooksSold: totalBooksSold
     };
 
     return categoryChartInfo;
@@ -171,12 +174,12 @@ export class BillService {
 
       if (reports.has(month)) {
         const existing = reports.get(month);
-        if(existing){
+        if (existing) {
           existing.sales += sales;
           existing.profits += profits;
         }
-      } else{
-        reports.set(month, {month: month, sales: sales, profits: profits});
+      } else {
+        reports.set(month, { month: month, sales: sales, profits: profits });
       }
     })
     return [...reports.values()].sort((a, b) => (+a.month) - (+b.month))
@@ -188,8 +191,6 @@ export class BillService {
     const profits = sales - (sales * randomPercent);
     return profits.toFixed(3);
   }
-
-
 
 
 }
