@@ -19,6 +19,14 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "resolveJsonModule": true,
+    "paths": {
+      "@/shared/*": ["src/app/shared/*"],
+      "@/model/*": ["src/app/model/*"],
+      "@/store/*": ["src/app/store/*"],
+      "@/services/*": ["src/app/services/*"],
+
+    },
     "lib": [
       "ES2022",
       "dom"

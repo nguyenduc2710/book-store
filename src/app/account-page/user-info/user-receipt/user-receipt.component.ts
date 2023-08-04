@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { OriginBill } from 'src/app/model/bill.model';
+import { OriginBill } from '@/model/bill.model';
 
 @Component({
   selector: 'app-user-receipt',

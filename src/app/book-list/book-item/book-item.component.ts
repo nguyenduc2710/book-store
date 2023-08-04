@@ -1,10 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { BookService } from 'src/app/services/book.services';
-import { Book } from 'src/app/model/books.model';
+import { BookService } from '@/services/book.services';
+import { Book } from '@/model/books.model';
 import { Subject, takeUntil } from 'rxjs'
-import { CartService } from 'src/app/services/cart.service';
-import { CartStore } from 'src/app/store/cart.store';
+import { CartService } from '@/services/cart.service';
+import { CartStore } from '@/store/cart.store';
 
 @Component({
   selector: 'app-book-item',

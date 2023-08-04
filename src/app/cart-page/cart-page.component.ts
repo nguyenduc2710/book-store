@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { CartService } from '../services/cart.service';
-import { Book } from '../model/books.model';
-import { Cart } from '../model/cart.model';
+import { CartService } from '@/services/cart.service';
+import { Book } from '@/model/books.model';
+import { Cart } from '@/model/cart.model';
 import { Subject, takeUntil } from 'rxjs';
-import { CartStore } from '../store/cart.store';
-import { BillStore } from '../store/bill.store';
+import { CartStore } from '@/store/cart.store';
+import { BillStore } from '@/store/bill.store';
 @Component({
   selector: 'app-cart-page',
   templateUrl: './cart-page.component.html',

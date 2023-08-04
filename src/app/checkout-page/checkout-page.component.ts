@@ -1,12 +1,12 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { UserService } from '../services/user.service';
-import { BookService } from '../services/book.services';
-import { UserModel } from '../model/user.model';
+import { UserService } from '@/services/user.service';
+import { BookService } from '@/services/book.services';
+import { UserModel } from '@/model/user.model';
 import { Subject, takeUntil } from 'rxjs';
-import { CartService } from '../services/cart.service';
-import { BillService } from '../services/bills.service';
-import { CartStore } from '../store/cart.store';
+import { CartService } from '@/services/cart.service';
+import { BillService } from '@/services/bills.service';
+import { CartStore } from '@/store/cart.store';
 
 @Component({
   selector: 'app-checkout-page',

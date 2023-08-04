@@ -1,9 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-import { User } from 'src/app/model/user.class';
-import { UserService } from 'src/app/services/user.service';
-import { BillStore } from 'src/app/store/bill.store';
-import { AccountStore } from 'src/app/store/login/auth.store';
+import { User } from '@/model/user.class';
+import { UserService } from '@/services/user.service';
+import { BillStore } from '@/store/bill.store';
+import { AccountStore } from '@/store/login/auth.store';
 
 @Component({
   selector: 'app-user-info',

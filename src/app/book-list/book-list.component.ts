@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BookService } from 'src/app/services/book.services';
-import { Book } from 'src/app/model/books.model';
-import { FilterDataService } from 'src/app/services/filter.services';
+import { BookService } from '@/services/book.services';
+import { Book } from '@/model/books.model';
+import { FilterDataService } from '@/services/filter.services';
 import { Subject, distinctUntilChanged, takeUntil } from 'rxjs';
 
 @Component({

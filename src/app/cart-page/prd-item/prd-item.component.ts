@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { Book } from 'src/app/model/books.model';
-import { CartService } from 'src/app/services/cart.service';
-import { CartStore } from 'src/app/store/cart.store';
+import { Book } from '@/model/books.model';
+import { CartService } from '@/services/cart.service';
+import { CartStore } from '@/store/cart.store';
 
 @Component({
   selector: 'app-prd-item',

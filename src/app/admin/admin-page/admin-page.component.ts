@@ -1,11 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-import { YearReport, categoryRp } from 'src/app/model/bill_reports.model';
-import { Book } from 'src/app/model/books.model';
-import { BillService } from 'src/app/services/bills.service';
-import { BillStore } from 'src/app/store/bill.store';
-// import { Context } from 'chartjs-plugin-datalabels';
+import { YearReport, categoryRp } from '@/model/bill_reports.model';
+import { Book } from '@/model/books.model';
+import { BillService } from '@/services/bills.service';
+import { BillStore } from '@/store/bill.store';
 import { Chart } from 'chart.js/auto';
+// import * as testJson from '../../../data/';
+// import { Context } from 'chartjs-plugin-datalabels';
 // import 'chartjs-plugin-datalabels';
 
 @Component({

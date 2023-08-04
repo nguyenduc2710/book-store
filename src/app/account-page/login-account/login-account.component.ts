@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
-import { BillStore } from 'src/app/store/bill.store';
-import { AccountStore } from 'src/app/store/login/auth.store';
+import { UserService } from '@/services/user.service';
+import { BillStore } from '@/store/bill.store';
+import { AccountStore } from '@/store/login/auth.store';
 
 @Component({
   selector: 'app-login-account',
