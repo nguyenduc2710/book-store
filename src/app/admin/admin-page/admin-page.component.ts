@@ -5,10 +5,10 @@ import { Book } from '@/model/books.model';
 import { BillService } from '@/services/bills.service';
 import { BillStore } from '@/store/bill.store';
 import { Chart } from 'chart.js/auto';
-// import * as testJson from '../../../data/';
-// import { Context } from 'chartjs-plugin-datalabels';
-// import 'chartjs-plugin-datalabels';
+import 'chartjs-plugin-datalabels';
+import chartDataLabels from 'chartjs-plugin-datalabels'
 
+Chart.register(chartDataLabels);
 @Component({
   selector: 'app-admin-page',
   templateUrl: './admin-page.component.html',
@@ -57,6 +57,11 @@ export class AdminPageComponent implements OnInit, OnDestroy {
       },
 
       options: {
+        plugins: {
+          datalabels: {
+            display: false
+          }
+        },
         aspectRatio: 2.5,
         elements: {
           line: {
@@ -68,7 +73,7 @@ export class AdminPageComponent implements OnInit, OnDestroy {
   }
 
   createCategoryChart(categoriesRp: categoryRp) {
-    const categories = categoriesRp.categories.map(item => item.category);
+    const categories = categoriesRp.categories.map(item => item.category.toString());
     const quantityData = categoriesRp.categories.map(item => item.quantity);
     this.categoryChart = new Chart('categoryChart', {
       type: 'doughnut',
@@ -99,6 +104,20 @@ export class AdminPageComponent implements OnInit, OnDestroy {
             ],
           }
         ],
+      },
+      options: {
+        plugins: {
+          datalabels: {
+            color: 'white',
+            font: {
+              weight: 'bold',
+            },
+            formatter: (value, context) => {
+              // Customize label format as needed
+              return context.chart.data.labels![context.dataIndex];
+            },
+          },
+        },
       },
     })
   }
