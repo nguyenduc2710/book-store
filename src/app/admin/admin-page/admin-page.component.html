@@ -59,7 +59,7 @@
             Overview
           </h3>
           <div>
-            <nz-date-picker nzMode="year" [(ngModel)]="date"
+            <nz-date-picker nzMode="year" [(ngModel)]="year"
               (ngModelChange)="onChangeCalendar($event)"></nz-date-picker>
           </div>
         </div>
@@ -69,10 +69,10 @@
             <div class="profit-info-chart">
               <div class="row chart-card">
                 <div class="component tripple">
-                  <nz-statistic [nzValue]="'$' + (95.595 | number)!" [nzTitle]="'Total Profits'"></nz-statistic>
+                  <nz-statistic [nzValue]="'$' + (totalProfits | number)!" [nzTitle]="'Total Profits'"></nz-statistic>
                 </div>
                 <div class="component tripple">
-                  <nz-statistic [nzValue]="'$' + (12.789 | number)!" [nzTitle]="'Total Expenses'"></nz-statistic>
+                  <nz-statistic [nzValue]="'$' + (totalExpenses | number)!" [nzTitle]="'Total Expenses'"></nz-statistic>
                 </div>
                 <div class="component tripple">
                   <nz-statistic [nzValue]="(212 | number)!" [nzTitle]="'Current Users'"></nz-statistic>
@@ -93,7 +93,33 @@
                   <div class="col-8">Meeting with partners</div>
                 </li>
               </ul>
-              <button class="more-detail-btn upcoming-detail-btn">See All</button>
+              <button (click)="test()" class="more-detail-btn upcoming-detail-btn">See All</button>
+            </div>
+
+            <div class="component component-seperate">
+              <h5>Recent Orders</h5>
+              <nz-table [nzFrontPagination]="false" #basicTable [nzData]="listOfBills">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Customer</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let data of basicTable.data">
+                    <td>{{ data.bill.dateBuy }}</td>
+                    <td>{{ data.bill.fullName }}</td>
+                    <td>{{ data.bill.status }}</td>
+                    <td>
+                      <span>Action 一 {{ data.bill.totalBill | currency }}</span>
+                      <nz-divider nzType="vertical"></nz-divider>
+                      <a>View</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </nz-table>
             </div>
           </div>
 

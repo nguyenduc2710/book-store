@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core'
 import { switchMap } from "rxjs"
 import { ComponentStore, tapResponse } from "@ngrx/component-store"
-import { BookService } from "../services/book.services"
-import { Book, BookStore } from "src/app/model/books.model"
+import { BookService } from "@/services/book.services"
+import { Book } from "@/model/books.model"
 
 export interface CartState {
   bookStorage: Book[],

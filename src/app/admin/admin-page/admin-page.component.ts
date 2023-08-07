@@ -1,9 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subject, takeUntil } from 'rxjs';
+import { Subject, takeUntil, Subscription } from 'rxjs';
+import { DashboardState, DashboardStore } from '@/store/dashboard.store';
 import { YearReport, categoryRp } from '@/model/bill_reports.model';
+import { Bill, OriginBill } from '@/model/bill.model';
 import { Book } from '@/model/books.model';
 import { BillService } from '@/services/bills.service';
-import { BillStore } from '@/store/bill.store';
 import { Chart } from 'chart.js/auto';
 import 'chartjs-plugin-datalabels';
 import chartDataLabels from 'chartjs-plugin-datalabels'
@@ -15,22 +16,74 @@ Chart.register(chartDataLabels);
   styleUrls: ['./admin-page.component.css']
 })
 export class AdminPageComponent implements OnInit, OnDestroy {
-  year = 2023;
+  year = new Date().getFullYear().toString();
+  dashboardRp: DashboardState = {
+    billReport: {
+      bills: [],
+      topProducts: [],
+      categoriesRp: {
+        categories: [],
+        totalBooksSold: 0
+      },
+      yearReports: undefined,
+      year: this.year,
+    },
+  }
   isCollapsed = false;
   salesChart: any;
   categoryChart: any;
-  topProducts: { book: Book, quantity: number }[] = [];
-  date = null;
   totalBooksSold = 0;
+  topProducts: { book: Book, quantity: number }[] = [];
+  totalProfits = 0;
+  totalSales = 0;
+  totalExpenses = 0;
   readonly destroy$ = new Subject<void>;
+  readonly report$ = this.dashboardStore.vm$;
+  subcription$ = new Subscription;
+  listOfBills: OriginBill[] = [];
 
   constructor(
-    private billStore: BillStore,
-    private billService: BillService
-  ) { }
+    private billService: BillService,
+    private dashboardStore: DashboardStore,
+  ) {}
+
+
+  // doughnutCenterLabel = {
+  //   id: 'doughnutLabel',
+  //   beforeDatasetsDraw(chart: Chart, args: any, pluginOptions:any) {
+  //     const { ctx, data } = chart;
+  //     ctx.save();
+  //     const xCoor = chart.getDatasetMeta(0).data[0].x;
+  //     const yCoor = chart.getDatasetMeta(0).data[0].y;
+  //     ctx.font = 'bold 20px sans-serif';
+  //     ctx.textAlign = 'center';
+  //     ctx.textBaseline = 'middle';
+  //     ctx.fillStyle = 'rgba(54,162,235,1)';
+  //     ctx.fillText('Center Text', xCoor, yCoor);
+  //   }
+  // }
 
   ngOnInit(): void {
-    this.test();
+    this.subcription$ = this.dashboardStore.select((state) => state.billReport).subscribe((billRp) => {
+      if (billRp.categoriesRp && billRp.topProducts && billRp.yearReports && billRp.bills) {
+        this.salesChart.destroy();
+        this.categoryChart.destroy();
+        this.topProducts = [];
+        this.listOfBills = [];
+
+        this.totalProfits = billRp.yearReports.profits.reduce((accumulate, profit) => accumulate + profit, 0);
+        this.totalSales = billRp.yearReports.sales.reduce((accumulate, sales) => accumulate + sales, 0);
+        this.totalExpenses = this.totalSales - this.totalProfits;
+        this.createSalesChart(billRp.yearReports);
+        this.createCategoryChart(billRp.categoriesRp);
+        this.listOfBills = this.filterNearestOrder(billRp.bills).splice(0, 5);
+        this.totalBooksSold = billRp.categoriesRp.totalBooksSold;
+        billRp.topProducts.forEach((item: any) => {
+          this.topProducts.push(item);
+        })
+      }
+    })
+    this.initDashboard();
   }
 
   createSalesChart(saleNProfitRp: YearReport) {
@@ -57,6 +110,7 @@ export class AdminPageComponent implements OnInit, OnDestroy {
       },
 
       options: {
+        responsive: true,
         plugins: {
           datalabels: {
             display: false
@@ -119,19 +173,27 @@ export class AdminPageComponent implements OnInit, OnDestroy {
           },
         },
       },
+      // plugins: [this.doughnutCenterLabel]
     })
   }
 
   onChangeCalendar(result: Date): void {
-    console.log(result.getFullYear());
+    const year = result.getFullYear().toString();
+    this.dashboardStore.initBillReport(year);
   }
 
-  test() {
-    const reportDatas = this.billService.initBillReports(this.year.toString());
+  initDashboard() {
+    const reportDatas = this.billService.initBillReports(this.year);
     reportDatas.pipe(takeUntil(this.destroy$)).subscribe((data: any) => {
       if (data.categoriesRp && data.topProducts && data.yearReports && data.bills) {
+        this.topProducts = [];
+
+        this.totalProfits = data.yearReports.profits.reduce((accumulate: number, profit: number) => accumulate + profit, 0);
+        this.totalSales = data.yearReports.sales.reduce((accumulate: number, sales: number) => accumulate + sales, 0);
+        this.totalExpenses = this.totalSales - this.totalProfits;
         this.createSalesChart(data.yearReports);
         this.createCategoryChart(data.categoriesRp);
+        this.listOfBills = this.filterNearestOrder(data.bills).splice(0, 5);
         this.totalBooksSold = data.categoriesRp.totalBooksSold;
         data.topProducts.forEach((item: any) => {
           this.topProducts.push(item);
@@ -141,8 +203,21 @@ export class AdminPageComponent implements OnInit, OnDestroy {
     })
   };
 
+  filterNearestOrder(bill: OriginBill[]){
+    const arrangedBills = bill.sort((a, b) => {
+      const aDate = Number(a.bill.dateBuy.split(' ')[0].split('-').join(''));
+      const bDate = Number(b.bill.dateBuy.split(' ')[0].split('-').join(''));
+      return bDate - aDate;
+    });
+    return arrangedBills;
+  }
+
+  test() {
+    this.filterNearestOrder(this.listOfBills);
+  }
 
   ngOnDestroy(): void {
+    this.subcription$.unsubscribe();
     this.destroy$.next();
     this.destroy$.complete();
   }

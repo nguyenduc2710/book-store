@@ -10,6 +10,8 @@ import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzStatisticModule } from 'ng-zorro-antd/statistic';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 
 const modules = [
   CommonModule,
@@ -25,6 +27,8 @@ const antd = [
   NzAvatarModule,
   NzDatePickerModule,
   NzStatisticModule,
+  NzTableModule,
+  NzDividerModule,
 ];
 
 const components = [

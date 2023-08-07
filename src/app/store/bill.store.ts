@@ -1,13 +1,13 @@
 import { ComponentStore, tapResponse } from "@ngrx/component-store";
-import { OriginBill } from "../model/bill.model";
-import { Book } from "../model/books.model";
-import { UserModel } from "../model/user.model";
-import { UserService } from "../services/user.service";
-import { BookService } from "../services/book.services";
-import { BillService } from "../services/bills.service";
+import { OriginBill } from "@/model/bill.model";
+import { Book } from "@/model/books.model";
+import { UserModel } from "@/model/user.model";
+import { UserService } from "@/services/user.service";
+import { BookService } from "@/services/book.services";
+import { BillService } from "@/services/bills.service";
 import { Injectable } from "@angular/core";
 import { switchMap } from "rxjs";
-import { BillReport } from "../model/bill_reports.model";
+import { BillReport } from "@/model/bill_reports.model";
 
 export interface BillState {
   bills: OriginBill[];

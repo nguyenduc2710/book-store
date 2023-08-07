@@ -48,6 +48,7 @@ export class BillService {
       totalBill: total,
       product: productList,
       dateBuy: currentDate,
+      status: 'pending'
     };
     const db = getDatabase();
     this.billId$.next(this.getRandomNumber());
@@ -97,7 +98,9 @@ export class BillService {
       take(1),
       map((bills: any[]) => {
         for (const [key, value] of Object.entries(bills)) {
-          data.push({ billId: key, bill: value });
+          if(value['dateBuy'].toString().includes(year)){
+            data.push({ billId: key, bill: value });
+          }
         };
         billReport.bills = data;
         billReport.topProducts = this.top6BestSellers(data);
@@ -115,7 +118,7 @@ export class BillService {
     );
   };
 
-  //return top 8 best sellers (FILTER DATA BEFORE USE FUNCTION)
+  //(FILTER DATA BEFORE USE FUNCTION)
   top6BestSellers(bills: OriginBill[]): { book: Book, quantity: number }[] {
     const bookMap = new Map<string, { book: Book, quantity: number }>();
 
@@ -155,7 +158,7 @@ export class BillService {
       });
     });
     const categoryChartInfo = {
-      categories: [...categoryMap.values()].sort((a, b) => b.quantity - a.quantity).splice(0,8),
+      categories: [...categoryMap.values()].sort((a, b) => b.quantity - a.quantity).splice(0, 8),
       totalBooksSold: totalBooksSold
     };
 
