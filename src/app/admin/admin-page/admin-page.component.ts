@@ -2,12 +2,15 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subject, takeUntil, Subscription } from 'rxjs';
 import { DashboardState, DashboardStore } from '@/store/dashboard.store';
 import { YearReport, categoryRp } from '@/model/bill_reports.model';
-import { Bill, OriginBill } from '@/model/bill.model';
+import { OriginBill } from '@/model/bill.model';
 import { Book } from '@/model/books.model';
 import { BillService } from '@/services/bills.service';
 import { Chart } from 'chart.js/auto';
 import 'chartjs-plugin-datalabels';
 import chartDataLabels from 'chartjs-plugin-datalabels'
+
+type AdminNavigate = 'Dashboard' | 'Customers' | 'Products' | 'Orders' | 'Tasks';
+
 
 Chart.register(chartDataLabels);
 @Component({
@@ -42,11 +45,12 @@ export class AdminPageComponent implements OnInit, OnDestroy {
   subcription$ = new Subscription;
   listOfBills: OriginBill[] = [];
 
+  navigate: AdminNavigate = 'Products';
+
   constructor(
     private billService: BillService,
     private dashboardStore: DashboardStore,
   ) {}
-
 
   // doughnutCenterLabel = {
   //   id: 'doughnutLabel',
@@ -64,7 +68,7 @@ export class AdminPageComponent implements OnInit, OnDestroy {
   // }
 
   ngOnInit(): void {
-    this.subcription$ = this.dashboardStore.select((state) => state.billReport).subscribe((billRp) => {
+    this.subcription$ = this.dashboardStore.billReport$.subscribe((billRp) => {
       if (billRp.categoriesRp && billRp.topProducts && billRp.yearReports && billRp.bills) {
         this.salesChart.destroy();
         this.categoryChart.destroy();
@@ -84,6 +88,10 @@ export class AdminPageComponent implements OnInit, OnDestroy {
       }
     })
     this.initDashboard();
+  }
+
+  onNavigate(title: AdminNavigate){
+    this.navigate = title;
   }
 
   createSalesChart(saleNProfitRp: YearReport) {
@@ -213,7 +221,8 @@ export class AdminPageComponent implements OnInit, OnDestroy {
   }
 
   test() {
-    this.filterNearestOrder(this.listOfBills);
+    // this.filterNearestOrder(this.listOfBills);
+    console.log(this.dashboardStore.basdd);
   }
 
   ngOnDestroy(): void {

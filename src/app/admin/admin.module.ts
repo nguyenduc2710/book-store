@@ -12,6 +12,13 @@ import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzStatisticModule } from 'ng-zorro-antd/statistic';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { ProductsManageComponent } from './admin-page/products-manage/products-manage.component';
+import { CustomersManageComponent } from './admin-page/customers-manage/customers-manage.component';
+import { OrdersManageComponent } from './admin-page/orders-manage/orders-manage.component';
+import { TasksManageComponent } from './admin-page/tasks-manage/tasks-manage.component';
+import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
 
 const modules = [
   CommonModule,
@@ -29,10 +36,17 @@ const antd = [
   NzStatisticModule,
   NzTableModule,
   NzDividerModule,
+  NzFormModule,
+  NzButtonModule,
+  NzRadioModule,
 ];
 
 const components = [
-  AdminPageComponent
+  AdminPageComponent,
+  ProductsManageComponent,
+  CustomersManageComponent,
+  OrdersManageComponent,
+  TasksManageComponent,
 ]
 
 const router: Routes = [
@@ -41,7 +55,7 @@ const router: Routes = [
 
 @NgModule({
   declarations: [
-    ...components
+    ...components,
   ],
   imports: [
     ...modules,

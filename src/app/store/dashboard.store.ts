@@ -29,9 +29,10 @@ export class DashboardStore extends ComponentStore<DashboardState>{
     super(initState);
   }
 
-
   //SELECTORS
   readonly billReport$ = this.select((state) => state.billReport);
+
+  readonly basdd = this.get(s => s.billReport);
   //ViewModel
   readonly vm$ = this.select(
     this.billReport$,
