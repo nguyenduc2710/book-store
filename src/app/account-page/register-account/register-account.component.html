@@ -2,6 +2,7 @@
   <form [formGroup]="registerForm" class="validate-account" (ngSubmit)="onCreateAcc()">
     <h3>Register account</h3>
     <hr>
+    <label class="alert-msg" *ngIf="!registerForm.get('username')?.valid && registerForm.get('username')?.touched && registerForm.value['username']?.length > 0">Username is used, please try another.</label>
     <div class="form-floating mb-3">
       <input type="text" class="form-control" name="username" formControlName="username" placeholder="username">
       <label>Username</label>
@@ -61,7 +62,7 @@
         I have read and agree to the terms
       </label>
     </div>
-
+    <button type="button" (click)="checkDuplicate('nguyenduc')">test here</button>
     <button [disabled]="!registerForm.valid" style="width: 100%;" class="btn btn-primary btn-block mb-3">Sign in</button>
 
   </form>

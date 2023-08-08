@@ -101,7 +101,7 @@ export class AccountStore extends ComponentStore<AccountState> {
   readonly authUser = this.effect((param$: Observable<{ username: string, password: string }>) => param$.pipe(
     switchMap((credential) =>
       this.userService.authUser(credential.username, credential.password).pipe(
-        delay(400),
+        delay(300),
         tapResponse(
           (user) => {
             if (user.value.username.length > 0) {

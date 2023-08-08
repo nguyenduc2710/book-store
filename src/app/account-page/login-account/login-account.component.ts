@@ -32,17 +32,3 @@ export class LoginAccountComponent implements OnInit {
     }
   }
 }
-
-
-
-
-  // onSubmit() {
-  //   this.isValid = this.userService.authenUser(this.username, this.password);
-  //   if (this.isValid) {
-  //     this.userService.sendUserMessage("success", "Login succeed");
-  //     this.router.navigate(['/book']);
-  //   } else {
-  //     this.userService.sendUserMessage("error", "Login failed");
-  //     this.password = '';
-  //   }
-  // }

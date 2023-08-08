@@ -1,12 +1,13 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { BehaviorSubject, Observable, map, of } from "rxjs";
+import { BehaviorSubject, Observable, map, of, take } from "rxjs";
 import { AngularFireDatabase, AngularFireList } from "@angular/fire/compat/database";
 import { getDatabase, ref, set } from "firebase/database"
 import { Message } from "../model/message.model";
 import { UserModel } from "../model/user.model";
 import { User } from "../model/user.class";
 import * as CryptoJS from "crypto-js";
+import { tapResponse } from "@ngrx/component-store";
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
@@ -50,6 +51,10 @@ export class UserService {
       })
   }
 
+  checkExistUsername(username: string) {
+
+  }
+
   getUserAcc() {
     return this.user;
   }
@@ -58,16 +63,16 @@ export class UserService {
     return this.currentUser.value;
   }
 
-  getAllUsers(): Observable<any>{
+  getAllUsers(): Observable<any> {
     return this.http.get(this.firebaseUrl + '/users.json');
   }
 
-  setUsers(users: UserModel){
+  setUsers(users: UserModel) {
     this.user = [];
     this.user.push(users);
   }
 
-  authUser(username: string, password: string){
+  authUser(username: string, password: string) {
     const user = new BehaviorSubject<User>(this.nullUser);
     const encode = CryptoJS.SHA256(password + username);
     Object.values(this.user[0]).forEach((userInfo: any) => {
@@ -78,18 +83,6 @@ export class UserService {
       }
     })
     return of(user);
-  }
-
-  authenUser(username: string, password: string){
-    const user = new BehaviorSubject<User>(this.nullUser);
-    Object.values(this.user[0]).forEach((userInfo: any) => {
-      if (userInfo.username == username && userInfo.password == password) {
-        this.isAuthenticated.next(true);
-        this.currentUser.next(userInfo);
-        user.next(userInfo);
-      }
-    })
-    return user;
   }
 
   createUser(
