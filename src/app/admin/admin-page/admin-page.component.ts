@@ -1,13 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subject, takeUntil, Subscription } from 'rxjs';
-import { DashboardState, DashboardStore } from '@/store/dashboard.store';
-import { YearReport, categoryRp } from '@/model/bill_reports.model';
-import { OriginBill } from '@/model/bill.model';
-import { Book } from '@/model/books.model';
-import { BillService } from '@/services/bills.service';
 import { Chart } from 'chart.js/auto';
 import 'chartjs-plugin-datalabels';
 import chartDataLabels from 'chartjs-plugin-datalabels'
+import { DashboardState, DashboardStore } from '@/store/dashboard.store';
+import { BillService } from '@/services/bills.service';
+import { YearReport, categoryRp } from '@/model/bill_reports.model';
+import { OriginBill } from '@/model/bill.model';
+import { Book } from '@/model/books.model';
 
 type AdminNavigate = 'Dashboard' | 'Customers' | 'Products' | 'Orders' | 'Tasks';
 
@@ -45,7 +45,7 @@ export class AdminPageComponent implements OnInit, OnDestroy {
   subcription$ = new Subscription;
   listOfBills: OriginBill[] = [];
 
-  navigate: AdminNavigate = 'Products';
+  navigate: AdminNavigate = 'Dashboard';
 
   constructor(
     private billService: BillService,

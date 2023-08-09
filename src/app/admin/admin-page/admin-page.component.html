@@ -41,196 +41,154 @@
     </ul>
   </nz-sider>
 
-  <ng-container *ngIf="navigate === 'Dashboard', then dashboard"></ng-container>
-  <ng-container *ngIf="navigate === 'Customers', then customers"></ng-container>
-  <ng-container *ngIf="navigate === 'Products', then products"></ng-container>
-  <ng-container *ngIf="navigate === 'Orders', then orders"></ng-container>
-  <ng-container *ngIf="navigate === 'Tasks', then tasks"></ng-container>
 
-  <ng-template #dashboard>
+
+
     <nz-layout>
       <nz-header>
         <div class="admin-header">
           <span class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
             (click)="isCollapsed = !isCollapsed"></span>
           <div class="header-setting">
-            <span class="home-icon" nz-icon nzType="home" nzTheme="outline"></span>
+            <a routerLink="/book" class="home-icon" nz-icon nzType="home" nzTheme="outline"></a>
             <nz-avatar nzIcon="user"></nz-avatar>
           </div>
         </div>
       </nz-header>
       <nz-content>
-        <div class="inner-content">
-          <div class="content-header d-flex justify-content-between p-2">
-            <h3>
-              Overview
-            </h3>
-            <div>
-              <nz-date-picker nzMode="year" [(ngModel)]="year"
-                (ngModelChange)="onChangeCalendar($event)"></nz-date-picker>
-            </div>
-          </div>
 
-          <div class="row d-flex justify-content-around mt-1">
-            <div class="right-element">
-              <div class="profit-info-chart">
-                <div class="row chart-card">
-                  <div class="component tripple">
-                    <nz-statistic [nzValue]="'$' + (totalProfits | number)!" [nzTitle]="'Total Profits'"></nz-statistic>
-                  </div>
-                  <div class="component tripple">
-                    <nz-statistic [nzValue]="'$' + (totalExpenses | number)!"
-                      [nzTitle]="'Total Expenses'"></nz-statistic>
-                  </div>
-                  <div class="component tripple">
-                    <nz-statistic [nzValue]="(212 | number)!" [nzTitle]="'Current Users'"></nz-statistic>
-                  </div>
-                </div>
+          <!----------->
+          <!--     *  |-->
+          <!--     |  |-->                                            <!--|*-->
+        <ng-container *ngIf="navigate === 'Dashboard', then dashboard"></ng-container>
+        <ng-container *ngIf="navigate === 'Customers', then customers"></ng-container>
+        <ng-container *ngIf="navigate === 'Products', then products"></ng-container>
+        <ng-container *ngIf="navigate === 'Orders', then orders"></ng-container>
+        <ng-container *ngIf="navigate === 'Tasks', then tasks"></ng-container>
 
-                <div class="component">
-                  <canvas id="salesChart">{{ salesChart }}</canvas>
-                </div>
-              </div>
-
-              <div class="upcoming-events component component-seperate">
-                <h5 class="upcoming-events_title">Upcoming Events</h5>
-                <ul class="upcoming-events_list">
-                  <li *ngFor="let item of topProducts" class="row event-item">
-                    <span class="col-1" nz-icon nzType="calendar" nzTheme="outline"></span>
-                    <div class="col-3">08 JUN, TUE</div>
-                    <div class="col-8">Meeting with partners</div>
-                  </li>
-                </ul>
-                <button (click)="test()" class="more-detail-btn upcoming-detail-btn">See All</button>
-              </div>
-
-              <div class="component component-seperate">
-                <h5>Recent Orders</h5>
-                <nz-table [nzFrontPagination]="false" #basicTable [nzData]="listOfBills">
-                  <thead>
-                    <tr>
-                      <th>Date</th>
-                      <th>Customer</th>
-                      <th>Status</th>
-                      <th>Total</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr *ngFor="let data of basicTable.data">
-                      <td>{{ data.bill.dateBuy }}</td>
-                      <td>{{ data.bill.fullName }}</td>
-                      <td>{{ data.bill.status }}</td>
-                      <td>
-                        <span>Action 一 {{ data.bill.totalBill | currency }}</span>
-                        <nz-divider nzType="vertical"></nz-divider>
-                        <a>View</a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </nz-table>
+        <ng-template #dashboard>
+          <div class="inner-content">
+            <div class="content-header d-flex justify-content-between p-2">
+              <h3>
+                Overview
+              </h3>
+              <div>
+                <nz-date-picker nzMode="year" [(ngModel)]="year"
+                  (ngModelChange)="onChangeCalendar($event)"></nz-date-picker>
               </div>
             </div>
 
-            <div class="left-element">
-              <div class="component top-selling-container">
-                <h5 class="top-selling_header">Top Selling Products</h5>
-                <ul class="top-sellers-list">
-                  <li *ngFor="let item of topProducts" class="row top-seller_item">
-                    <span class="col-1" nz-icon nzType="star" nzTheme="twotone" [nzTwotoneColor]="'#FFD700'"></span>
-                    <div class="col-8">{{ item.book.name }}</div>
-                    <div class="col-3 item_sales">{{ item.book.price * item.quantity | currency}}</div>
-                  </li>
-                </ul>
+            <div class="row d-flex justify-content-around mt-1">
+              <div class="right-element">
+                <div class="profit-info-chart">
+                  <div class="row chart-card">
+                    <div class="component tripple">
+                      <nz-statistic [nzValue]="'$' + (totalProfits | number)!"
+                        [nzTitle]="'Total Profits'"></nz-statistic>
+                    </div>
+                    <div class="component tripple">
+                      <nz-statistic [nzValue]="'$' + (totalExpenses | number)!"
+                        [nzTitle]="'Total Expenses'"></nz-statistic>
+                    </div>
+                    <div class="component tripple">
+                      <nz-statistic [nzValue]="(212 | number)!" [nzTitle]="'Current Users'"></nz-statistic>
+                    </div>
+                  </div>
+
+                  <div class="component">
+                    <canvas id="salesChart">{{ salesChart }}</canvas>
+                  </div>
+                </div>
+
+                <div class="upcoming-events component component-seperate">
+                  <h5 class="upcoming-events_title">Upcoming Events</h5>
+                  <ul class="upcoming-events_list">
+                    <li *ngFor="let item of topProducts" class="row event-item">
+                      <span class="col-1" nz-icon nzType="calendar" nzTheme="outline"></span>
+                      <div class="col-3">08 JUN, TUE</div>
+                      <div class="col-8">Meeting with partners</div>
+                    </li>
+                  </ul>
+                  <button (click)="test()" class="more-detail-btn upcoming-detail-btn">See All</button>
+                </div>
+
+                <div class="component component-seperate">
+                  <h5>Recent Orders</h5>
+                  <nz-table [nzFrontPagination]="false" #basicTable [nzData]="listOfBills">
+                    <thead>
+                      <tr>
+                        <th>Date</th>
+                        <th>Customer</th>
+                        <th>Status</th>
+                        <th>Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let data of basicTable.data">
+                        <td>{{ data.bill.dateBuy }}</td>
+                        <td>{{ data.bill.fullName }}</td>
+                        <td>{{ data.bill.status }}</td>
+                        <td>
+                          <span>Action 一 {{ data.bill.totalBill | currency }}</span>
+                          <nz-divider nzType="vertical"></nz-divider>
+                          <a>View</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </nz-table>
+                </div>
               </div>
 
-              <div class="categories-container component component-seperate">
-                <h5 class="categories-header">Popular Categories</h5>
-                <div>
-                  <canvas id="categoryChart">{{ categoryChart }}</canvas>
-                  <div class="total-books-sold">
-                    {{ totalBooksSold }} Books Sold
+              <div class="left-element">
+                <div class="component top-selling-container">
+                  <h5 class="top-selling_header">Top Selling Products</h5>
+                  <ul class="top-sellers-list">
+                    <li *ngFor="let item of topProducts" class="row top-seller_item">
+                      <span class="col-1" nz-icon nzType="star" nzTheme="twotone" [nzTwotoneColor]="'#FFD700'"></span>
+                      <div class="col-8">{{ item.book.name }}</div>
+                      <div class="col-3 item_sales">{{ item.book.price * item.quantity | currency}}</div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="categories-container component component-seperate">
+                  <h5 class="categories-header">Popular Categories</h5>
+                  <div>
+                    <canvas id="categoryChart">{{ categoryChart }}</canvas>
+                    <div class="total-books-sold">
+                      {{ totalBooksSold }} Books Sold
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </ng-template>
 
-          <!-- <button (click)="test()">Test Init BillRp function</button> -->
-        </div>
-      </nz-content>
-    </nz-layout>
-  </ng-template>
-
-  <ng-template #customers>
-    <nz-layout>
-      <nz-header>
-        <div class="admin-header">
-          <span class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-            (click)="isCollapsed = !isCollapsed"></span>
-          <div class="header-setting">
-            <span class="home-icon" nz-icon nzType="home" nzTheme="outline"></span>
-            <nz-avatar nzIcon="user"></nz-avatar>
+        <ng-template #customers>
+          <div class="inner-content">
+            <app-customers-manage></app-customers-manage>
           </div>
-        </div>
-      </nz-header>
-      <nz-content>
-        <app-customers-manage></app-customers-manage>
-      </nz-content>
-    </nz-layout>
-  </ng-template>
+        </ng-template>
 
-  <ng-template #products>
-    <nz-layout>
-      <nz-header>
-        <div class="admin-header">
-          <span class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-            (click)="isCollapsed = !isCollapsed"></span>
-          <div class="header-setting">
-            <span class="home-icon" nz-icon nzType="home" nzTheme="outline"></span>
-            <nz-avatar nzIcon="user"></nz-avatar>
+        <ng-template #products>
+          <div class="inner-content">
+            <app-products-manage></app-products-manage>
           </div>
-        </div>
-      </nz-header>
-      <nz-content>
-        <app-products-manage></app-products-manage>
-      </nz-content>
-    </nz-layout>
-  </ng-template>
+        </ng-template>
 
-  <ng-template #orders>
-    <nz-layout>
-      <nz-header>
-        <div class="admin-header">
-          <span class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-            (click)="isCollapsed = !isCollapsed"></span>
-          <div class="header-setting">
-            <span class="home-icon" nz-icon nzType="home" nzTheme="outline"></span>
-            <nz-avatar nzIcon="user"></nz-avatar>
+        <ng-template #orders>
+          <div class="inner-content">
+            <app-orders-manage></app-orders-manage>
           </div>
-        </div>
-      </nz-header>
-      <nz-content>
-        <app-orders-manage></app-orders-manage>
-      </nz-content>
-    </nz-layout>
-  </ng-template>
+        </ng-template>
 
-  <ng-template #tasks>
-    <nz-layout>
-      <nz-header>
-        <div class="admin-header">
-          <span class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-            (click)="isCollapsed = !isCollapsed"></span>
-          <div class="header-setting">
-            <span class="home-icon" nz-icon nzType="home" nzTheme="outline"></span>
-            <nz-avatar nzIcon="user"></nz-avatar>
+        <ng-template #tasks>
+          <div class="inner-content">
+            <app-tasks-manage></app-tasks-manage>
           </div>
-        </div>
-      </nz-header>
-      <nz-content>
-        <app-tasks-manage></app-tasks-manage>
+        </ng-template>
+
       </nz-content>
     </nz-layout>
-  </ng-template>
-
 </nz-layout>

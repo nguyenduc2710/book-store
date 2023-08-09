@@ -1,3 +1,12 @@
+.inner-content{
+  /* max-height: 100vh; */
+  /* overflow: auto; */
+}
+
+.checkbox-heading{
+  width: 30px;
+}
+
 .search-box {
   padding: 8px;
 }

@@ -14,5 +14,5 @@ export interface Book{
 
 export interface BookStore{
   id: string,
-  value: Book[]
+  value: Book
 }

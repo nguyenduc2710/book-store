@@ -5,25 +5,47 @@
     </h3>
   </div>
 
-  <div class="row d-flex justify-content-around mt-1">
-    <nz-table #nzTable [nzData]="listOfDisplayData" nzTableLayout="fixed">
+  <div class="mt-1">
+    <nz-table #nzTable
+    [nzData]="listOfDisplayData"
+    nzTableLayout="auto"
+    (nzCurrentPageDataChange)="onCurrentPageDataChange($event)"
+    [nzScroll]="{y: '100%'}"
+    >
       <thead>
         <tr>
+          <th
+          class="checkbox-heading"
+          [nzWidth]="'30px'"
+          [(nzChecked)]="checked"
+          [nzIndeterminate]="indeterminate"
+          (nzCheckedChange)="onAllChecked($event)"></th>
+          <th>
+            Id
+            <!-- <th nzCustomFilter> -->
+            <!-- <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0" [nzDropdownMenu]="menu">
+              <span nz-icon nzType="search"></span>
+            </nz-filter-trigger> -->
+          </th>
           <th nzCustomFilter>
             Name
             <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0" [nzDropdownMenu]="menu">
               <span nz-icon nzType="search"></span>
             </nz-filter-trigger>
           </th>
-          <th>Age</th>
-          <th>Address</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Category</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let data of nzTable.data">
-          <!-- <td>{{ data.name }}</td>
-          <td>{{ data.age }}</td>
-          <td>{{ data.address }}</td> -->
+          <td [nzChecked]="setOfCheckedId.has(data.id)" (nzCheckedChange)="onItemChecked(data.id, $event)"></td>
+          <td>{{ data.value.book_id }}</td>
+          <td>{{ data.value.name }}</td>
+          <td>{{ data.value.quantity }}</td>
+          <td>{{ data.value.price }}</td>
+          <td>{{ data.value.category }}</td>
         </tr>
       </tbody>
     </nz-table>
